@@ -1,3 +1,31 @@
 baseURL = 'https://imtiazalshariar.com/'
 languageCode = 'en-us'
-title = 'My Hugo Site'
+title = 'Imtiaz Al Shariar - Design-forward Product Engineer'
+theme = ''
+
+[params]
+  description = "Design-forward Product Engineer architecting scalable, user-centric systems. Portfolio and blog showcasing innovative solutions and technical expertise."
+  author = "Imtiaz Al Shariar"
+  keywords = ["product engineer", "design", "scalable systems", "user-centric", "portfolio", "blog", "frontend", "backend", "full-stack", "architecture"]
+  
+  # Social Media
+  github = "imtiazalshariar"
+  linkedin = "imtiazalshariar"
+  
+  # SEO
+  [params.seo]
+    googleAnalytics = "G-XXXXXXXXXX"  # Replace with your GA4 ID
+    googleSiteVerification = ""  # Add your Google Search Console verification code
+    bingSiteVerification = ""    # Add your Bing verification code if needed
+    
+  # Open Graph
+  [params.og]
+    image = "/images/og-image.jpg"
+    imageAlt = "Imtiaz Al Shariar - Design-forward Product Engineer"
+    type = "website"
+    
+  # Twitter Card
+  [params.twitter]
+    card = "summary_large_image"
+    site = "@imtiazalshariar"
+    creator = "@imtiazalshariar"
