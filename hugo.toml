@@ -1,0 +1,4 @@
+baseURL = 'https://imtiazalshariar.com/'
+languageCode = 'en-us'
+title = 'My Hugo Site'
+theme = ''

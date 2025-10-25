@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-family: 'EB Garamond', serif;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-family: 'EB Garamond', serif;
+            font-weight: 600;
+            color: #34495e;
+            margin: 2rem 0 1rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between py-4 px-6 bg-white border-b border-gray-200">
+        <!-- Left side: Logo and Navigation links -->
+        <div class="hidden md:flex items-center space-x-8">
+            <span class="text-xl font-semibold text-gray-900">Im.</span>
+            <a href="#" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Projects</a>
+            <a href="#" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Case Study</a>
+            <a href="#" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Gallery</a>
+        </div>
+
+        <!-- Mobile logo (visible when menu is hidden) -->
+        <div class="md:hidden">
+            <span class="text-xl font-semibold text-gray-900">Im.</span>
+        </div>
+
+        <!-- Right side: Action buttons -->
+        <div class="flex items-center space-x-4">
+            <button
+                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full">Subscribe</button>
+            <button
+                class="px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors">Consult</button>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="max-w-4xl mx-auto px-6 py-8">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
+</body>
+
+</html>
