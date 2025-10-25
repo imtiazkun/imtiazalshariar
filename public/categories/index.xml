@@ -2,10 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://imtiazalshariar.com/categories/</link>
     <description>Recent content in Categories on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://imtiazalshariar.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Case Studies</title>
+      <link>https://imtiazalshariar.com/categories/case-studies/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/categories/case-studies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>https://imtiazalshariar.com/categories/design/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/categories/design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technical</title>
+      <link>https://imtiazalshariar.com/categories/technical/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/categories/technical/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

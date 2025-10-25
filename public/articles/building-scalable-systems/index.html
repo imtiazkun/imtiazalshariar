@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Scalable Systems: A Case Study - Imtiaz Al Shariar - Design-forward Product Engineer</title>
+    <meta name="description" content="How we designed and implemented a microservices architecture that handles 10M&#43; requests per day while maintaining sub-100ms response times.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-family: 'EB Garamond', serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-weight: 600;
+            margin: 2rem 0 1rem 0;
+        }
+
+        h3 {
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .prose {
+            max-width: none;
+        }
+
+        .prose h1,
+        .prose h2,
+        .prose h3,
+        .prose h4,
+        .prose h5,
+        .prose h6 {
+            color: #111827;
+            font-weight: 600;
+        }
+
+        .prose p {
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        .prose ul,
+        .prose ol {
+            color: #374151;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #111827;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <nav class="relative flex items-center py-4 px-6 bg-white border-b border-gray-200">
+        <div class="flex items-center space-x-8">
+            <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
+            <a href="/" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Home</a>
+            <a href="/articles" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Articles</a>
+        </div>
+    </nav>
+
+    
+    <article class="max-w-4xl mx-auto px-6 py-16">
+        
+        <header class="mb-12">
+            <div class="flex items-center gap-4 mb-6">
+                
+                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Case Studies</span>
+                
+                
+                <span class="text-sm text-gray-500">8 min read</span>
+                
+                <span class="text-sm text-gray-500">January 15, 2024</span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Building Scalable Systems: A Case Study</h1>
+
+            
+            <p class="text-xl text-gray-700 leading-relaxed">How we designed and implemented a microservices architecture that handles 10M&#43; requests per day while maintaining sub-100ms response times.</p>
+            
+        </header>
+
+        
+        
+
+        
+        <div class="prose prose-lg max-w-none">
+            <h2 id="the-challenge">The Challenge</h2>
+<p>When we started working with our client, they were experiencing significant performance issues with their monolithic application. The system was struggling to handle the growing user base and was becoming increasingly difficult to maintain.</p>
+<h2 id="our-approach">Our Approach</h2>
+<p>We implemented a microservices architecture with the following key components:</p>
+<ul>
+<li><strong>API Gateway</strong> for request routing and load balancing</li>
+<li><strong>Service Mesh</strong> for inter-service communication</li>
+<li><strong>Event-Driven Architecture</strong> for asynchronous processing</li>
+<li><strong>Database Sharding</strong> for horizontal scaling</li>
+</ul>
+<h2 id="results">Results</h2>
+<p>The new architecture resulted in:</p>
+<ul>
+<li>99.9% uptime</li>
+<li>Sub-100ms average response time</li>
+<li>10x increase in concurrent user capacity</li>
+<li>50% reduction in infrastructure costs</li>
+</ul>
+<h2 id="key-learnings">Key Learnings</h2>
+<p>Building scalable systems requires careful planning, proper monitoring, and a focus on performance from day one. The investment in architecture pays dividends as the system grows.</p>
+
+        </div>
+
+        
+        <footer class="mt-16 pt-8 border-t border-gray-200">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm text-gray-600">Published on January 15, 2024</p>
+                    
+                    <div class="mt-2">
+                        
+                        <span class="inline-block px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded mr-2">Architecture</span>
+                        
+                        <span class="inline-block px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded mr-2">Scalability</span>
+                        
+                        <span class="inline-block px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded mr-2">System Design</span>
+                        
+                    </div>
+                    
+                </div>
+                <a href="/articles" class="text-gray-900 font-medium hover:text-gray-700 flex items-center">
+                    ← Back to Articles
+                </a>
+            </div>
+        </footer>
+    </article>
+</body>
+
+</html>

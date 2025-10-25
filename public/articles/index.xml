@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>https://imtiazalshariar.com/</link>
-    <description>Recent content on Imtiaz Al Shariar - Design-forward Product Engineer</description>
+    <title>Articles on Imtiaz Al Shariar - Design-forward Product Engineer</title>
+    <link>https://imtiazalshariar.com/articles/</link>
+    <description>Recent content in Articles on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://imtiazalshariar.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://imtiazalshariar.com/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Scalable Systems: A Case Study</title>
       <link>https://imtiazalshariar.com/articles/building-scalable-systems/</link>

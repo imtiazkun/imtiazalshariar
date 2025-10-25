@@ -2,10 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://imtiazalshariar.com/tags/</link>
     <description>Recent content in Tags on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://imtiazalshariar.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architecture</title>
+      <link>https://imtiazalshariar.com/tags/architecture/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/tags/architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scalability</title>
+      <link>https://imtiazalshariar.com/tags/scalability/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/tags/scalability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>System Design</title>
+      <link>https://imtiazalshariar.com/tags/system-design/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/tags/system-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design Thinking</title>
+      <link>https://imtiazalshariar.com/tags/design-thinking/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/tags/design-thinking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Product Development</title>
+      <link>https://imtiazalshariar.com/tags/product-development/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/tags/product-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UX</title>
+      <link>https://imtiazalshariar.com/tags/ux/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/tags/ux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://imtiazalshariar.com/tags/ai/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Challenges</title>
+      <link>https://imtiazalshariar.com/tags/challenges/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/tags/challenges/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Integration</title>
+      <link>https://imtiazalshariar.com/tags/integration/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/tags/integration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>https://imtiazalshariar.com/tags/machine-learning/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
