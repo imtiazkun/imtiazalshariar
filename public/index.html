@@ -114,12 +114,49 @@
         p {
             margin-bottom: 1rem;
         }
+
+         
+        #mobile-menu {
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #mobile-menu:not(.hidden) {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+         
+        #mobile-menu-button svg {
+            transition: transform 0.3s ease-in-out;
+        }
+
+         
+        #mobile-menu-button:hover svg {
+            transform: scale(1.1);
+        }
+
+         
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
     </style>
 </head>
 
 <body>
     
-    <nav class="flex items-center justify-between py-4 px-6 bg-white border-b border-gray-200">
+    <nav class="relative flex items-center py-4 px-6 bg-white border-b border-gray-200">
         
         <div class="hidden md:flex items-center space-x-8">
             <span class="text-xl font-semibold text-gray-900">Im.</span>
@@ -134,51 +171,199 @@
         </div>
 
         
-        <div class="flex items-center space-x-4">
+        <div class="hidden md:flex items-center space-x-4 ml-auto">
             <button
                 class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full">Subscribe</button>
             <button
                 class="px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors">Consult</button>
         </div>
+
+        
+        <button id="mobile-menu-button"
+            class="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+
+        
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50">
+            <div class="px-6 py-4 space-y-4">
+                <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Projects</a>
+                <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Case
+                    Study</a>
+                <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Gallery</a>
+                <div class="pt-4 border-t border-gray-200 space-y-3">
+                    <button
+                        class="w-full px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full border border-gray-300">Subscribe</button>
+                    <button
+                        class="w-full px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors">Consult</button>
+                </div>
+            </div>
+        </div>
     </nav>
 
     
-    <div class="max-w-4xl mx-auto px-6 py-8">
-        <h1>Imtiaz Al Shariar - Design-forward Product Engineer</h1>
-        <h1 id="imtiaz-al-shariar">Imtiaz Al Shariar</h1>
-<h2 id="design-forward-product-engineer">Design-forward Product Engineer</h2>
-<p>Architecting scalable, user-centric systems that bridge the gap between design and engineering. I specialize in creating products that not only function flawlessly but also deliver exceptional user experiences.</p>
-<h2 id="about-me">About Me</h2>
-<p>I&rsquo;m a Design-forward Product Engineer with a passion for architecting scalable, user-centric systems. My approach combines technical expertise with design thinking to create products that are both powerful and intuitive.</p>
-<p><strong>What I Do:</strong></p>
-<ul>
-<li>Design and architect scalable web applications</li>
-<li>Build user-centric product experiences</li>
-<li>Create modern, responsive interfaces</li>
-<li>Optimize for performance and accessibility</li>
-<li>Lead technical strategy and implementation</li>
-</ul>
-<h2 id="featured-projects">Featured Projects</h2>
-<p>Explore my latest work and case studies that showcase innovative solutions to complex product challenges.</p>
-<h2 id="technical-expertise">Technical Expertise</h2>
-<ul>
-<li><strong>Frontend:</strong> React, Vue.js, TypeScript, Next.js</li>
-<li><strong>Backend:</strong> Node.js, Python, Go, Microservices</li>
-<li><strong>Design:</strong> Figma, Design Systems, User Research</li>
-<li><strong>Architecture:</strong> Scalable Systems, Cloud Infrastructure</li>
-<li><strong>Tools:</strong> Docker, Kubernetes, CI/CD, Testing</li>
-</ul>
-<h2 id="get-in-touch">Get in Touch</h2>
-<p>Ready to collaborate on your next project? Let&rsquo;s discuss how we can build something amazing together.</p>
-<p><strong>Connect with me:</strong></p>
-<ul>
-<li>Email: <a href="mailto:hello@imtiazalshariar.com">hello@imtiazalshariar.com</a></li>
-<li>LinkedIn: <a href="https://linkedin.com/in/imtiazalshariar">linkedin.com/in/imtiazalshariar</a></li>
-<li>GitHub: <a href="https://github.com/imtiazalshariar">github.com/imtiazalshariar</a></li>
-<li>Twitter: <a href="https://twitter.com/imtiazalshariar">@imtiazalshariar</a></li>
-</ul>
+    <section class="bg-white">
+        <div class="container flex mx-auto px-6 py-16">
+            <div class="lg:w-1/2">
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
+                    Design-forward<br>
+                    Product Engineer.<br>
+                    Architecting scalable,<br>
+                    user-centric systems.
+                </h1>
 
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
+                    I build end-to-end web applications and MVPs that solve complex business challenges. With a
+                    focus on design and technical execution, I help startups and enterprises bring innovative
+                    products to market.
+                </p>
+
+                
+                <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                    <button
+                        class="px-6 py-3 bg-gray-900 text-white hover:bg-gray-800 transition-colors font-medium cursor-pointer">
+                        Consult
+                    </button>
+                    <button
+                        class="px-6 py-3 border border-gray-900 text-gray-900 hover:bg-gray-50 transition-colors font-medium cursor-pointer">
+                        Portfolio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="bg-gray-50 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-center text-gray-600 text-sm font-medium mb-8">Trusted by innovative teams across Europe and
+                Asia</h2>
+
+            
+            <div class="overflow-hidden">
+                <div class="flex animate-marquee whitespace-nowrap">
+                    
+                    <div class="flex items-center space-x-12 mr-12">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">W</span>
+                            </div>
+                            <span class="text-gray-900 font-medium">Webflow</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">R</span>
+                            </div>
+                            <span class="text-gray-900 font-medium">Relume</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">F</span>
+                            </div>
+                            <span class="text-gray-900 font-medium">Framer</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">N</span>
+                            </div>
+                            <span class="text-gray-900 font-medium">Notion</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">S</span>
+                            </div>
+                            <span class="text-gray-900 font-medium">Stripe</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="flex items-center space-x-12 mr-12">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">W</span>
+                            </div>
+                            <span class="text-gray-900 font-medium">Webflow</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">R</span>
+                            </div>
+                            <span class="text-gray-900 font-medium">Relume</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">F</span>
+                            </div>
+                            <span class="text-gray-900 font-medium">Framer</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">N</span>
+                            </div>
+                            <span class="text-gray-900 font-medium">Notion</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">S</span>
+                            </div>
+                            <span class="text-gray-900 font-medium">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div class="px-6 py-8">
+        
     </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = mobileMenuButton.querySelector('svg');
+
+            mobileMenuButton.addEventListener('click', function () {
+                const isHidden = mobileMenu.classList.contains('hidden');
+
+                if (isHidden) {
+                    
+                    mobileMenu.classList.remove('hidden');
+                    
+                    hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+                } else {
+                    
+                    mobileMenu.classList.add('hidden');
+                    
+                    hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+                }
+            });
+
+            
+            document.addEventListener('click', function (event) {
+                if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+                }
+            });
+
+            
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
