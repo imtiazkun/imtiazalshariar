@@ -135,18 +135,15 @@
         }
 
          
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
         }
 
-        .animate-marquee {
-            animation: marquee 30s linear infinite;
+        .marquee-content {
+            display: flex;
+            white-space: nowrap;
+            transition: none;
         }
     </style>
 </head>
@@ -242,27 +239,9 @@
                 Asia</h2>
 
             
-            <div class="overflow-hidden mt-8">
-                <div class="flex animate-marquee whitespace-nowrap">
+            <div class="marquee-container mt-8">
+                <div id="marquee-content" class="marquee-content">
                     
-                    <div class="flex items-center space-x-12 mr-12">
-                        <img src="/assets/companies/kone_logo.jpg" alt="KONE" class="h-8 w-auto mx-2">
-                        <span class="text-gray-900 font-bold text-xl">Kahf</span>
-                        <span class="text-gray-900 font-bold text-xl">Zipli</span>
-                        <span class="text-gray-900 font-bold text-xl">Summer Schools</span>
-                        <span class="text-gray-900 font-bold text-xl">Flowtusk</span>
-                        <span class="text-gray-900 font-bold text-xl">Zelta</span>
-                    </div>
-
-                    
-                    <div class="flex items-center space-x-12 mr-12">
-                        <img src="/assets/companies/kone_logo.jpg" alt="KONE" class="h-8 w-auto mx-16">
-                        <span class="text-gray-900 font-bold text-xl">Kahf</span>
-                        <span class="text-gray-900 font-bold text-xl">Zipli</span>
-                        <span class="text-gray-900 font-bold text-xl">Summer Schools</span>
-                        <span class="text-gray-900 font-bold text-xl">Flowtusk</span>
-                        <span class="text-gray-900 font-bold text-xl">Zeltalab</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -449,6 +428,68 @@
                     hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
                 });
             });
+
+            
+            const marqueeContent = document.getElementById('marquee-content');
+            const companies = [
+                { type: 'image', src: '/assets/companies/kone_logo.jpg', alt: 'KONE' },
+                { type: 'image', src: '/assets/companies/kahf.svg', alt: 'Kahf' },
+                { type: 'image', src: '/assets/companies/zipli.svg', alt: 'Zipli' },
+                { type: 'image', src: '/assets/companies/ource.svg', alt: 'Ource' },
+                { type: 'text', content: 'Summer Schools' },
+                { type: 'text', content: 'Flowtusk' },
+                { type: 'image', src: '/assets/companies/zeltatech.svg', alt: 'ZeltaTech' }
+            ];
+
+            
+            const copies = 4; 
+            let currentPosition = 0;
+            const speed = 0.5; 
+
+            
+            function buildMarquee() {
+                marqueeContent.innerHTML = '';
+
+                for (let i = 0; i < copies; i++) {
+                    const companySet = document.createElement('div');
+                    companySet.className = 'flex items-center space-x-12 mr-12 flex-shrink-0';
+
+                    companies.forEach(company => {
+                        if (company.type === 'image') {
+                            const img = document.createElement('img');
+                            img.src = company.src;
+                            img.alt = company.alt;
+                            img.className = 'h-8 w-auto border-2 p-1 border-transparent';
+                            companySet.appendChild(img);
+                        } else {
+                            const span = document.createElement('span');
+                            span.textContent = company.content;
+                            span.className = 'text-gray-900 font-bold text-xl border-2 border-transparent px-2 py-1';
+                            companySet.appendChild(span);
+                        }
+                    });
+
+                    marqueeContent.appendChild(companySet);
+                }
+            }
+
+            
+            function animate() {
+                currentPosition -= speed;
+
+                
+                const setWidth = marqueeContent.children[0].offsetWidth;
+                if (Math.abs(currentPosition) >= setWidth) {
+                    currentPosition = 0;
+                }
+
+                marqueeContent.style.transform = `translateX(${currentPosition}px)`;
+                requestAnimationFrame(animate);
+            }
+
+            
+            buildMarquee();
+            animate();
         });
     </script>
 </body>
