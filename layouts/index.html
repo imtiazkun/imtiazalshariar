@@ -21,6 +21,10 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ .Permalink }}">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ .Site.BaseURL }}assets/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}assets/favicon.ico">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type"
         content="{{ if .Params.og.type }}{{ .Params.og.type }}{{ else }}{{ .Site.Params.og.type }}{{ end }}">
