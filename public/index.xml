@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>http://localhost:1313/</link>
+    <link>https://imtiazalshariar.com/</link>
     <description>Recent content on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://imtiazalshariar.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pink Tanks and Green Futures: Balance Between Institutional and Public Participation in BRAC’s Climate Change Program</title>
+      <link>https://imtiazalshariar.com/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</link>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://imtiazalshariar.com/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</guid>
+      <description>&lt;p&gt;A persistent question has intrigued me to a great extent, whether institutional (NGOs/governments) efforts alone can uplift a community or nation. This question has been taking up more space in my thoughts recently as I started my very own initiative that work on making STEM education more accessible to the greater Bengali-speaking community within Bangladesh and outside. I was fortunate to find BRAC’s Climate Change Program (CCP) among some very interesting organizations at my campus for an event (The Way) in our Multipurpose Hall. They were able to address this quite elegantly.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Building Scalable Systems: A Case Study</title>
-      <link>http://localhost:1313/articles/building-scalable-systems/</link>
+      <link>https://imtiazalshariar.com/articles/building-scalable-systems/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/building-scalable-systems/</guid>
+      <guid>https://imtiazalshariar.com/articles/building-scalable-systems/</guid>
       <description>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;When we started working with our client, they were experiencing significant performance issues with their monolithic application. The system was struggling to handle the growing user base and was becoming increasingly difficult to maintain.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-approach&#34;&gt;Our Approach&lt;/h2&gt;&#xA;&lt;p&gt;We implemented a microservices architecture with the following key components:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;API Gateway&lt;/strong&gt; for request routing and load balancing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Service Mesh&lt;/strong&gt; for inter-service communication&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Event-Driven Architecture&lt;/strong&gt; for asynchronous processing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Database Sharding&lt;/strong&gt; for horizontal scaling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;&#xA;&lt;p&gt;The new architecture resulted in:&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Design Thinking Process in Product Development</title>
-      <link>http://localhost:1313/articles/design-thinking-process/</link>
+      <link>https://imtiazalshariar.com/articles/design-thinking-process/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/design-thinking-process/</guid>
+      <guid>https://imtiazalshariar.com/articles/design-thinking-process/</guid>
       <description>&lt;h2 id=&#34;what-is-design-thinking&#34;&gt;What is Design Thinking?&lt;/h2&gt;&#xA;&lt;p&gt;Design thinking is a human-centered approach to innovation that draws from the designer&amp;rsquo;s toolkit to integrate the needs of people, the possibilities of technology, and the requirements for business success.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-five-stages&#34;&gt;The Five Stages&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-empathize&#34;&gt;1. Empathize&lt;/h3&gt;&#xA;&lt;p&gt;Understanding the user&amp;rsquo;s needs, experiences, and motivations through research and observation.&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-define&#34;&gt;2. Define&lt;/h3&gt;&#xA;&lt;p&gt;Defining the problem based on user insights and research findings.&lt;/p&gt;&#xA;&lt;h3 id=&#34;3-ideate&#34;&gt;3. Ideate&lt;/h3&gt;&#xA;&lt;p&gt;Generating creative solutions through brainstorming and collaborative thinking.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Integrating AI into Existing Applications: Challenges and Solutions</title>
-      <link>http://localhost:1313/articles/ai-integration-challenges/</link>
+      <link>https://imtiazalshariar.com/articles/ai-integration-challenges/</link>
       <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/ai-integration-challenges/</guid>
+      <guid>https://imtiazalshariar.com/articles/ai-integration-challenges/</guid>
       <description>&lt;h2 id=&#34;the-ai-integration-landscape&#34;&gt;The AI Integration Landscape&lt;/h2&gt;&#xA;&lt;p&gt;As AI becomes more accessible, organizations are looking to integrate these capabilities into their existing applications. However, this integration comes with unique challenges.&lt;/p&gt;&#xA;&lt;h2 id=&#34;common-challenges&#34;&gt;Common Challenges&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-data-quality-and-preparation&#34;&gt;1. Data Quality and Preparation&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Inconsistent data formats across systems&lt;/li&gt;&#xA;&lt;li&gt;Missing or incomplete datasets&lt;/li&gt;&#xA;&lt;li&gt;Privacy and compliance requirements&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-performance-considerations&#34;&gt;2. Performance Considerations&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AI models can be computationally expensive&lt;/li&gt;&#xA;&lt;li&gt;Latency requirements for real-time applications&lt;/li&gt;&#xA;&lt;li&gt;Resource allocation and scaling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-integration-complexity&#34;&gt;3. Integration Complexity&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Legacy system compatibility&lt;/li&gt;&#xA;&lt;li&gt;API design and versioning&lt;/li&gt;&#xA;&lt;li&gt;Error handling and fallback mechanisms&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;our-solutions&#34;&gt;Our Solutions&lt;/h2&gt;&#xA;&lt;h3 id=&#34;data-pipeline-architecture&#34;&gt;Data Pipeline Architecture&lt;/h3&gt;&#xA;&lt;p&gt;We implemented a robust data pipeline that:&lt;/p&gt;</description>
     </item>
   </channel>

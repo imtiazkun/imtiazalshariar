@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technical on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>http://localhost:1313/categories/technical/</link>
+    <link>https://imtiazalshariar.com/categories/technical/</link>
     <description>Recent content in Technical on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/technical/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://imtiazalshariar.com/categories/technical/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Integrating AI into Existing Applications: Challenges and Solutions</title>
-      <link>http://localhost:1313/articles/ai-integration-challenges/</link>
+      <link>https://imtiazalshariar.com/articles/ai-integration-challenges/</link>
       <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/ai-integration-challenges/</guid>
+      <guid>https://imtiazalshariar.com/articles/ai-integration-challenges/</guid>
       <description>&lt;h2 id=&#34;the-ai-integration-landscape&#34;&gt;The AI Integration Landscape&lt;/h2&gt;&#xA;&lt;p&gt;As AI becomes more accessible, organizations are looking to integrate these capabilities into their existing applications. However, this integration comes with unique challenges.&lt;/p&gt;&#xA;&lt;h2 id=&#34;common-challenges&#34;&gt;Common Challenges&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-data-quality-and-preparation&#34;&gt;1. Data Quality and Preparation&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Inconsistent data formats across systems&lt;/li&gt;&#xA;&lt;li&gt;Missing or incomplete datasets&lt;/li&gt;&#xA;&lt;li&gt;Privacy and compliance requirements&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-performance-considerations&#34;&gt;2. Performance Considerations&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AI models can be computationally expensive&lt;/li&gt;&#xA;&lt;li&gt;Latency requirements for real-time applications&lt;/li&gt;&#xA;&lt;li&gt;Resource allocation and scaling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-integration-complexity&#34;&gt;3. Integration Complexity&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Legacy system compatibility&lt;/li&gt;&#xA;&lt;li&gt;API design and versioning&lt;/li&gt;&#xA;&lt;li&gt;Error handling and fallback mechanisms&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;our-solutions&#34;&gt;Our Solutions&lt;/h2&gt;&#xA;&lt;h3 id=&#34;data-pipeline-architecture&#34;&gt;Data Pipeline Architecture&lt;/h3&gt;&#xA;&lt;p&gt;We implemented a robust data pipeline that:&lt;/p&gt;</description>
     </item>
   </channel>

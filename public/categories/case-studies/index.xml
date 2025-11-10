@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Case Studies on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>http://localhost:1313/categories/case-studies/</link>
+    <link>https://imtiazalshariar.com/categories/case-studies/</link>
     <description>Recent content in Case Studies on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/case-studies/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://imtiazalshariar.com/categories/case-studies/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Scalable Systems: A Case Study</title>
-      <link>http://localhost:1313/articles/building-scalable-systems/</link>
+      <link>https://imtiazalshariar.com/articles/building-scalable-systems/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/building-scalable-systems/</guid>
+      <guid>https://imtiazalshariar.com/articles/building-scalable-systems/</guid>
       <description>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;When we started working with our client, they were experiencing significant performance issues with their monolithic application. The system was struggling to handle the growing user base and was becoming increasingly difficult to maintain.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-approach&#34;&gt;Our Approach&lt;/h2&gt;&#xA;&lt;p&gt;We implemented a microservices architecture with the following key components:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;API Gateway&lt;/strong&gt; for request routing and load balancing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Service Mesh&lt;/strong&gt; for inter-service communication&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Event-Driven Architecture&lt;/strong&gt; for asynchronous processing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Database Sharding&lt;/strong&gt; for horizontal scaling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;&#xA;&lt;p&gt;The new architecture resulted in:&lt;/p&gt;</description>
     </item>
   </channel>

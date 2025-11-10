@@ -29,8 +29,7 @@
         content="{{ if .Title }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta property="og:description"
         content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta property="og:image"
-        content="{{ if .Params.og.image }}{{ .Params.og.image | absURL }}{{ else }}{{ .Site.Params.og.image | absURL }}{{ end }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}assets/socialbanner.jpg">
     <meta property="og:image:alt"
         content="{{ if .Params.og.imageAlt }}{{ .Params.og.imageAlt }}{{ else }}{{ .Site.Params.og.imageAlt }}{{ end }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
@@ -43,8 +42,7 @@
         content="{{ if .Title }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta property="twitter:description"
         content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta property="twitter:image"
-        content="{{ if .Params.og.image }}{{ .Params.og.image | absURL }}{{ else }}{{ .Site.Params.og.image | absURL }}{{ end }}">
+    <meta property="twitter:image" content="{{ .Site.BaseURL }}assets/socialbanner.jpg">
     <meta property="twitter:image:alt"
         content="{{ if .Params.og.imageAlt }}{{ .Params.og.imageAlt }}{{ else }}{{ .Site.Params.og.imageAlt }}{{ end }}">
     <meta property="twitter:site" content="{{ .Site.Params.twitter.site }}">
@@ -214,7 +212,8 @@
                 </h1>
 
                 <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-                    I build end-to-end web applications and MVPs that solve complex business challenges. With a
+                    I, Imtiaz Al Shariar, build end-to-end web applications and MVPs that solve complex business
+                    challenges. With a
                     focus on design and technical execution, I help startups and enterprises bring innovative
                     products to market.
                 </p>
