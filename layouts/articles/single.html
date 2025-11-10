@@ -20,7 +20,8 @@
     <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
     <meta property="og:description"
         content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}">
-    <meta property="og:image" content="{{ .Site.BaseURL }}assets/socialbanner.jpg">
+    <meta property="og:image"
+        content="{{ if .Params.featuredImage }}{{ .Params.featuredImage | absURL }}{{ else }}{{ .Site.BaseURL }}assets/socialbanner.jpg{{ end }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 
@@ -30,7 +31,8 @@
     <meta property="twitter:title" content="{{ .Title }} - {{ .Site.Title }}">
     <meta property="twitter:description"
         content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}">
-    <meta property="twitter:image" content="{{ .Site.BaseURL }}assets/socialbanner.jpg">
+    <meta property="twitter:image"
+        content="{{ if .Params.featuredImage }}{{ .Params.featuredImage | absURL }}{{ else }}{{ .Site.BaseURL }}assets/socialbanner.jpg{{ end }}">
     {{ if .Site.Params.twitter.site }}
     <meta property="twitter:site" content="{{ .Site.Params.twitter.site }}">
     {{ end }}
