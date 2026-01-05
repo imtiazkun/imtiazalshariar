@@ -5,22 +5,16 @@
     <loc>http://localhost:1313/articles/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/categories/case-studies/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/climate/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/climate/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/community/</loc>
-    <lastmod>2025-11-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/community/</loc>
-    <lastmod>2025-11-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/ngo/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ngo/</loc>
@@ -54,9 +48,6 @@
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/articles/building-scalable-systems/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/case-studies/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/scalability/</loc>
@@ -102,6 +93,8 @@
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/case-studies/</loc>
+  </url><url>
+    <loc>http://localhost:1313/opinion/</loc>
   </url><url>
     <loc>http://localhost:1313/projects/</loc>
   </url>

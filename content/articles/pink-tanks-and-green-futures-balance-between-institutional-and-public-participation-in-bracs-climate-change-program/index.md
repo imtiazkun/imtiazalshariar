@@ -2,7 +2,7 @@
 title: "Pink Tanks and Green Futures: Balance Between Institutional and Public Participation in BRAC’s Climate Change Program"
 date: 2025-11-10
 draft: false
-categories: ["NGO", "Community", "Climate"]
+categories: ["Case Studies"]
 tags: ["NGO", "Community", "Climate"]
 readTime: "3 min read"
 featuredImage: "/assets/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/1.jpg"

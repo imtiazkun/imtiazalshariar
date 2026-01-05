@@ -1,81 +1,81 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="{{ .Site.LanguageCode }}">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
-    <title>The Design Thinking Process in Product Development - Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <meta name="title" content="The Design Thinking Process in Product Development - Imtiaz Al Shariar - Design-forward Product Engineer">
+    <!-- Primary Meta Tags -->
+    <title>{{ if .Title }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="title" content="{{ if .Title }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta name="description"
-        content="How applying design thinking principles transformed our product development process and led to better user experiences.">
+        content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    {{ if .Params.keywords }}
+    <meta name="keywords"
+        content="{{ range $i, $keyword := .Params.keywords }}{{ if $i }}, {{ end }}{{ $keyword }}{{ end }}">{{ else }}
+    <meta name="keywords"
+        content="{{ range $i, $keyword := .Site.Params.keywords }}{{ if $i }}, {{ end }}{{ $keyword }}{{ end }}">{{ end }}
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="{{ .Site.LanguageCode }}">
 
-    
-    <link rel="canonical" href="http://localhost:1313/articles/design-thinking-process/">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ .Permalink }}">
 
-    
-    <link rel="icon" type="image/x-icon" href="http://localhost:1313/assets/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="http://localhost:1313/assets/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ .Site.BaseURL }}assets/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}assets/favicon.ico">
 
-    
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="http://localhost:1313/articles/design-thinking-process/">
-    <meta property="og:title" content="The Design Thinking Process in Product Development - Imtiaz Al Shariar - Design-forward Product Engineer">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:title"
+        content="{{ if .Title }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta property="og:description"
-        content="How applying design thinking principles transformed our product development process and led to better user experiences.">
-    <meta property="og:image"
-        content="http://localhost:1313/assets/socialbanner.jpg">
-    <meta property="og:site_name" content="Imtiaz Al Shariar - Design-forward Product Engineer">
-    <meta property="og:locale" content="en-us">
+        content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}assets/socialbanner.jpg">
+    <meta property="og:image:alt"
+        content="{{ if .Params.og.imageAlt }}{{ .Params.og.imageAlt }}{{ else }}{{ .Site.Params.og.imageAlt }}{{ end }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:locale" content="{{ .Site.LanguageCode }}">
 
-    
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="http://localhost:1313/articles/design-thinking-process/">
-    <meta property="twitter:title" content="The Design Thinking Process in Product Development - Imtiaz Al Shariar - Design-forward Product Engineer">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="{{ .Site.Params.twitter.card }}">
+    <meta property="twitter:url" content="{{ .Permalink }}">
+    <meta property="twitter:title"
+        content="{{ if .Title }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta property="twitter:description"
-        content="How applying design thinking principles transformed our product development process and led to better user experiences.">
-    <meta property="twitter:image"
-        content="http://localhost:1313/assets/socialbanner.jpg">
-    
-    <meta property="twitter:site" content="@imtiazalshariar">
-    
-    
-    <meta property="twitter:creator" content="@imtiazalshariar">
-    
+        content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="twitter:image" content="{{ .Site.BaseURL }}assets/socialbanner.jpg">
+    <meta property="twitter:image:alt"
+        content="{{ if .Params.og.imageAlt }}{{ .Params.og.imageAlt }}{{ else }}{{ .Site.Params.og.imageAlt }}{{ end }}">
+    <meta property="twitter:site" content="{{ .Site.Params.twitter.site }}">
+    <meta property="twitter:creator" content="{{ .Site.Params.twitter.creator }}">
 
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "The Design Thinking Process in Product Development",
-      "description": "How applying design thinking principles transformed our product development process and led to better user experiences.",
-      "url": "http:\/\/localhost:1313\/articles\/design-thinking-process\/",
-      "datePublished": "2024-01-10T00:00:00Z",
-      "dateModified": "2024-01-10T00:00:00Z",
-      "author": {
-        "@type": "Person",
-        "name": "Imtiaz Al Shariar Shamrat",
-        "url": "http:\/\/localhost:1313\/"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "Imtiaz Al Shariar Shamrat",
-        "url": "http:\/\/localhost:1313\/"
-      }
-    }
-    </script>
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="msapplication-TileColor" content="#2c3e50">
+    <meta name="application-name" content="{{ .Site.Title }}">
+
+    <!-- Google Site Verification -->
+    {{ if .Site.Params.seo.googleSiteVerification }}
+    <meta name="google-site-verification" content="{{ .Site.Params.seo.googleSiteVerification }}">
+    {{ end }}
+
+    <!-- Bing Site Verification -->
+    {{ if .Site.Params.seo.bingSiteVerification }}
+    <meta name="msvalidate.01" content="{{ .Site.Params.seo.bingSiteVerification }}">
+    {{ end }}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    
+    <!-- Calendly link widget begin -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    
+    <!-- Calendly link widget end -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body {
@@ -96,55 +96,17 @@
             margin: 2rem 0 1rem 0;
         }
 
-        h3 {
-            font-weight: 600;
-            margin: 1.5rem 0 0.75rem 0;
-        }
-
         p {
             margin-bottom: 1rem;
-        }
-
-        .prose {
-            max-width: none;
-        }
-
-        .prose h1,
-        .prose h2,
-        .prose h3,
-        .prose h4,
-        .prose h5,
-        .prose h6 {
-            color: #111827;
-            font-weight: 600;
-        }
-
-        .prose p {
-            color: #374151;
-            line-height: 1.7;
-        }
-
-        .prose ul,
-        .prose ol {
-            color: #374151;
-        }
-
-        .prose li {
-            margin-bottom: 0.5rem;
-        }
-
-        .prose strong {
-            color: #111827;
-            font-weight: 600;
         }
     </style>
 </head>
 
 <body>
-    
+    <!-- Navbar -->
     <nav class="relative bg-white border-b border-gray-200">
         <div class="container flex items-center mx-auto px-6 py-4">
-            
+            <!-- Logo and Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-8">
                 <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
                 <a href="/projects" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Projects</a>
@@ -155,12 +117,12 @@
                     class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Gallery</a>
             </div>
 
-            
+            <!-- Mobile Logo -->
             <div class="md:hidden">
                 <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
             </div>
 
-            
+            <!-- Desktop Action Buttons -->
             <div class="hidden md:flex items-center space-x-4 ml-auto">
                 <a href="https://imtiazalshariar.substack.com/" target="_blank" rel="noopener noreferrer"
                     class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full">Newsletter</a>
@@ -169,7 +131,7 @@
                     class="px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors cursor-pointer">Consult</a>
             </div>
 
-            
+            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button"
                 class="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors ml-auto">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,7 +141,7 @@
             </button>
         </div>
 
-        
+        <!-- Mobile Menu Overlay -->
         <div id="mobile-menu"
             class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50">
             <div class="px-6 py-4 space-y-4">
@@ -202,86 +164,70 @@
         </div>
     </nav>
 
-    
-    <article class="max-w-4xl mx-auto px-6 py-16">
-        
-        <header class="mb-12">
-            <div class="flex items-center gap-4 mb-6">
-                
-                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Design</span>
-                
-                
-                <span class="text-sm text-gray-500">6 min read</span>
-                
-                <span class="text-sm text-gray-500">January 10, 2024</span>
+    <!-- Opinion List -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Opinion</h1>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Personal thoughts, perspectives, and commentary on technology, design, and society.</p>
             </div>
 
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">The Design Thinking Process in Product Development</h1>
-
-            
-            <p class="text-xl text-gray-700 leading-relaxed">How applying design thinking principles transformed our product development process and led to better user experiences.</p>
-            
-        </header>
-
-        
-        
-
-        
-        <div class="prose prose-lg max-w-none">
-            <h2 id="what-is-design-thinking">What is Design Thinking?</h2>
-<p>Design thinking is a human-centered approach to innovation that draws from the designer&rsquo;s toolkit to integrate the needs of people, the possibilities of technology, and the requirements for business success.</p>
-<h2 id="the-five-stages">The Five Stages</h2>
-<h3 id="1-empathize">1. Empathize</h3>
-<p>Understanding the user&rsquo;s needs, experiences, and motivations through research and observation.</p>
-<h3 id="2-define">2. Define</h3>
-<p>Defining the problem based on user insights and research findings.</p>
-<h3 id="3-ideate">3. Ideate</h3>
-<p>Generating creative solutions through brainstorming and collaborative thinking.</p>
-<h3 id="4-prototype">4. Prototype</h3>
-<p>Creating tangible representations of ideas to test and refine concepts.</p>
-<h3 id="5-test">5. Test</h3>
-<p>Gathering feedback from users to validate solutions and iterate on designs.</p>
-<h2 id="impact-on-our-process">Impact on Our Process</h2>
-<p>Implementing design thinking has led to:</p>
-<ul>
-<li>40% faster time to market</li>
-<li>60% increase in user satisfaction scores</li>
-<li>25% reduction in development rework</li>
-</ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>Design thinking isn&rsquo;t just a process—it&rsquo;s a mindset that puts users at the center of everything we build.</p>
-
-        </div>
-
-        
-        <footer class="mt-16 pt-8 border-t border-gray-200">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-sm text-gray-600">Published on January 10, 2024</p>
-                    
-                    <div class="mt-2">
-                        
-                        <span class="inline-block px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded mr-2">Design Thinking</span>
-                        
-                        <span class="inline-block px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded mr-2">UX</span>
-                        
-                        <span class="inline-block px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded mr-2">Product Development</span>
-                        
+            <!-- Opinion List -->
+            <div class="space-y-8">
+                {{ range where .Site.RegularPages "Section" "articles" }}
+                {{ if in .Params.categories "Opinion" }}
+                <article class="bg-transparent">
+                    <div class="flex flex-col md:flex-row">
+                        <div
+                            class="w-full md:w-96 h-48 md:h-64 bg-gray-200 flex items-center justify-center flex-shrink-0">
+                            {{ if .Params.featuredImage }}
+                            <img src="{{ .Params.featuredImage }}" alt="{{ .Title }}"
+                                class="w-full h-full object-cover">
+                            {{ else }}
+                            <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            {{ end }}
+                        </div>
+                        <div class="p-4 md:p-6 flex-1">
+                            <div class="flex items-center justify-start gap-4 mb-3">
+                                {{ if .Params.categories }}
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{{ index
+                                    .Params.categories 0 }}</span>
+                                {{ end }}
+                                {{ if .Params.readTime }}
+                                <span class="text-sm text-gray-500">{{ .Params.readTime }}</span>
+                                {{ end }}
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ .Title }}</h3>
+                            <p class="text-gray-600 mb-4">{{ .Params.description | default .Summary | truncate 150 }}
+                            </p>
+                            <a href="{{ .Permalink }}"
+                                class="text-gray-900 font-medium hover:text-gray-700 flex items-center">
+                                Read more
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                    
-                </div>
-                <a href="/articles" class="text-gray-900 font-medium hover:text-gray-700 flex items-center">
-                    ← Back to Articles
-                </a>
+                </article>
+                {{ end }}
+                {{ end }}
             </div>
-        </footer>
-    </article>
+        </div>
+    </section>
 
-    
+    <!-- Footer -->
     <footer class="bg-white border-t border-gray-200 py-6 md:py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 md:gap-4">
-                <div class="text-xs sm:text-sm text-gray-600 text-left">© 2026 Imtiaz Al Shariar Shamrat. All rights reserved.</div>
+                <div class="text-xs sm:text-sm text-gray-600 text-left">© {{ now.Year }} {{
+                    .Site.Params.author }}. All rights reserved.</div>
                 <div class="flex items-center gap-4 sm:gap-6 flex-wrap">
                     <a href="https://www.linkedin.com/in/shariarsensei/" target="_blank" rel="noopener noreferrer"
                         class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">LinkedIn</a>
@@ -296,7 +242,7 @@
         </div>
     </footer>
 
-    
+    <!-- Mobile Menu JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -307,19 +253,19 @@
                 const isHidden = mobileMenu.classList.contains('hidden');
 
                 if (isHidden) {
-                    
+                    // Show menu
                     mobileMenu.classList.remove('hidden');
-                    
+                    // Change hamburger to X
                     hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
                 } else {
-                    
+                    // Hide menu
                     mobileMenu.classList.add('hidden');
-                    
+                    // Change X back to hamburger
                     hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
                 }
             });
 
-            
+            // Close menu when clicking outside
             document.addEventListener('click', function (event) {
                 if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
                     mobileMenu.classList.add('hidden');
@@ -327,7 +273,7 @@
                 }
             });
 
-            
+            // Close menu when clicking on menu links
             const menuLinks = mobileMenu.querySelectorAll('a');
             menuLinks.forEach(link => {
                 link.addEventListener('click', function () {
@@ -340,3 +286,4 @@
 </body>
 
 </html>
+
