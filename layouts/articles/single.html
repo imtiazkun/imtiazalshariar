@@ -49,27 +49,35 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "{{ .Title }}",
-      "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}",
+      "headline": "{{ .Title | replace `"` `\"` }}",
+      "description": "{{ if .Description }}{{ .Description | replace `"` `\"` }}{{ else }}{{ .Summary | truncate 160 | replace `"` `\"` }}{{ end }}",
       "url": "{{ .Permalink }}",
-      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-      {{ if .Lastmod }}"dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",{{ end }}
+      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"{{ if .Lastmod }},
+      "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}"{{ end }},
       "author": {
         "@type": "Person",
         "name": "{{ .Site.Params.author }}",
         "url": "{{ .Site.BaseURL }}"
       },
       "publisher": {
-        "@type": "Person",
+        "@type": "Organization",
         "name": "{{ .Site.Params.author }}",
-        "url": "{{ .Site.BaseURL }}"
+        "url": "{{ .Site.BaseURL }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ .Site.BaseURL }}assets/socialbanner.jpg"
+        }
       }{{ if .Params.featuredImage }},
       "image": {
         "@type": "ImageObject",
         "url": "{{ .Params.featuredImage | absURL }}",
         "width": 1200,
         "height": 630
-      }{{ end }}
+      }{{ end }},
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}"
+      }
     }
     </script>
 
@@ -271,11 +279,11 @@
                 <div class="text-xs sm:text-sm text-gray-600 text-left">© {{ now.Year }} {{
                     .Site.Params.author }}. All rights reserved.</div>
                 <div class="flex items-center gap-4 sm:gap-6 flex-wrap">
-                    <a href="https://www.linkedin.com/in/shariarsensei/" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.linkedin.com/in/imtiazalshariar/" target="_blank" rel="noopener noreferrer"
                         class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">LinkedIn</a>
                     <a href="https://github.com/imtiazkun" target="_blank" rel="noopener noreferrer"
                         class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">GitHub</a>
-                    <a href="https://x.com/shariarsensei" target="_blank" rel="noopener noreferrer"
+                    <a href="https://x.com/imtiazalshariar" target="_blank" rel="noopener noreferrer"
                         class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">Twitter/X</a>
                     <a href="https://www.reshh.com/u/imtiazkun" target="_blank" rel="noopener noreferrer"
                         class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">Reshh</a>
