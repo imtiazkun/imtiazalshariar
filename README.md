@@ -1,57 +1,149 @@
-# Hugo Site for imtiazalshariar.com
+# imtiazalshariar.com
 
-This Hugo site is configured for deployment to GitHub Pages with a custom domain.
+Personal portfolio and blog site for Imtiaz Al Shariar - Design-forward Product Engineer. Built with Hugo static site generator and deployed to GitHub Pages.
 
-## Setup Instructions
+## About
 
-### 1. GitHub Repository Setup
-1. Create a new repository on GitHub (e.g., `imtiazalshariar.github.io`)
-2. Push this code to the `main` branch
-3. Go to repository Settings → Pages
-4. Under "Source", select "GitHub Actions"
+This site showcases:
+- **Portfolio**: Design-forward product engineering work and case studies
+- **Articles**: Technical insights, design thinking, and thought leadership
+- **Case Studies**: Real-world projects including climate change programs and scalable system architecture
 
-### 2. Cloudflare DNS Configuration
-In your Cloudflare dashboard for `imtiazalshariar.com`:
+## Project Structure
 
-1. **Add CNAME record:**
-   - Type: CNAME
-   - Name: `www`
-   - Target: `imtiazalshariar.github.io`
-   - Proxy status: Proxied (orange cloud)
+```
+.
+├── content/              # Site content (Markdown files)
+│   ├── _index.md        # Homepage content
+│   └── articles/        # Blog articles and case studies
+├── layouts/             # Hugo templates
+│   ├── articles/        # Article list and single page templates
+│   └── index.html       # Homepage template
+├── static/              # Static assets (images, favicons, etc.)
+│   └── assets/          # Images, icons, and other media
+├── assets/              # Source assets (processed by Hugo)
+├── public/              # Generated site (gitignored, built on deploy)
+└── hugo.toml           # Hugo configuration
+```
 
-2. **Add A records for root domain:**
-   - Type: A
-   - Name: `@`
-   - Target: `185.199.108.153`
-   - Proxy status: Proxied (orange cloud)
-   - Add another A record with target: `185.199.109.153`
+## Content
 
-### 3. GitHub Pages Settings
-1. In your GitHub repository, go to Settings → Pages
-2. Under "Custom domain", enter: `imtiazalshariar.com`
-3. Check "Enforce HTTPS"
+### Articles
 
-### 4. Local Development
+The site includes articles on:
+- **Technical Topics**: AI integration challenges, scalable systems architecture
+- **Design Thinking**: Product development processes and methodologies
+- **Case Studies**: Climate change programs, NGO work, and community initiatives
+
+Articles are written in Markdown with front matter for metadata (title, date, categories, tags, etc.).
+
+## Local Development
+
+### Prerequisites
+
+- [Hugo](https://gohugo.io/) (Extended version recommended)
+- Git
+
+### Setup
+
 ```bash
-# Install Hugo
+# Install Hugo (macOS)
 brew install hugo
+
+# Clone the repository
+git clone <repository-url>
+cd imtiazalshariar
 
 # Run development server
 hugo server -D
 
-# Build for production
-hugo
+# The site will be available at http://localhost:1313
 ```
 
-## Files Created
-- `static/CNAME` - Custom domain configuration
-- `.github/workflows/hugo.yml` - GitHub Actions deployment workflow
-- `hugo.toml` - Updated with correct baseURL
+### Commands
+
+```bash
+# Start development server with drafts
+hugo server -D
+
+# Build site for production
+hugo
+
+# Build with verbose output
+hugo -v
+```
 
 ## Deployment
-The site will automatically deploy when you push to the `main` branch. The GitHub Actions workflow will:
-1. Install Hugo
-2. Build the site
-3. Deploy to GitHub Pages
 
-Your site will be available at `https://imtiazalshariar.com` once DNS propagation is complete (usually 5-15 minutes).
+The site is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the `main` branch.
+
+### Deployment Configuration
+
+- **Platform**: GitHub Pages
+- **Custom Domain**: `imtiazalshariar.com`
+- **Build**: Automated via `.github/workflows/hugo.yml`
+- **DNS**: Configured via Cloudflare
+
+### Manual Deployment
+
+If you need to deploy manually:
+
+```bash
+# Build the site
+hugo
+
+# The generated site will be in the `public/` directory
+# Push to GitHub to trigger automatic deployment
+```
+
+## Adding New Content
+
+### Create a New Article
+
+```bash
+# Create new article (Hugo will create the directory structure)
+hugo new articles/my-new-article/index.md
+```
+
+Edit the front matter in the generated file:
+
+```yaml
+---
+title: "Your Article Title"
+date: 2024-01-15
+draft: false
+categories: ["Technical"]
+tags: ["tag1", "tag2"]
+readTime: "5 min read"
+description: "Article description for SEO and previews"
+---
+```
+
+### Article Assets
+
+Place article-specific images in the article's directory:
+```
+content/articles/my-article/
+├── index.md
+├── banner.jpg
+└── cover.jpg
+```
+
+## Configuration
+
+Main configuration is in `hugo.toml`:
+- Site title and description
+- Social media links (GitHub, LinkedIn)
+- SEO settings (Google Analytics, site verification)
+- Open Graph and Twitter Card metadata
+
+## Technologies
+
+- **Hugo**: Static site generator
+- **GitHub Pages**: Hosting
+- **GitHub Actions**: CI/CD
+- **Cloudflare**: DNS and CDN
+
+## License
+
+This project is personal and proprietary.
