@@ -159,58 +159,60 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="relative flex items-center py-4 px-6 bg-white border-b border-gray-200">
-        <!-- Logo and Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-8">
-            <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
-            <a href="/projects" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Projects</a>
-            <a href="/case-studies" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Case Studies</a>
-            <a href="https://www.reshh.com/u/imtiazkun" target="_blank" rel="noopener noreferrer"
-                class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Gallery</a>
-        </div>
-
-        <!-- Mobile Logo -->
-        <div class="md:hidden">
-            <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
-        </div>
-
-        <!-- Desktop Action Buttons -->
-        <div class="hidden md:flex items-center space-x-4 ml-auto">
-            <a href="https://imtiazalshariar.substack.com/" target="_blank" rel="noopener noreferrer"
-                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full">Newsletter</a>
-            <a href=""
-                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/imtiaz-tingeworks/30min'});return false;"
-                class="px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors cursor-pointer">Consult</a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-button"
-            class="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-        </button>
-
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu"
-            class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50">
-            <div class="px-6 py-4 space-y-4">
-                <a href="/projects"
-                    class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Projects</a>
-                <a href="/case-studies"
-                    class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Case Studies</a>
+    <nav class="relative bg-white border-b border-gray-200">
+        <div class="container flex items-center mx-auto px-6 py-4">
+            <!-- Logo and Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
+                <a href="/projects" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Projects</a>
+                <a href="/case-studies" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Case
+                    Studies</a>
                 <a href="https://www.reshh.com/u/imtiazkun" target="_blank" rel="noopener noreferrer"
-                    class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Gallery</a>
-                <div class="pt-4 border-t border-gray-200 space-y-3">
-                    <a href="https://imtiazalshariar.substack.com/" target="_blank" rel="noopener noreferrer"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full border border-gray-300 text-center">Newsletter</a>
-                    <a href=""
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/imtiaz-tingeworks/30min'});return false;"
-                        class="block w-full px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors text-center cursor-pointer">Consult</a>
+                    class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Gallery</a>
+            </div>
+
+            <!-- Mobile Logo -->
+            <div class="md:hidden">
+                <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
+            </div>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden md:flex items-center space-x-4 ml-auto">
+                <a href="https://imtiazalshariar.substack.com/" target="_blank" rel="noopener noreferrer"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full">Newsletter</a>
+                <a href=""
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/imtiaz-tingeworks/30min'});return false;"
+                    class="px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors cursor-pointer">Consult</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button"
+                class="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu"
+                class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50">
+                <div class="px-6 py-4 space-y-4">
+                    <a href="/projects"
+                        class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Projects</a>
+                    <a href="/case-studies"
+                        class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Case Studies</a>
+                    <a href="https://www.reshh.com/u/imtiazkun" target="_blank" rel="noopener noreferrer"
+                        class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Gallery</a>
+                    <div class="pt-4 border-t border-gray-200 space-y-3">
+                        <a href="https://imtiazalshariar.substack.com/" target="_blank" rel="noopener noreferrer"
+                            class="block w-full px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full border border-gray-300 text-center">Newsletter</a>
+                        <a href=""
+                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/imtiaz-tingeworks/30min'});return false;"
+                            class="block w-full px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors text-center cursor-pointer">Consult</a>
+                    </div>
                 </div>
             </div>
-        </div>
     </nav>
 
     <!-- Hero Section -->
