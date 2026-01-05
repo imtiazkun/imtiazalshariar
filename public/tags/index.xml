@@ -30,6 +30,34 @@
       <description></description>
     </item>
     <item>
+      <title>E-Commerce</title>
+      <link>http://localhost:1313/tags/e-commerce/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/e-commerce/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Full-Stack</title>
+      <link>http://localhost:1313/tags/full-stack/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/full-stack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Inventory Management</title>
+      <link>http://localhost:1313/tags/inventory-management/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/inventory-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Real-Time</title>
+      <link>http://localhost:1313/tags/real-time/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/real-time/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Architecture</title>
       <link>http://localhost:1313/tags/architecture/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>

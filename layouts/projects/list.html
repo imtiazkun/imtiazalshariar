@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="{{ .Site.LanguageCode }}">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies - Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <meta name="description" content="In-depth case studies showcasing real-world projects, solutions, and outcomes.">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Description | default .Site.Params.description }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    
+    <!-- Calendly link widget begin -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    
+    <!-- Calendly link widget end -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body {
@@ -42,9 +42,9 @@
 </head>
 
 <body>
-    
+    <!-- Navbar -->
     <nav class="relative flex items-center py-4 px-6 bg-white border-b border-gray-200">
-        
+        <!-- Logo and Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-8">
             <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
             <a href="/projects" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Projects</a>
@@ -53,12 +53,12 @@
                 class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Gallery</a>
         </div>
 
-        
+        <!-- Mobile Logo -->
         <div class="md:hidden">
             <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
         </div>
 
-        
+        <!-- Desktop Action Buttons -->
         <div class="hidden md:flex items-center space-x-4 ml-auto">
             <a href="https://imtiazalshariar.substack.com/" target="_blank" rel="noopener noreferrer"
                 class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full">Newsletter</a>
@@ -67,7 +67,7 @@
                 class="px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors cursor-pointer">Consult</a>
         </div>
 
-        
+        <!-- Mobile Menu Button -->
         <button id="mobile-menu-button"
             class="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@
             </svg>
         </button>
 
-        
+        <!-- Mobile Menu Overlay -->
         <div id="mobile-menu"
             class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50">
             <div class="px-6 py-4 space-y-4">
@@ -97,48 +97,48 @@
         </div>
     </nav>
 
-    
+    <!-- Projects List -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Case Studies</h1>
-                <p class="text-lg text-gray-700 max-w-2xl mx-auto">In-depth case studies showcasing real-world projects,
-                    solutions, and outcomes.</p>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Projects</h1>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Showcasing innovative projects and technical
+                    implementations.</p>
             </div>
 
-            
+            <!-- Projects List -->
             <div class="space-y-8">
-                
-                
-                
-                
-                
-                
+                {{ range where .Site.RegularPages "Section" "articles" }}
+                {{ if in .Params.categories "Projects" }}
                 <article class="bg-transparent">
                     <div class="flex flex-col md:flex-row">
                         <div
                             class="w-full md:w-96 h-48 md:h-64 bg-gray-200 flex items-center justify-center flex-shrink-0">
-                            
+                            {{ if .Params.featuredImage }}
+                            <img src="{{ .Params.featuredImage }}" alt="{{ .Title }}"
+                                class="w-full h-full object-cover">
+                            {{ else }}
                             <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
                                     clip-rule="evenodd"></path>
                             </svg>
-                            
+                            {{ end }}
                         </div>
                         <div class="p-4 md:p-6 flex-1">
                             <div class="flex items-center justify-start gap-4 mb-3">
-                                
-                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Case Studies</span>
-                                
-                                
-                                <span class="text-sm text-gray-500">8 min read</span>
-                                
+                                {{ if .Params.categories }}
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{{ index
+                                    .Params.categories 0 }}</span>
+                                {{ end }}
+                                {{ if .Params.readTime }}
+                                <span class="text-sm text-gray-500">{{ .Params.readTime }}</span>
+                                {{ end }}
                             </div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Building Scalable Systems: A Case Study</h3>
-                            <p class="text-gray-600 mb-4">How we designed and implemented a microservices architecture that handles 10M+ requests per day while maintaining sub-100ms response times.
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ .Title }}</h3>
+                            <p class="text-gray-600 mb-4">{{ .Params.description | default .Summary | truncate 150 }}
                             </p>
-                            <a href="http://localhost:1313/articles/building-scalable-systems/"
+                            <a href="{{ .Permalink }}"
                                 class="text-gray-900 font-medium hover:text-gray-700 flex items-center">
                                 Read more
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -150,21 +150,18 @@
                         </div>
                     </div>
                 </article>
-                
-                
-                
-                
-                
-                
+                {{ end }}
+                {{ end }}
             </div>
         </div>
     </section>
 
-    
+    <!-- Footer -->
     <footer class="bg-white border-t border-gray-200 py-6 md:py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
-                <p class="text-xs sm:text-sm text-gray-600 text-center md:text-left mb-2 md:mb-0">© 2026 Imtiaz Al Shariar. All rights reserved.</p>
+                <p class="text-xs sm:text-sm text-gray-600 text-center md:text-left mb-2 md:mb-0">© {{ now.Year }} {{
+                    .Site.Params.author }}. All rights reserved.</p>
                 <div class="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
                     <a href="https://www.linkedin.com/in/shariarsensei/" target="_blank" rel="noopener noreferrer"
                         class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">LinkedIn</a>
@@ -177,7 +174,7 @@
         </div>
     </footer>
 
-    
+    <!-- Mobile Menu JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -188,19 +185,19 @@
                 const isHidden = mobileMenu.classList.contains('hidden');
 
                 if (isHidden) {
-                    
+                    // Show menu
                     mobileMenu.classList.remove('hidden');
-                    
+                    // Change hamburger to X
                     hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
                 } else {
-                    
+                    // Hide menu
                     mobileMenu.classList.add('hidden');
-                    
+                    // Change X back to hamburger
                     hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
                 }
             });
 
-            
+            // Close menu when clicking outside
             document.addEventListener('click', function (event) {
                 if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
                     mobileMenu.classList.add('hidden');
@@ -208,7 +205,7 @@
                 }
             });
 
-            
+            // Close menu when clicking on menu links
             const menuLinks = mobileMenu.querySelectorAll('a');
             menuLinks.forEach(link => {
                 link.addEventListener('click', function () {

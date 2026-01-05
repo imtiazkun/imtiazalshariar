@@ -49,6 +49,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body {
@@ -119,9 +123,10 @@
         
         <div class="hidden md:flex items-center space-x-8">
             <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
-            <a href="#" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Projects</a>
-            <a href="/articles" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Case Study</a>
-            <a href="#" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Gallery</a>
+            <a href="/projects" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Projects</a>
+            <a href="/case-studies" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Case Studies</a>
+            <a href="https://www.reshh.com/u/imtiazkun" target="_blank" rel="noopener noreferrer"
+                class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Gallery</a>
         </div>
 
         
@@ -131,10 +136,11 @@
 
         
         <div class="hidden md:flex items-center space-x-4 ml-auto">
-            <button
-                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full">Subscribe</button>
-            <button
-                class="px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors">Consult</button>
+            <a href="https://imtiazalshariar.substack.com/" target="_blank" rel="noopener noreferrer"
+                class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full">Newsletter</a>
+            <a href=""
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/imtiaz-tingeworks/30min'});return false;"
+                class="px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors cursor-pointer">Consult</a>
         </div>
 
         
@@ -150,15 +156,18 @@
         <div id="mobile-menu"
             class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50">
             <div class="px-6 py-4 space-y-4">
-                <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Projects</a>
-                <a href="/articles" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Case
-                    Study</a>
-                <a href="#" class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Gallery</a>
+                <a href="/projects"
+                    class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Projects</a>
+                <a href="/case-studies"
+                    class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Case Studies</a>
+                <a href="https://www.reshh.com/u/imtiazkun" target="_blank" rel="noopener noreferrer"
+                    class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Gallery</a>
                 <div class="pt-4 border-t border-gray-200 space-y-3">
-                    <button
-                        class="w-full px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full border border-gray-300">Subscribe</button>
-                    <button
-                        class="w-full px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors">Consult</button>
+                    <a href="https://imtiazalshariar.substack.com/" target="_blank" rel="noopener noreferrer"
+                        class="block w-full px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full border border-gray-300 text-center">Newsletter</a>
+                    <a href=""
+                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/imtiaz-tingeworks/30min'});return false;"
+                        class="block w-full px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors text-center cursor-pointer">Consult</a>
                 </div>
             </div>
         </div>
@@ -238,6 +247,23 @@
             </div>
         </footer>
     </article>
+
+    
+    <footer class="bg-white border-t border-gray-200 py-6 md:py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
+                <p class="text-xs sm:text-sm text-gray-600 text-center md:text-left mb-2 md:mb-0">© 2026 Imtiaz Al Shariar. All rights reserved.</p>
+                <div class="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
+                    <a href="https://www.linkedin.com/in/shariarsensei/" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">LinkedIn</a>
+                    <a href="https://x.com/shariarsensei" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">Twitter/X</a>
+                    <a href="https://www.reshh.com/u/imtiazkun" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">Reshh</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     
     <script>
