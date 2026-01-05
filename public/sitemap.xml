@@ -2,85 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://imtiazalshariar.com/articles/</loc>
+    <loc>http://localhost:1313/articles/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/categories/climate/</loc>
+    <loc>http://localhost:1313/categories/climate/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/climate/</loc>
+    <loc>http://localhost:1313/tags/climate/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/categories/community/</loc>
+    <loc>http://localhost:1313/categories/community/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/community/</loc>
+    <loc>http://localhost:1313/tags/community/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/categories/ngo/</loc>
+    <loc>http://localhost:1313/categories/ngo/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/ngo/</loc>
+    <loc>http://localhost:1313/tags/ngo/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</loc>
+    <loc>http://localhost:1313/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/architecture/</loc>
+    <loc>http://localhost:1313/tags/architecture/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/articles/building-scalable-systems/</loc>
+    <loc>http://localhost:1313/articles/building-scalable-systems/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/categories/case-studies/</loc>
+    <loc>http://localhost:1313/categories/case-studies/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/scalability/</loc>
+    <loc>http://localhost:1313/tags/scalability/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/system-design/</loc>
+    <loc>http://localhost:1313/tags/system-design/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/categories/design/</loc>
+    <loc>http://localhost:1313/categories/design/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/design-thinking/</loc>
+    <loc>http://localhost:1313/tags/design-thinking/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/product-development/</loc>
+    <loc>http://localhost:1313/tags/product-development/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/articles/design-thinking-process/</loc>
+    <loc>http://localhost:1313/articles/design-thinking-process/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/ux/</loc>
+    <loc>http://localhost:1313/tags/ux/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/ai/</loc>
+    <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/challenges/</loc>
+    <loc>http://localhost:1313/tags/challenges/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/articles/ai-integration-challenges/</loc>
+    <loc>http://localhost:1313/articles/ai-integration-challenges/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/integration/</loc>
+    <loc>http://localhost:1313/tags/integration/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/tags/machine-learning/</loc>
+    <loc>http://localhost:1313/tags/machine-learning/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/categories/technical/</loc>
+    <loc>http://localhost:1313/categories/technical/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://imtiazalshariar.com/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/case-studies/</loc>
   </url>
 </urlset>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Community on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>https://imtiazalshariar.com/categories/community/</link>
+    <link>http://localhost:1313/categories/community/</link>
     <description>Recent content in Community on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://imtiazalshariar.com/categories/community/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/community/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pink Tanks and Green Futures: Balance Between Institutional and Public Participation in BRAC’s Climate Change Program</title>
-      <link>https://imtiazalshariar.com/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</link>
+      <link>http://localhost:1313/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://imtiazalshariar.com/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</guid>
+      <guid>http://localhost:1313/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</guid>
       <description>&lt;p&gt;A persistent question has intrigued me to a great extent, whether institutional (NGOs/governments) efforts alone can uplift a community or nation. This question has been taking up more space in my thoughts recently as I started my very own initiative that works on making STEM education more accessible to the greater Bengali-speaking community within Bangladesh and outside. I was fortunate to find BRAC’s Climate Change Program (CCP) among some very interesting organizations at my campus for an event (The Way) in our Multipurpose Hall. They were able to address this quite elegantly.&lt;/p&gt;</description>
     </item>
   </channel>
