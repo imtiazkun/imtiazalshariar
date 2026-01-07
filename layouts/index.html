@@ -237,8 +237,8 @@
 
     <!-- Hero Section -->
     <section class="bg-white">
-        <div class="container flex mx-auto px-6 py-16">
-            <div class="lg:w-1/2">
+        <div class="container flex flex-col lg:flex-row items-center lg:items-start gap-8 mx-auto px-6 py-16">
+            <div class="lg:w-2/3 xl:w-1/2 order-2 lg:order-1">
                 <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
                     Design-forward<br>
                     Product Engineer.<br>
@@ -261,6 +261,10 @@
                         Consult
                     </a>
                 </div>
+            </div>
+            <div class="lg:w-1/3 xl:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2">
+                <canvas id="bouncing-circles" class="w-full aspect-square max-w-md lg:max-w-lg rounded-lg shadow-lg"
+                    style="background-color: #5f2dc2;"></canvas>
             </div>
         </div>
     </section>
@@ -474,6 +478,211 @@
             // Initialize
             buildMarquee();
             animate();
+
+            // Bouncing Circles Animation
+            const canvas = document.getElementById('bouncing-circles');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                const colors = ['#000000', '#FFFFFF']; // Black and white only
+
+                // Pixelated rendering
+                ctx.imageSmoothingEnabled = false;
+
+                // Circle class
+                class Circle {
+                    constructor(radiusRatio, color) {
+                        this.radiusRatio = radiusRatio;
+                        this.color = color;
+                        this.vx = (Math.random() - 0.5) * 3;
+                        this.vy = (Math.random() - 0.5) * 3;
+                        this.updateRadius();
+                        this.x = canvas.width / 2;
+                        this.y = canvas.height / 2;
+                    }
+
+                    updateRadius() {
+                        this.radius = (canvas.width / 4) * this.radiusRatio;
+                    }
+
+                    checkCollision(other) {
+                        const dx = other.x - this.x;
+                        const dy = other.y - this.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        const minDistance = this.radius + other.radius;
+
+                        if (distance < minDistance && distance > 0) {
+                            // Collision detected - separate circles first
+                            const overlap = minDistance - distance;
+                            const separationX = (dx / distance) * overlap * 0.5;
+                            const separationY = (dy / distance) * overlap * 0.5;
+
+                            this.x -= separationX;
+                            this.y -= separationY;
+                            other.x += separationX;
+                            other.y += separationY;
+
+                            // Calculate collision response (elastic collision)
+                            const normalX = dx / distance;
+                            const normalY = dy / distance;
+
+                            // Relative velocity
+                            const relativeVx = other.vx - this.vx;
+                            const relativeVy = other.vy - this.vy;
+
+                            // Velocity along normal
+                            const velocityAlongNormal = relativeVx * normalX + relativeVy * normalY;
+
+                            // Don't resolve if velocities are separating
+                            if (velocityAlongNormal > 0) return;
+
+                            // Elastic collision with mass consideration (using radius as mass proxy)
+                            const restitution = 0.9; // Bounciness
+                            const impulse = (2 * velocityAlongNormal) / (1 + 1); // Simplified: equal mass
+
+                            // Update velocities
+                            this.vx += impulse * normalX * restitution;
+                            this.vy += impulse * normalY * restitution;
+                            other.vx -= impulse * normalX * restitution;
+                            other.vy -= impulse * normalY * restitution;
+                        }
+                    }
+
+                    update() {
+                        this.x += this.vx;
+                        this.y += this.vy;
+
+                        // Bounce off walls
+                        if (this.x - this.radius <= 0 || this.x + this.radius >= canvas.width) {
+                            this.vx = -this.vx;
+                        }
+                        if (this.y - this.radius <= 0 || this.y + this.radius >= canvas.height) {
+                            this.vy = -this.vy;
+                        }
+
+                        // Keep within bounds
+                        this.x = Math.max(this.radius, Math.min(canvas.width - this.radius, this.x));
+                        this.y = Math.max(this.radius, Math.min(canvas.height - this.radius, this.y));
+                    }
+
+                    draw() {
+                        ctx.fillStyle = this.color;
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+
+                // Create exactly 3 circles with specific size ratios
+                const circles = [];
+
+                // Assign random black/white colors ensuring not all are the same
+                function assignInitialColors(count) {
+                    const initialColors = [];
+                    let blackCount = 0;
+                    let whiteCount = 0;
+
+                    // Randomly assign colors
+                    for (let i = 0; i < count; i++) {
+                        const color = colors[Math.floor(Math.random() * 2)];
+                        initialColors.push(color);
+                        if (color === '#000000') blackCount++;
+                        else whiteCount++;
+                    }
+
+                    // Ensure at least one of each color
+                    if (blackCount === 0) {
+                        initialColors[0] = '#000000';
+                    } else if (whiteCount === 0) {
+                        initialColors[0] = '#FFFFFF';
+                    }
+
+                    return initialColors;
+                }
+
+                // Create 10 size categories, with n circles in each category (n = category number)
+                // Category 1: 1 circle, Category 2: 2 circles, Category 3: 3 circles, etc.
+                // Total: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55 circles
+                const sizeCategories = [
+                    1.0,      // Category 1: 1 circle (largest)
+                    0.7,      // Category 2: 2 circles
+                    0.5,      // Category 3: 3 circles
+                    0.35,     // Category 4: 4 circles
+                    0.25,     // Category 5: 5 circles
+                    0.18,     // Category 6: 6 circles
+                    0.13,     // Category 7: 7 circles
+                    0.10,     // Category 8: 8 circles
+                    0.08,     // Category 9: 9 circles
+                    0.06      // Category 10: 10 circles (smallest)
+                ];
+
+                // Calculate total number of circles
+                let totalCircles = 0;
+                sizeCategories.forEach((_, index) => {
+                    totalCircles += index + 1;
+                });
+
+                const initialColors = assignInitialColors(totalCircles);
+
+                // Create circles for each category
+                let colorIndex = 0;
+                sizeCategories.forEach((ratio, categoryIndex) => {
+                    const circlesInCategory = categoryIndex + 1; // n circles for category n
+                    for (let i = 0; i < circlesInCategory; i++) {
+                        circles.push(new Circle(ratio, initialColors[colorIndex]));
+                        colorIndex++;
+                    }
+                });
+
+                // Set initial positions - random locations ensuring circles stay within bounds
+                circles.forEach((circle) => {
+                    // Random position with margin for radius
+                    circle.x = Math.random() * (canvas.width - circle.radius * 2) + circle.radius;
+                    circle.y = Math.random() * (canvas.height - circle.radius * 2) + circle.radius;
+                });
+
+                // Set canvas size to be square
+                function resizeCanvas() {
+                    const container = canvas.parentElement;
+                    const size = Math.min(container.offsetWidth, 500);
+                    canvas.width = size;
+                    canvas.height = size;
+
+                    // Update circle radii when canvas resizes
+                    circles.forEach(circle => {
+                        circle.updateRadius();
+                    });
+                }
+
+                resizeCanvas();
+                window.addEventListener('resize', resizeCanvas);
+
+                // Animation loop
+                function animateCircles() {
+                    ctx.fillStyle = '#5f2dc2';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                    // Update positions
+                    circles.forEach(circle => {
+                        circle.update();
+                    });
+
+                    // Check collisions between all pairs of circles
+                    for (let i = 0; i < circles.length; i++) {
+                        for (let j = i + 1; j < circles.length; j++) {
+                            circles[i].checkCollision(circles[j]);
+                        }
+                    }
+
+                    // Draw circles
+                    circles.forEach(circle => {
+                        circle.draw();
+                    });
+
+                    requestAnimationFrame(animateCircles);
+                }
+
+                animateCircles();
+            }
         });
     </script>
 </body>
