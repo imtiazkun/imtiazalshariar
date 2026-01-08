@@ -1,6 +1,7 @@
 baseURL = 'https://imtiazalshariar.com/'
 languageCode = 'en-us'
 title = 'Imtiaz Al Shariar - Design-forward Product Engineer'
+buildFuture = true
 
 [params]
   description = "Design-forward Product Engineer architecting scalable, user-centric systems. Portfolio and blog showcasing innovative solutions and technical expertise."

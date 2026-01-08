@@ -6,60 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Opinion - Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <meta name="title" content="Opinion - Imtiaz Al Shariar - Design-forward Product Engineer">
+    <title>Why Traditional Unix Permissions Fall Short — and How ACLs Fix Them - Imtiaz Al Shariar - Design-forward Product Engineer</title>
+    <meta name="title" content="Why Traditional Unix Permissions Fall Short — and How ACLs Fix Them - Imtiaz Al Shariar - Design-forward Product Engineer">
     <meta name="description"
-        content="Personal thoughts, perspectives, and commentary on technology, design, and society.">
-    
-    <meta name="keywords"
-        content="product engineer, design, scalable systems, user-centric, portfolio, blog, frontend, backend, full-stack, architecture">
-    <meta name="author" content="Imtiaz Al Shariar Shamrat">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="language" content="en-us">
+        content="Essential principles and patterns for designing robust, maintainable, and developer-friendly APIs.">
 
     
-    <link rel="canonical" href="http://localhost:1313/opinion/">
+    <link rel="canonical" href="http://localhost:1313/articles/api-design-best-practices/">
 
     
     <link rel="icon" type="image/x-icon" href="http://localhost:1313/assets/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="http://localhost:1313/assets/favicon.ico">
 
     
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:1313/opinion/">
-    <meta property="og:title"
-        content="Opinion - Imtiaz Al Shariar - Design-forward Product Engineer">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://localhost:1313/articles/api-design-best-practices/">
+    <meta property="og:title" content="Why Traditional Unix Permissions Fall Short — and How ACLs Fix Them - Imtiaz Al Shariar - Design-forward Product Engineer">
     <meta property="og:description"
-        content="Personal thoughts, perspectives, and commentary on technology, design, and society.">
-    <meta property="og:image" content="http://localhost:1313/assets/socialbanner.jpg">
-    <meta property="og:image:alt"
-        content="Imtiaz Al Shariar - Design-forward Product Engineer">
+        content="Essential principles and patterns for designing robust, maintainable, and developer-friendly APIs.">
+    <meta property="og:image"
+        content="http://localhost:1313/assets/socialbanner.jpg">
     <meta property="og:site_name" content="Imtiaz Al Shariar - Design-forward Product Engineer">
     <meta property="og:locale" content="en-us">
 
     
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="http://localhost:1313/opinion/">
-    <meta property="twitter:title"
-        content="Opinion - Imtiaz Al Shariar - Design-forward Product Engineer">
+    <meta property="twitter:url" content="http://localhost:1313/articles/api-design-best-practices/">
+    <meta property="twitter:title" content="Why Traditional Unix Permissions Fall Short — and How ACLs Fix Them - Imtiaz Al Shariar - Design-forward Product Engineer">
     <meta property="twitter:description"
-        content="Personal thoughts, perspectives, and commentary on technology, design, and society.">
-    <meta property="twitter:image" content="http://localhost:1313/assets/socialbanner.jpg">
-    <meta property="twitter:image:alt"
-        content="Imtiaz Al Shariar - Design-forward Product Engineer">
+        content="Essential principles and patterns for designing robust, maintainable, and developer-friendly APIs.">
+    <meta property="twitter:image"
+        content="http://localhost:1313/assets/socialbanner.jpg">
+    
     <meta property="twitter:site" content="@imtiazalshariar">
+    
+    
     <meta property="twitter:creator" content="@imtiazalshariar">
-
-    
-    <meta name="theme-color" content="#2c3e50">
-    <meta name="msapplication-TileColor" content="#2c3e50">
-    <meta name="application-name" content="Imtiaz Al Shariar - Design-forward Product Engineer">
-
-    
     
 
     
-    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "\u0022",
+      "description": "\u0022",
+      "url": "http:\/\/localhost:1313\/articles\/api-design-best-practices\/",
+      "datePublished": "2025-12-19T00:00:00Z",
+      "dateModified": "2025-12-19T00:00:00Z",
+      "author": {
+        "@type": "Person",
+        "name": "Imtiaz Al Shariar Shamrat",
+        "url": "http:\/\/localhost:1313\/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Imtiaz Al Shariar Shamrat",
+        "url": "http:\/\/localhost:1313\/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "http:\/\/localhost:1313\/assets/socialbanner.jpg"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/articles\/api-design-best-practices\/"
+      }
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,8 +104,46 @@
             margin: 2rem 0 1rem 0;
         }
 
+        h3 {
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
         p {
             margin-bottom: 1rem;
+        }
+
+        .prose {
+            max-width: none;
+        }
+
+        .prose h1,
+        .prose h2,
+        .prose h3,
+        .prose h4,
+        .prose h5,
+        .prose h6 {
+            color: #111827;
+            font-weight: 600;
+        }
+
+        .prose p {
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        .prose ul,
+        .prose ol {
+            color: #374151;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #111827;
+            font-weight: 600;
         }
 
          
@@ -106,8 +158,8 @@
                 border-color: #333333;
             }
 
-            section.bg-gray-50 {
-                background-color: #000000 !important;
+            article {
+                background-color: #000000;
             }
 
             footer.bg-white {
@@ -159,8 +211,23 @@
                 color: #ffffff !important;
             }
 
-            .hover\:bg-gray-100:hover {
-                background-color: #222222 !important;
+            .prose h1,
+            .prose h2,
+            .prose h3,
+            .prose h4,
+            .prose h5,
+            .prose h6 {
+                color: #ffffff !important;
+            }
+
+            .prose p,
+            .prose ul,
+            .prose ol {
+                color: #e5e5e5 !important;
+            }
+
+            .prose strong {
+                color: #ffffff !important;
             }
         }
     </style>
@@ -229,31 +296,120 @@
     </nav>
 
     
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Opinion</h1>
-                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Personal thoughts, perspectives, and commentary on technology, design, and society.</p>
+    <article class="max-w-4xl mx-auto px-6 py-16">
+        
+        <header class="mb-12">
+            <div class="flex items-center gap-4 mb-6">
+                
+                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Technical</span>
+                
+                
+                <span class="text-sm text-gray-500">6 min read</span>
+                
+                <span class="text-sm text-gray-500">December 19, 2025</span>
             </div>
 
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Why Traditional Unix Permissions Fall Short — and How ACLs Fix Them</h1>
+
             
-            <div class="space-y-8">
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            </div>
+            <p class="text-xl text-gray-700 leading-relaxed">Essential principles and patterns for designing robust, maintainable, and developer-friendly APIs.</p>
+            
+        </header>
+
+        
+        
+
+        
+        <div class="prose prose-lg max-w-none">
+            <h2 id="introduction">Introduction</h2>
+<p>Well-designed APIs are the foundation of modern software architecture. They enable systems to communicate effectively, support scalability, and provide a great developer experience.</p>
+<h2 id="core-principles">Core Principles</h2>
+<h3 id="1-restful-design">1. RESTful Design</h3>
+<ul>
+<li>Use standard HTTP methods (GET, POST, PUT, DELETE)</li>
+<li>Follow resource-based URLs</li>
+<li>Leverage HTTP status codes appropriately</li>
+<li>Support proper content negotiation</li>
+</ul>
+<h3 id="2-consistency">2. Consistency</h3>
+<ul>
+<li>Maintain consistent naming conventions</li>
+<li>Use predictable URL structures</li>
+<li>Standardize error response formats</li>
+<li>Follow the same patterns across endpoints</li>
+</ul>
+<h3 id="3-versioning">3. Versioning</h3>
+<ul>
+<li>Implement API versioning from the start</li>
+<li>Use URL-based or header-based versioning</li>
+<li>Maintain backward compatibility when possible</li>
+<li>Document breaking changes clearly</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="requestresponse-design">Request/Response Design</h3>
+<ul>
+<li>Use clear, descriptive resource names</li>
+<li>Implement pagination for list endpoints</li>
+<li>Include relevant metadata in responses</li>
+<li>Support filtering, sorting, and field selection</li>
+</ul>
+<h3 id="error-handling">Error Handling</h3>
+<ul>
+<li>Return meaningful error messages</li>
+<li>Use appropriate HTTP status codes</li>
+<li>Provide error codes for programmatic handling</li>
+<li>Include request IDs for debugging</li>
+</ul>
+<h3 id="security">Security</h3>
+<ul>
+<li>Implement authentication and authorization</li>
+<li>Use HTTPS for all communications</li>
+<li>Validate and sanitize all inputs</li>
+<li>Rate limit to prevent abuse</li>
+</ul>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<ul>
+<li>Implement caching where appropriate</li>
+<li>Use compression for large payloads</li>
+<li>Support partial responses (field selection)</li>
+<li>Optimize database queries</li>
+<li>Consider async operations for long-running tasks</li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li>Provide comprehensive API documentation</li>
+<li>Include request/response examples</li>
+<li>Document error scenarios</li>
+<li>Maintain changelog for version updates</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Good API design requires careful consideration of developer experience, performance, and maintainability. Following these practices will help create APIs that are both powerful and easy to use.</p>
+
         </div>
-    </section>
+
+        
+        <footer class="mt-16 pt-8 border-t border-gray-200">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm text-gray-600">Published on December 19, 2025</p>
+                    
+                    <div class="mt-2">
+                        
+                        <span class="inline-block px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded mr-2">API</span>
+                        
+                        <span class="inline-block px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded mr-2">Backend</span>
+                        
+                        <span class="inline-block px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded mr-2">Development</span>
+                        
+                    </div>
+                    
+                </div>
+                <a href="/articles" class="text-gray-900 font-medium hover:text-gray-700 flex items-center">
+                    ← Back to Articles
+                </a>
+            </div>
+        </footer>
+    </article>
 
     
     <footer class="bg-white border-t border-gray-200 py-6 md:py-8">
@@ -318,4 +474,3 @@
 </body>
 
 </html>
-
