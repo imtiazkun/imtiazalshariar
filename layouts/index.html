@@ -171,6 +171,90 @@
             white-space: nowrap;
             transition: none;
         }
+
+        /* Dark Mode Styles */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000000;
+                color: #ffffff;
+            }
+
+            nav.bg-white {
+                background-color: #000000 !important;
+                border-color: #333333;
+            }
+
+            section.bg-white {
+                background-color: #000000 !important;
+            }
+
+            section.bg-gray-50 {
+                background-color: #111111 !important;
+            }
+
+            footer.bg-white {
+                background-color: #000000 !important;
+                border-color: #333333;
+            }
+
+            #mobile-menu {
+                background-color: #000000 !important;
+                border-color: #333333;
+            }
+
+            /* Text colors */
+            .text-gray-900,
+            .text-gray-700,
+            .text-gray-600 {
+                color: #ffffff !important;
+            }
+
+            .text-gray-500 {
+                color: #cccccc !important;
+            }
+
+            /* Links */
+            a.text-gray-700,
+            a.text-gray-900 {
+                color: #ffffff !important;
+            }
+
+            a:hover.text-gray-700,
+            a:hover.text-gray-900 {
+                color: #e5e5e5 !important;
+            }
+
+            /* Borders */
+            .border-gray-200,
+            .border-gray-300 {
+                border-color: #333333 !important;
+            }
+
+            /* Buttons */
+            .bg-gray-900 {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            .bg-gray-900:hover {
+                background-color: #e5e5e5 !important;
+            }
+
+            .border-gray-300 {
+                border-color: #555555 !important;
+            }
+
+            /* Hover states */
+            .hover\:bg-gray-100:hover {
+                background-color: #222222 !important;
+            }
+
+            /* Categories and tags */
+            .bg-gray-100 {
+                background-color: #222222 !important;
+                color: #ffffff !important;
+            }
+        }
     </style>
 </head>
 
@@ -262,8 +346,8 @@
                     </a>
                 </div>
             </div>
-            <div class="lg:w-1/3 xl:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2">
-                <canvas id="bouncing-circles" class="w-full aspect-square max-w-md lg:max-w-lg rounded-lg shadow-lg"
+            <div class="lg:w-1/3 xl:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2 w-full">
+                <canvas id="bouncing-circles" class="w-full aspect-square rounded-lg shadow-lg"
                     style="background-color: #5f2dc2;"></canvas>
             </div>
         </div>
@@ -420,13 +504,13 @@
             // Continuous Marquee Implementation
             const marqueeContent = document.getElementById('marquee-content');
             const companies = [
-                { type: 'image', src: '/assets/companies/kone_logo.jpg', alt: 'KONE' },
-                { type: 'image', src: '/assets/companies/kahf.svg', alt: 'Kahf' },
-                { type: 'image', src: '/assets/companies/zipli.svg', alt: 'Zipli' },
-                { type: 'image', src: '/assets/companies/ource.svg', alt: 'Ource' },
+                { type: 'text', content: "KONE" },
+                { type: 'text', content: "Kahf Yazılım A.Ş." },
+                { type: 'text', content: "Zipli" },
+                { type: 'text', content: 'Ource' },
                 { type: 'text', content: 'Summer Schools' },
                 { type: 'text', content: 'Flowtusk' },
-                { type: 'image', src: '/assets/companies/zeltatech.svg', alt: 'ZeltaTech' }
+                { type: 'text', content: 'ZeltaTech' }
             ];
 
             // Create enough copies to fill the screen and ensure seamless loop

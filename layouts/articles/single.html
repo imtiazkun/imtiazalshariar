@@ -151,6 +151,91 @@
             color: #111827;
             font-weight: 600;
         }
+
+        /* Dark Mode Styles */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000000;
+                color: #ffffff;
+            }
+
+            nav.bg-white {
+                background-color: #000000 !important;
+                border-color: #333333;
+            }
+
+            article {
+                background-color: #000000;
+            }
+
+            footer.bg-white {
+                background-color: #000000 !important;
+                border-color: #333333;
+            }
+
+            #mobile-menu {
+                background-color: #000000 !important;
+                border-color: #333333;
+            }
+
+            .text-gray-900,
+            .text-gray-700,
+            .text-gray-600 {
+                color: #ffffff !important;
+            }
+
+            .text-gray-500 {
+                color: #cccccc !important;
+            }
+
+            a.text-gray-700,
+            a.text-gray-900 {
+                color: #ffffff !important;
+            }
+
+            a:hover.text-gray-700,
+            a:hover.text-gray-900 {
+                color: #e5e5e5 !important;
+            }
+
+            .border-gray-200,
+            .border-gray-300 {
+                border-color: #333333 !important;
+            }
+
+            .bg-gray-900 {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            .bg-gray-900:hover {
+                background-color: #e5e5e5 !important;
+            }
+
+            .bg-gray-100 {
+                background-color: #222222 !important;
+                color: #ffffff !important;
+            }
+
+            .prose h1,
+            .prose h2,
+            .prose h3,
+            .prose h4,
+            .prose h5,
+            .prose h6 {
+                color: #ffffff !important;
+            }
+
+            .prose p,
+            .prose ul,
+            .prose ol {
+                color: #e5e5e5 !important;
+            }
+
+            .prose strong {
+                color: #ffffff !important;
+            }
+        }
     </style>
 </head>
 
