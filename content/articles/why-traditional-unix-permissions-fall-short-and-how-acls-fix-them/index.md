@@ -4,7 +4,7 @@ date: 2026-01-09
 draft: false
 categories: ["Technical"]
 tags: ["OS", "UNIX", "Security"]
-readTime: "6 min read"
+readTime: "5 min read"
 featuredImage: "/assets/articles/why-traditional-unix-permissions-fall-short-and-how-acls-fix-them/cat_thumbnail.jpg"
 description: "A practical explanation of why the traditional rwx model breaks down in modern multi-user systems."
 ---

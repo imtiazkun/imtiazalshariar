@@ -115,6 +115,13 @@
 
         .prose {
             max-width: none;
+            font-size: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .prose {
+                font-size: 1.125rem;
+            }
         }
 
         .prose h1,
@@ -127,23 +134,143 @@
             font-weight: 600;
         }
 
+        .prose h1 {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .prose h2 {
+            font-size: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .prose h3 {
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 768px) {
+            .prose h1 {
+                font-size: 2.25rem;
+            }
+
+            .prose h2 {
+                font-size: 1.875rem;
+            }
+
+            .prose h3 {
+                font-size: 1.5rem;
+            }
+        }
+
         .prose p {
             color: #374151;
             line-height: 1.7;
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        @media (min-width: 768px) {
+            .prose p {
+                font-size: 1.125rem;
+            }
+        }
+
+         
+        .prose pre {
+            background-color: #1f2937;
+            color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin: 1.5rem 0;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        @media (min-width: 768px) {
+            .prose pre {
+                font-size: 0.9375rem;
+                padding: 1.25rem;
+            }
+        }
+
+        .prose code {
+            background-color: #f3f4f6;
+            color: #1f2937;
+            padding: 0.125rem 0.375rem;
+            border-radius: 0.25rem;
+            font-size: 0.875em;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+        }
+
+        .prose pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+            border-radius: 0;
+            font-size: inherit;
+        }
+
+        .prose blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            color: #6b7280;
+            font-style: italic;
         }
 
         .prose ul,
         .prose ol {
             color: #374151;
+            margin: 1.25rem 0;
+            padding-left: 1.625rem;
+        }
+
+        .prose ul {
+            list-style-type: disc;
+        }
+
+        .prose ol {
+            list-style-type: decimal;
         }
 
         .prose li {
             margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+
+        .prose ul ul,
+        .prose ol ol,
+        .prose ul ol,
+        .prose ol ul {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .prose ul ul {
+            list-style-type: circle;
+        }
+
+        .prose ul ul ul {
+            list-style-type: square;
         }
 
         .prose strong {
             color: #111827;
             font-weight: 600;
+        }
+
+        .prose a {
+            color: #2563eb;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color 0.2s ease;
+        }
+
+        .prose a:hover {
+            color: #1d4ed8;
         }
 
          
@@ -220,14 +347,48 @@
                 color: #ffffff !important;
             }
 
-            .prose p,
+            .prose p {
+                color: #e5e5e5 !important;
+            }
+
             .prose ul,
             .prose ol {
                 color: #e5e5e5 !important;
             }
 
+            .prose li {
+                color: #e5e5e5 !important;
+            }
+
             .prose strong {
                 color: #ffffff !important;
+            }
+
+            .prose pre {
+                background-color: #1a1a1a !important;
+                color: #e5e5e5 !important;
+            }
+
+            .prose code {
+                background-color: #2a2a2a !important;
+                color: #e5e5e5 !important;
+            }
+
+            .prose pre code {
+                background-color: transparent !important;
+            }
+
+            .prose blockquote {
+                border-left-color: #444444 !important;
+                color: #cccccc !important;
+            }
+
+            .prose a {
+                color: #60a5fa !important;
+            }
+
+            .prose a:hover {
+                color: #93c5fd !important;
             }
         }
     </style>
@@ -296,23 +457,23 @@
     </nav>
 
     
-    <article class="max-w-4xl mx-auto px-6 py-16">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-16">
         
-        <header class="mb-12">
-            <div class="flex items-center gap-4 mb-6">
+        <header class="mb-8 sm:mb-12">
+            <div class="flex flex-wrap items-center gap-2 sm:gap-4 mb-4 sm:mb-6">
                 
-                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Projects</span>
+                <span class="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full">Projects</span>
                 
                 
-                <span class="text-sm text-gray-500">5 min read</span>
+                <span class="text-xs sm:text-sm text-gray-500">5 min read</span>
                 
-                <span class="text-sm text-gray-500">February 10, 2024</span>
+                <span class="text-xs sm:text-sm text-gray-500">February 10, 2024</span>
             </div>
 
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Modern E-Commerce Platform with Real-Time Inventory</h1>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Modern E-Commerce Platform with Real-Time Inventory</h1>
 
             
-            <p class="text-xl text-gray-700 leading-relaxed">Built a scalable e-commerce platform with real-time inventory tracking, payment integration, and admin dashboard using modern web technologies.</p>
+            <p class="text-lg sm:text-xl text-gray-700 leading-relaxed">Built a scalable e-commerce platform with real-time inventory tracking, payment integration, and admin dashboard using modern web technologies.</p>
             
         </header>
 
@@ -320,7 +481,7 @@
         
 
         
-        <div class="prose prose-lg max-w-none">
+        <div class="prose max-w-none">
             <h2 id="project-overview">Project Overview</h2>
 <p>This project involved building a complete e-commerce solution from scratch, focusing on real-time inventory management and seamless user experience.</p>
 <h2 id="key-features">Key Features</h2>

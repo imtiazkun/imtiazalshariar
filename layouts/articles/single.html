@@ -268,6 +268,17 @@
             font-weight: 600;
         }
 
+        .prose a {
+            color: #2563eb;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color 0.2s ease;
+        }
+
+        .prose a:hover {
+            color: #1d4ed8;
+        }
+
         /* Dark Mode Styles */
         @media (prefers-color-scheme: dark) {
             body {
@@ -376,6 +387,14 @@
             .prose blockquote {
                 border-left-color: #444444 !important;
                 color: #cccccc !important;
+            }
+
+            .prose a {
+                color: #60a5fa !important;
+            }
+
+            .prose a:hover {
+                color: #93c5fd !important;
             }
         }
     </style>
