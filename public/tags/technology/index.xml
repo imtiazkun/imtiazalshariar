@@ -9,11 +9,18 @@
     <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Kone Siteflow - Real-time digital tools for construction and building</title>
+      <title>Real-time Simulation - Kone Siteflow</title>
       <link>http://localhost:1313/articles/siteflow-realtime-construction-3d-simulation/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/articles/siteflow-realtime-construction-3d-simulation/</guid>
-      <description>&lt;p&gt;Siteflow is a real-time 3D simulation platform designed for construction projects. It enables architects, engineers, and project managers to visualize and plan building sites in immersive detail, providing a comprehensive view of construction progress, resource allocation, and potential challenges before they arise.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Companies like Kone hire a lot of firms and external contractors for their projects. I had the opportunity to work on one of their large projects - Siteflow.&lt;/p&gt;&#xA;&lt;p&gt;Siteflow is this software used on construction sites to manage lifts, i.e. see if they are operational, how many people are in it, on which floor, if something malfunctioned, etc. All this info properly baked in the UI.&lt;/p&gt;&#xA;&lt;p&gt;The stakeholders thought it would be nice to be able to see these in a 3D environment and for that they needed someone who knew WebGL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The future is not AI-generated, but AI-assisted—and that distinction matters more than most headlines suggest.</title>
+      <link>http://localhost:1313/articles/the-future-is-not-ai-generated-but-ai-assisted/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/the-future-is-not-ai-generated-but-ai-assisted/</guid>
+      <description>&lt;p&gt;Just-in latest YC backed AI startup is going to replace &amp;ldquo;Place a job title&amp;rdquo; — I&amp;rsquo;m pretty sure you&amp;rsquo;ve come across headlines like these. And you might get alarmed about some dystopian future ahead. You are right about the dystopian future part but it won&amp;rsquo;t come from AI replacing us outright. Rest assured this article was not AI-generated; AI-assisted? For sure.&lt;/p&gt;&#xA;&lt;p&gt;Before we dive deeper, it&amp;rsquo;s important to establish some definitions — specifically, what do I mean by AI generated verses AI-assisted. AI-generated is what people often dismiss as &amp;ldquo;AI slop&amp;rdquo;, content that has no input aside from just mere prompts. When I say AI-assisted I&amp;rsquo;m referring to AI automating certain tasks within existing workflows. And if we look at trends people seem to be enjoying the AI-assisted workflows; it&amp;rsquo;s not only giving better results but are also accepte by consumers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Transforming Healthcare Through Intelligent Systems</title>

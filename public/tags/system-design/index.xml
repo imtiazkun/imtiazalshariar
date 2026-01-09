@@ -6,14 +6,14 @@
     <description>Recent content in System Design on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/system-design/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building Scalable Systems: A Case Study</title>
-      <link>http://localhost:1313/articles/building-scalable-systems/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/building-scalable-systems/</guid>
-      <description>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;When we started working with our client, they were experiencing significant performance issues with their monolithic application. The system was struggling to handle the growing user base and was becoming increasingly difficult to maintain.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-approach&#34;&gt;Our Approach&lt;/h2&gt;&#xA;&lt;p&gt;We implemented a microservices architecture with the following key components:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;API Gateway&lt;/strong&gt; for request routing and load balancing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Service Mesh&lt;/strong&gt; for inter-service communication&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Event-Driven Architecture&lt;/strong&gt; for asynchronous processing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Database Sharding&lt;/strong&gt; for horizontal scaling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;&#xA;&lt;p&gt;The new architecture resulted in:&lt;/p&gt;</description>
+      <title>Microservices vs Monoliths: The Real Trade-offs</title>
+      <link>http://localhost:1313/articles/microservices-vs-monoliths/</link>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/microservices-vs-monoliths/</guid>
+      <description>&lt;p&gt;The microservices vs monolith debate has become almost religious in software engineering circles. Both sides have valid points, but the answer depends entirely on your context.&lt;/p&gt;&#xA;&lt;h2 id=&#34;start-monolithic&#34;&gt;Start Monolithic&lt;/h2&gt;&#xA;&lt;p&gt;Most successful companies started with monoliths. They&amp;rsquo;re simpler to develop, debug, and deploy. You can always extract services later when you have clear boundaries and actual scaling needs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;when-microservices-make-sense&#34;&gt;When Microservices Make Sense&lt;/h2&gt;&#xA;&lt;p&gt;Microservices shine when you have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Multiple teams that need independent deployment&lt;/li&gt;&#xA;&lt;li&gt;Different scaling requirements for different parts of the system&lt;/li&gt;&#xA;&lt;li&gt;Clear domain boundaries that map to business capabilities&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-hidden-costs&#34;&gt;The Hidden Costs&lt;/h2&gt;&#xA;&lt;p&gt;Microservices introduce distributed system complexity. Network latency, eventual consistency, and debugging across services are real challenges. Don&amp;rsquo;t underestimate the operational overhead.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

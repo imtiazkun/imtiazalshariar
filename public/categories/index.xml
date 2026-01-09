@@ -16,6 +16,13 @@
       <description></description>
     </item>
     <item>
+      <title>Opinion</title>
+      <link>http://localhost:1313/categories/opinion/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/opinion/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Technical</title>
       <link>http://localhost:1313/categories/technical/</link>
       <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>

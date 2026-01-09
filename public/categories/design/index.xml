@@ -6,14 +6,14 @@
     <description>Recent content in Design on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/design/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The Design Thinking Process in Product Development</title>
-      <link>http://localhost:1313/articles/design-thinking-process/</link>
-      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/design-thinking-process/</guid>
-      <description>&lt;h2 id=&#34;what-is-design-thinking&#34;&gt;What is Design Thinking?&lt;/h2&gt;&#xA;&lt;p&gt;Design thinking is a human-centered approach to innovation that draws from the designer&amp;rsquo;s toolkit to integrate the needs of people, the possibilities of technology, and the requirements for business success.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-five-stages&#34;&gt;The Five Stages&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-empathize&#34;&gt;1. Empathize&lt;/h3&gt;&#xA;&lt;p&gt;Understanding the user&amp;rsquo;s needs, experiences, and motivations through research and observation.&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-define&#34;&gt;2. Define&lt;/h3&gt;&#xA;&lt;p&gt;Defining the problem based on user insights and research findings.&lt;/p&gt;&#xA;&lt;h3 id=&#34;3-ideate&#34;&gt;3. Ideate&lt;/h3&gt;&#xA;&lt;p&gt;Generating creative solutions through brainstorming and collaborative thinking.&lt;/p&gt;</description>
+      <title>Design Systems in Practice</title>
+      <link>http://localhost:1313/articles/design-systems-in-practice/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/design-systems-in-practice/</guid>
+      <description>&lt;p&gt;Design systems promise consistency and speed, but the reality of building and maintaining them is more nuanced than most articles suggest.&lt;/p&gt;&#xA;&lt;h2 id=&#34;starting-small&#34;&gt;Starting Small&lt;/h2&gt;&#xA;&lt;p&gt;The biggest mistake teams make is trying to build everything upfront. Start with your most common components—buttons, inputs, cards. These form the foundation everything else builds upon.&lt;/p&gt;&#xA;&lt;h2 id=&#34;documentation-matters&#34;&gt;Documentation Matters&lt;/h2&gt;&#xA;&lt;p&gt;A component library without documentation is just code. Developers need clear examples, usage guidelines, and accessibility considerations. Tools like Storybook help, but they&amp;rsquo;re not a substitute for thoughtful documentation.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

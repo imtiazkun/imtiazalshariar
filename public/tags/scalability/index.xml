@@ -6,14 +6,14 @@
     <description>Recent content in Scalability on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/scalability/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building Scalable Systems: A Case Study</title>
-      <link>http://localhost:1313/articles/building-scalable-systems/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/building-scalable-systems/</guid>
-      <description>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;When we started working with our client, they were experiencing significant performance issues with their monolithic application. The system was struggling to handle the growing user base and was becoming increasingly difficult to maintain.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-approach&#34;&gt;Our Approach&lt;/h2&gt;&#xA;&lt;p&gt;We implemented a microservices architecture with the following key components:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;API Gateway&lt;/strong&gt; for request routing and load balancing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Service Mesh&lt;/strong&gt; for inter-service communication&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Event-Driven Architecture&lt;/strong&gt; for asynchronous processing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Database Sharding&lt;/strong&gt; for horizontal scaling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;&#xA;&lt;p&gt;The new architecture resulted in:&lt;/p&gt;</description>
+      <title>Building Scalable API Architecture</title>
+      <link>http://localhost:1313/articles/building-scalable-api-architecture/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/building-scalable-api-architecture/</guid>
+      <description>&lt;p&gt;When building modern applications, API architecture decisions can make or break your system&amp;rsquo;s ability to scale. The difference between a well-designed API and a poorly architected one becomes painfully obvious when traffic spikes hit.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-foundation&#34;&gt;The Foundation&lt;/h2&gt;&#xA;&lt;p&gt;RESTful principles provide a solid starting point, but real-world scalability requires going beyond textbook implementations. Resource-based URLs, proper HTTP methods, and consistent response formats are table stakes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-considerations&#34;&gt;Key Considerations&lt;/h2&gt;&#xA;&lt;p&gt;Rate limiting prevents abuse while allowing legitimate traffic to flow. Versioning strategies ensure backward compatibility as your API evolves. Caching layers reduce database load and improve response times.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

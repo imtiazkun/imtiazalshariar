@@ -67,8 +67,22 @@
     <item>
       <title>Technology</title>
       <link>http://localhost:1313/tags/technology/</link>
-      <pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Future</title>
+      <link>http://localhost:1313/tags/future/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/future/</guid>
       <description></description>
     </item>
     <item>
@@ -79,10 +93,24 @@
       <description></description>
     </item>
     <item>
+      <title>Philosophy</title>
+      <link>http://localhost:1313/tags/philosophy/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/philosophy/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Security</title>
       <link>http://localhost:1313/tags/security/</link>
       <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Society</title>
+      <link>http://localhost:1313/tags/society/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/society/</guid>
       <description></description>
     </item>
     <item>
@@ -132,13 +160,6 @@
       <link>http://localhost:1313/tags/social-media/</link>
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/social-media/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     <item>

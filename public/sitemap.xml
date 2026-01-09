@@ -20,13 +20,13 @@
     <loc>http://localhost:1313/tags/food-waste/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/siteflow-realtime-construction-3d-simulation/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/projects/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/real-time/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/articles/siteflow-realtime-construction-3d-simulation/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/scale/</loc>
@@ -47,13 +47,31 @@
     <loc>http://localhost:1313/articles/zipli-rescuing-surplus-food-at-scale/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/future/</loc>
+    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/opinion/</loc>
+    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/os/</loc>
+    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/philosophy/</loc>
     <lastmod>2026-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/security/</loc>
     <lastmod>2026-01-09T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/society/</loc>
+    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/technical/</loc>
+    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/articles/the-future-is-not-ai-generated-but-ai-assisted/</loc>
     <lastmod>2026-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/unix/</loc>
@@ -82,9 +100,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/social-media/</loc>
     <lastmod>2026-01-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
-    <lastmod>2025-12-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/healthcare/</loc>
     <lastmod>2025-12-25T00:00:00+00:00</lastmod>

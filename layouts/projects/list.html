@@ -245,9 +245,15 @@
             </div>
 
             <!-- Projects List -->
+            {{ $projects := slice }}
+            {{ range where .Site.RegularPages "Section" "articles" }}
+            {{ if in .Params.categories "Projects" }}
+            {{ $projects = $projects | append . }}
+            {{ end }}
+            {{ end }}
+            {{ $paginator := .Paginate $projects }}
             <div class="space-y-8">
-                {{ range where .Site.RegularPages "Section" "articles" }}
-                {{ if in .Params.categories "Projects" }}
+                {{ range $paginator.Pages }}
                 <article class="bg-transparent">
                     <div class="flex flex-col md:flex-row">
                         <div
@@ -289,8 +295,34 @@
                     </div>
                 </article>
                 {{ end }}
+            </div>
+
+            <!-- Pagination -->
+            {{ if gt $paginator.TotalPages 1 }}
+            <div class="mt-12 flex justify-center items-center gap-4">
+                {{ if $paginator.HasPrev }}
+                <a href="{{ $paginator.Prev.URL }}"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors">
+                    ← Previous
+                </a>
+                {{ else }}
+                <span class="px-4 py-2 text-sm text-gray-400 cursor-not-allowed">← Previous</span>
+                {{ end }}
+
+                <span class="text-sm text-gray-600">
+                    Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}
+                </span>
+
+                {{ if $paginator.HasNext }}
+                <a href="{{ $paginator.Next.URL }}"
+                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors">
+                    Next →
+                </a>
+                {{ else }}
+                <span class="px-4 py-2 text-sm text-gray-400 cursor-not-allowed">Next →</span>
                 {{ end }}
             </div>
+            {{ end }}
         </div>
     </section>
 
