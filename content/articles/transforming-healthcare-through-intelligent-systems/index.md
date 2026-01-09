@@ -4,7 +4,7 @@ date: 2025-12-25
 draft: false
 categories: ["Projects"]
 tags: ["AI", "Machine Learning", "Healthcare", "Medicine", "Technology"]
-readTime: "6 min read"
+readTime: "2 min read"
 featuredImage: "/assets/articles/medai-transforming-healthcare-through-intelligent-systems/banner.jpg"
 description: "Revolutionizing patient care and medical diagnostics through cutting-edge artificial intelligence and machine learning technologies."
 ---

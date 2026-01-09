@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mental Health on Imtiaz Al Shariar - Design-forward Product Engineer</title>
+    <link>http://localhost:1313/tags/mental-health/</link>
+    <description>Recent content in Mental Health on Imtiaz Al Shariar - Design-forward Product Engineer</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mental-health/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deepfakes for Anonymous Group Therapy</title>
+      <link>http://localhost:1313/articles/deepfakes-anonymous-group-therapy/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/deepfakes-anonymous-group-therapy/</guid>
+      <description>&lt;p&gt;Group therapy has long been recognized as an effective treatment modality, offering participants the opportunity to share experiences, gain perspective, and build connections with others facing similar challenges. However, one of the biggest barriers to participation is the fear of being recognized or judged—especially in tight-knit communities or professional circles where privacy concerns can prevent people from seeking the help they need.&lt;/p&gt;&#xA;&lt;p&gt;We explored an unconventional solution: using deepfake technology to allow participants to attend group therapy sessions while appearing as completely different personas. The idea was to preserve the authenticity of human interaction—facial expressions, voice intonation, body language—while completely anonymizing the participant&amp;rsquo;s true identity.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
