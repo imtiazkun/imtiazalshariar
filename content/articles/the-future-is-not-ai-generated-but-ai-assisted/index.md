@@ -1,6 +1,6 @@
 ---
 title: "The future is not AI-generated, but AI-assisted—and that distinction matters more than most headlines suggest."
-date: 2026-01-15
+date: 2026-01-09
 draft: false
 categories: ["Opinion"]
 tags: ["AI", "Technology", "Future", "Philosophy", "Society"]
