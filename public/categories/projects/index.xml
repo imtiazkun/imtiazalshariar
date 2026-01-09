@@ -6,14 +6,49 @@
     <description>Recent content in Projects on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Modern E-Commerce Platform with Real-Time Inventory</title>
-      <link>http://localhost:1313/articles/e-commerce-platform/</link>
-      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/e-commerce-platform/</guid>
-      <description>&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;This project involved building a complete e-commerce solution from scratch, focusing on real-time inventory management and seamless user experience.&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Real-Time Inventory&lt;/strong&gt;: Live stock updates across all user sessions&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Payment Integration&lt;/strong&gt;: Secure payment processing with multiple gateways&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Admin Dashboard&lt;/strong&gt;: Comprehensive management interface for products, orders, and analytics&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Responsive Design&lt;/strong&gt;: Mobile-first approach ensuring great UX on all devices&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;technology-stack&#34;&gt;Technology Stack&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Frontend&lt;/strong&gt;: React with TypeScript&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Backend&lt;/strong&gt;: Node.js with Express&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Database&lt;/strong&gt;: PostgreSQL with Redis for caching&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Real-Time&lt;/strong&gt;: WebSocket connections for live updates&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Deployment&lt;/strong&gt;: Docker containers on AWS&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;&#xA;&lt;p&gt;The platform successfully handles:&lt;/p&gt;</description>
+      <title>Kone Siteflow - Real-time digital tools for construction and building</title>
+      <link>http://localhost:1313/articles/siteflow-realtime-construction-3d-simulation/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/siteflow-realtime-construction-3d-simulation/</guid>
+      <description>&lt;p&gt;Siteflow is a real-time 3D simulation platform designed for construction projects. It enables architects, engineers, and project managers to visualize and plan building sites in immersive detail, providing a comprehensive view of construction progress, resource allocation, and potential challenges before they arise.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zipli - Food Surplus Management for a Circular Economy</title>
+      <link>http://localhost:1313/articles/zipli-rescuing-surplus-food-at-scale/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/zipli-rescuing-surplus-food-at-scale/</guid>
+      <description>&lt;p&gt;We had a delightful experience working on this project. We had the opportunity to use the latest AI tools to launch features quickly for fast-paced, real-world testing—not just with everyday users, but also with major organizations operating in Finland such as the Sodexo Group.&lt;/p&gt;&#xA;&lt;p&gt;The core idea behind the technologies developed here was to simplify the reduction of food waste by connecting donors—both large and small—with recipients who can put surplus food to proper use. In this way, excess food ends up on plates meeting nutritional needs instead of in landfills.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reshh - Social Media Platform for Bengal&#39;s Indies</title>
+      <link>http://localhost:1313/articles/reshh/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/reshh/</guid>
+      <description>&lt;p&gt;Reshh emerged from a simple observation: Bengal&amp;rsquo;s independent creative scene—musicians, game developers, artists, and other creators—lacked a dedicated space to connect, share, and grow their audience. While global platforms exist, they often don&amp;rsquo;t capture the unique cultural context and community needs of Bengal&amp;rsquo;s indie creators. Check &lt;a href=&#34;https://www.reshh.com&#34;&gt;reshh&lt;/a&gt; out.&lt;/p&gt;&#xA;&lt;p&gt;This is a work on progress and a project under my non-profit &lt;a href=&#34;https://ource.org&#34;&gt;OURCE&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Transforming Healthcare Through Intelligent Systems</title>
+      <link>http://localhost:1313/articles/transforming-healthcare-through-intelligent-systems/</link>
+      <pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/transforming-healthcare-through-intelligent-systems/</guid>
+      <description>&lt;p&gt;Putting aside all the hype and fear mongering on social media about AI replacing humans, we should take a look at how AI at its application level is going to increase accessibility in health care. I&amp;rsquo;ve had the luxury of working with Dr Raphael Chowdhury and his firm &lt;a href=&#34;https://bioforgehealth.org/&#34;&gt;Bioforge Health Systems&lt;/a&gt;. We did a few run through; made MVPs and tried testing in real environments to see how well AI automates different redundant tasks in a health care facility. This article explores one of those experiments we went tried.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mahfil - Safe, Curated Video Platform</title>
+      <link>http://localhost:1313/articles/mahfil/</link>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/mahfil/</guid>
+      <description>&lt;p&gt;Mahfil is a video-sharing and streaming platform built around safe, curated content you can actually trust. It works a lot like YouTube, but every video is reviewed to keep the experience clean, family-friendly, and free of harmful material — giving users a peaceful place to watch, share, and engage with uplifting content.&lt;/p&gt;&#xA;&lt;p&gt;This is made with the greater conservative Muslim demography in mind, made with strong moderation and ads are served via their own ethical ads platform with strong abstainance from gambling or other unethical content according to Islamic ethics. This project is owned by Kahf Yazilim A.Ş. I worked there as a contractual Frontend Developer hired for modernizing their old code base from 2019.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deepfakes for Anonymous Group Therapy</title>
+      <link>http://localhost:1313/articles/deepfakes-anonymous-group-therapy/</link>
+      <pubDate>Wed, 29 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/deepfakes-anonymous-group-therapy/</guid>
+      <description>&lt;p&gt;Another MVP we attempted in Finland under EU law, internally we called it &amp;ldquo;Persona&amp;rdquo;. When I say we I&amp;rsquo;m talking about Hasan, Shijie, Mursalat and me. The idea was brought forward by Alex who was very optimitic about group therapies and wanted to bring it on the web. The techincal challenge this posed was running deepfakes on the cloud; as normally people use their local machine with good GPUs for deepfakes but creating a distributed system for hosting multiple calls with multiple users that too with deepfake enabled was something new.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

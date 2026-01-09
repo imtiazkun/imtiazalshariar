@@ -2,19 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/3d/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/architecture/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/articles/</loc>
-    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/construction/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/food-waste/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/articles/siteflow-realtime-construction-3d-simulation/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/projects/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/real-time/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/scale/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/simulation/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sustainability/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/technology/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/articles/zipli-rescuing-surplus-food-at-scale/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/os/</loc>
     <lastmod>2026-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/security/</loc>
-    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/technical/</loc>
@@ -26,13 +62,46 @@
     <loc>http://localhost:1313/articles/why-traditional-unix-permissions-fall-short-and-how-acls-fix-them/</loc>
     <lastmod>2026-01-09T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/art/</loc>
+    <lastmod>2026-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/bengal/</loc>
+    <lastmod>2026-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/community/</loc>
+    <lastmod>2026-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/games/</loc>
+    <lastmod>2026-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/music/</loc>
+    <lastmod>2026-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/articles/reshh/</loc>
+    <lastmod>2026-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/social-media/</loc>
+    <lastmod>2026-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2025-12-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/healthcare/</loc>
+    <lastmod>2025-12-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/machine-learning/</loc>
+    <lastmod>2025-12-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/medicine/</loc>
+    <lastmod>2025-12-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/articles/transforming-healthcare-through-intelligent-systems/</loc>
+    <lastmod>2025-12-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/case-studies/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/climate/</loc>
-    <lastmod>2025-11-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/community/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ngo/</loc>
@@ -41,65 +110,35 @@
     <loc>http://localhost:1313/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/e-commerce/</loc>
-    <lastmod>2024-02-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/content/</loc>
+    <lastmod>2025-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/full-stack/</loc>
-    <lastmod>2024-02-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/articles/mahfil/</loc>
+    <lastmod>2025-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/inventory-management/</loc>
-    <lastmod>2024-02-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/platform/</loc>
+    <lastmod>2025-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/e-commerce-platform/</loc>
-    <lastmod>2024-02-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/streaming/</loc>
+    <lastmod>2025-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/projects/</loc>
-    <lastmod>2024-02-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/video/</loc>
+    <lastmod>2025-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/real-time/</loc>
-    <lastmod>2024-02-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/deepfakes/</loc>
+    <lastmod>2024-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/architecture/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/articles/deepfakes-anonymous-group-therapy/</loc>
+    <lastmod>2024-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/building-scalable-systems/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/mental-health/</loc>
+    <lastmod>2024-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/scalability/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/privacy/</loc>
+    <lastmod>2024-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/system-design/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/design/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/design-thinking/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/product-development/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/articles/design-thinking-process/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ux/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
-    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/challenges/</loc>
-    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/articles/ai-integration-challenges/</loc>
-    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/integration/</loc>
-    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/machine-learning/</loc>
-    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/therapy/</loc>
+    <lastmod>2024-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>

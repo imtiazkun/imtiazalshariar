@@ -9,11 +9,11 @@
     <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/scale/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Zipli - Rescuing surplus food at scale</title>
+      <title>Zipli - Food Surplus Management for a Circular Economy</title>
       <link>http://localhost:1313/articles/zipli-rescuing-surplus-food-at-scale/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/articles/zipli-rescuing-surplus-food-at-scale/</guid>
-      <description>&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;Zipli is a platform designed to rescue surplus food at scale, connecting food donors with recipients to reduce waste and fight hunger.&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Surplus Food Matching&lt;/strong&gt;: Intelligent matching system connecting donors with recipients&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Scale Operations&lt;/strong&gt;: Built to handle large volumes of food rescue operations&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Real-Time Coordination&lt;/strong&gt;: Efficient logistics and coordination for food pickup and delivery&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Impact Tracking&lt;/strong&gt;: Metrics and reporting to measure food waste reduction&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;technology-stack&#34;&gt;Technology Stack&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Frontend&lt;/strong&gt;:&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Backend&lt;/strong&gt;:&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Database&lt;/strong&gt;:&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Deployment&lt;/strong&gt;:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;&#xA;&lt;p&gt;The platform successfully:&lt;/p&gt;</description>
+      <description>&lt;p&gt;We had a delightful experience working on this project. We had the opportunity to use the latest AI tools to launch features quickly for fast-paced, real-world testing—not just with everyday users, but also with major organizations operating in Finland such as the Sodexo Group.&lt;/p&gt;&#xA;&lt;p&gt;The core idea behind the technologies developed here was to simplify the reduction of food waste by connecting donors—both large and small—with recipients who can put surplus food to proper use. In this way, excess food ends up on plates meeting nutritional needs instead of in landfills.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
