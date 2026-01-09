@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Games on Imtiaz Al Shariar - Design-forward Product Engineer</title>
+    <link>http://localhost:1313/tags/games/</link>
+    <description>Recent content in Games on Imtiaz Al Shariar - Design-forward Product Engineer</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/games/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reshh - Social Media Platform for Bengal&#39;s Indies</title>
+      <link>http://localhost:1313/projects/reshh/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/reshh/</guid>
+      <description>&lt;p&gt;Reshh is a social media platform designed specifically for Bengal&amp;rsquo;s independent creators—musicians, game developers, artists, and other creative professionals. The platform serves as a dedicated space where these creators can showcase their work, connect with audiences, and build a community around independent creative expression.&lt;/p&gt;&#xA;&lt;p&gt;The idea emerged from recognizing the need for a localized platform that understands and celebrates the unique creative ecosystem of Bengal. While global platforms exist, they often don&amp;rsquo;t provide the focused community and discovery mechanisms that independent creators need to gain visibility and connect with their target audience.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

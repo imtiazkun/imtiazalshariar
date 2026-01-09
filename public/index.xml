@@ -23,6 +23,13 @@
       <description>&lt;p&gt;NB: This was taken from my assignment on Operating Systems course in college.&lt;/p&gt;&#xA;&lt;p&gt;In order to secure systems from unauthorized access it is of the utmost importance to&#xA;implement some sort of access control in an operating system. A proper access control&#xA;Access control is a fundamental responsibility of an operating system – it stops actors of bad&#xA;faith from accessing confidential information and executing processes for misuse. Traditional&#xA;Unix-based systems use a very simple form of permission model. It assigns rwx (read, write&#xA;and execute) permission on a file based on three categories; owner, gorup and others.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Reshh - Social Media Platform for Bengal&#39;s Indies</title>
+      <link>http://localhost:1313/articles/reshh/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/reshh/</guid>
+      <description>&lt;p&gt;Reshh emerged from a simple observation: Bengal&amp;rsquo;s independent creative scene—musicians, game developers, artists, and other creators—lacked a dedicated space to connect, share, and grow their audience. While global platforms exist, they often don&amp;rsquo;t capture the unique cultural context and community needs of Bengal&amp;rsquo;s indie creators. Check &lt;a href=&#34;https://www.reshh.com&#34;&gt;reshh&lt;/a&gt; out.&lt;/p&gt;&#xA;&lt;p&gt;This is a work on progress and a project under my non-profit &lt;a href=&#34;https://ource.org&#34;&gt;OURCE&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Transforming Healthcare Through Intelligent Systems</title>
       <link>http://localhost:1313/articles/transforming-healthcare-through-intelligent-systems/</link>
       <pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate>
