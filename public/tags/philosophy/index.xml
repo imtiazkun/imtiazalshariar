@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Philosophy on Imtiaz Al Shariar - Design-forward Product Engineer</title>
+    <link>http://localhost:1313/tags/philosophy/</link>
+    <description>Recent content in Philosophy on Imtiaz Al Shariar - Design-forward Product Engineer</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/philosophy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The future is not AI-generated, but AI-assisted—and that distinction matters more than most headlines suggest.</title>
+      <link>http://localhost:1313/opinion/the-future-is-not-ai-generated-but-ai-assisted/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/opinion/the-future-is-not-ai-generated-but-ai-assisted/</guid>
+      <description>&lt;p&gt;The tech industry loves dramatic headlines. &amp;ldquo;AI will replace writers.&amp;rdquo; &amp;ldquo;Machines will code better than humans.&amp;rdquo; &amp;ldquo;The end of human creativity.&amp;rdquo; But these narratives miss something crucial: the difference between AI &lt;em&gt;generating&lt;/em&gt; our future versus AI &lt;em&gt;assisting&lt;/em&gt; us in creating it.&lt;/p&gt;&#xA;&lt;p&gt;This isn&amp;rsquo;t just semantic pedantry. The distinction shapes how we build products, how we educate, how we think about value creation, and ultimately, how we design systems that amplify human capability rather than replace human judgment.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
