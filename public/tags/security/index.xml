@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>http://localhost:1313/tags/security/</link>
+    <link>https://imtiazalshariar.com/tags/security/</link>
     <description>Recent content in Security on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://imtiazalshariar.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Traditional Unix Permissions Fall Short — and How ACLs Fix Them</title>
-      <link>http://localhost:1313/articles/why-traditional-unix-permissions-fall-short-and-how-acls-fix-them/</link>
+      <link>https://imtiazalshariar.com/articles/why-traditional-unix-permissions-fall-short-and-how-acls-fix-them/</link>
       <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/why-traditional-unix-permissions-fall-short-and-how-acls-fix-them/</guid>
+      <guid>https://imtiazalshariar.com/articles/why-traditional-unix-permissions-fall-short-and-how-acls-fix-them/</guid>
       <description>&lt;p&gt;NB: This was taken from my assignment on Operating Systems course in college.&lt;/p&gt;&#xA;&lt;p&gt;In order to secure systems from unauthorized access it is of the utmost importance to&#xA;implement some sort of access control in an operating system. A proper access control&#xA;Access control is a fundamental responsibility of an operating system – it stops actors of bad&#xA;faith from accessing confidential information and executing processes for misuse. Traditional&#xA;Unix-based systems use a very simple form of permission model. It assigns rwx (read, write&#xA;and execute) permission on a file based on three categories; owner, gorup and others.&lt;/p&gt;</description>
     </item>
   </channel>
