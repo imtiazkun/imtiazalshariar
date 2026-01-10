@@ -3,7 +3,7 @@ title: "Pink Tanks and Green Futures: Balance Between Institutional and Public P
 date: 2025-11-10
 draft: false
 categories: ["Case Studies"]
-tags: ["NGO", "Community", "Climate"]
+tags: ["NGO", "Community", "Climate", "Sustainability"]
 readTime: "3 min read"
 featuredImage: "/assets/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/1.jpg"
 description: "My visit to BRAC's Climate Change Program in Mongla showed me how lasting change emerges when institutions and communities work hand in hand. From natural composting farms to disaster-safe homes with pink rainwater tanks, I witnessed how support and self-reliance can grow together to build resilient futures."

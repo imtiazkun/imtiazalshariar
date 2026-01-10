@@ -3,7 +3,7 @@ title: "Zipli - Food Surplus Management for a Circular Economy"
 date: 2026-01-15
 draft: false
 categories: ["Projects"]
-tags: ["Food Waste", "Sustainability", "Scale"]
+tags: ["Food Waste", "Sustainability", "Scale", "Climate"]
 readTime: "5 min read"
 featuredImage: "/assets/articles/zipli-rescuing-surplus-food-at-scale/banner.jpg"
 description: "A platform designed to rescue surplus food at scale, connecting food donors with recipients to reduce waste and fight hunger."
