@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Machine Learning on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>https://imtiazalshariar.com/tags/machine-learning/</link>
+    <link>http://localhost:1313/tags/machine-learning/</link>
     <description>Recent content in Machine Learning on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 25 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://imtiazalshariar.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Transforming Healthcare Through Intelligent Systems</title>
-      <link>https://imtiazalshariar.com/articles/transforming-healthcare-through-intelligent-systems/</link>
+      <link>http://localhost:1313/articles/transforming-healthcare-through-intelligent-systems/</link>
       <pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://imtiazalshariar.com/articles/transforming-healthcare-through-intelligent-systems/</guid>
+      <guid>http://localhost:1313/articles/transforming-healthcare-through-intelligent-systems/</guid>
       <description>&lt;p&gt;Putting aside all the hype and fear mongering on social media about AI replacing humans, we should take a look at how AI at its application level is going to increase accessibility in health care. I&amp;rsquo;ve had the luxury of working with Dr Raphael Chowdhury and his firm &lt;a href=&#34;https://bioforgehealth.org/&#34;&gt;Bioforge Health Systems&lt;/a&gt;. We did a few run through; made MVPs and tried testing in real environments to see how well AI automates different redundant tasks in a health care facility. This article explores one of those experiments we went tried.&lt;/p&gt;</description>
     </item>
   </channel>

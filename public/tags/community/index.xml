@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Community on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>https://imtiazalshariar.com/tags/community/</link>
+    <link>http://localhost:1313/tags/community/</link>
     <description>Recent content in Community on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://imtiazalshariar.com/tags/community/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/community/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reshh - Social Media Platform for Bengal&#39;s Indies</title>
-      <link>https://imtiazalshariar.com/articles/reshh/</link>
+      <link>http://localhost:1313/articles/reshh/</link>
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://imtiazalshariar.com/articles/reshh/</guid>
+      <guid>http://localhost:1313/articles/reshh/</guid>
       <description>&lt;p&gt;Reshh emerged from a simple observation: Bengal&amp;rsquo;s independent creative scene—musicians, game developers, artists, and other creators—lacked a dedicated space to connect, share, and grow their audience. While global platforms exist, they often don&amp;rsquo;t capture the unique cultural context and community needs of Bengal&amp;rsquo;s indie creators. Check &lt;a href=&#34;https://www.reshh.com&#34;&gt;reshh&lt;/a&gt; out.&lt;/p&gt;&#xA;&lt;p&gt;This is a work on progress and a project under my non-profit &lt;a href=&#34;https://ource.org&#34;&gt;OURCE&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Pink Tanks and Green Futures: Balance Between Institutional and Public Participation in BRAC’s Climate Change Program</title>
-      <link>https://imtiazalshariar.com/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</link>
+      <link>http://localhost:1313/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://imtiazalshariar.com/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</guid>
+      <guid>http://localhost:1313/articles/pink-tanks-and-green-futures-balance-between-institutional-and-public-participation-in-bracs-climate-change-program/</guid>
       <description>&lt;p&gt;A persistent question has intrigued me to a great extent, whether institutional (NGOs/governments) efforts alone can uplift a community or nation. This question has been taking up more space in my thoughts recently as I started my very own initiative that works on making STEM education more accessible to the greater Bengali-speaking community within Bangladesh and outside. I was fortunate to find BRAC’s Climate Change Program (CCP) among some very interesting organizations at my campus for an event (The Way) in our Multipurpose Hall. They were able to address this quite elegantly.&lt;/p&gt;</description>
     </item>
   </channel>

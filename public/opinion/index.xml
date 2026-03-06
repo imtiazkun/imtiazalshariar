@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Opinion on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>https://imtiazalshariar.com/opinion/</link>
+    <link>http://localhost:1313/opinion/</link>
     <description>Recent content in Opinion on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://imtiazalshariar.com/opinion/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/opinion/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
