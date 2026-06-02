@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Construction on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>http://localhost:1313/tags/construction/</link>
+    <link>https://imtiazalshariar.com/tags/construction/</link>
     <description>Recent content in Construction on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/construction/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://imtiazalshariar.com/tags/construction/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Real-time Simulation - Kone Siteflow</title>
-      <link>http://localhost:1313/articles/siteflow-realtime-construction-3d-simulation/</link>
+      <link>https://imtiazalshariar.com/articles/siteflow-realtime-construction-3d-simulation/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/siteflow-realtime-construction-3d-simulation/</guid>
+      <guid>https://imtiazalshariar.com/articles/siteflow-realtime-construction-3d-simulation/</guid>
       <description>&lt;p&gt;Companies like Kone hire a lot of firms and external contractors for their projects. I had the opportunity to work on one of their large projects - Siteflow.&lt;/p&gt;&#xA;&lt;p&gt;Siteflow is this software used on construction sites to manage lifts, i.e. see if they are operational, how many people are in it, on which floor, if something malfunctioned, etc. All this info properly baked in the UI.&lt;/p&gt;&#xA;&lt;p&gt;The stakeholders thought it would be nice to be able to see these in a 3D environment and for that they needed someone who knew WebGL.&lt;/p&gt;</description>
     </item>
   </channel>

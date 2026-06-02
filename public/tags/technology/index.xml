@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technology on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>http://localhost:1313/tags/technology/</link>
+    <link>https://imtiazalshariar.com/tags/technology/</link>
     <description>Recent content in Technology on Imtiaz Al Shariar - Design-forward Product Engineer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/technology/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://imtiazalshariar.com/tags/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Real-time Simulation - Kone Siteflow</title>
-      <link>http://localhost:1313/articles/siteflow-realtime-construction-3d-simulation/</link>
+      <link>https://imtiazalshariar.com/articles/siteflow-realtime-construction-3d-simulation/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/siteflow-realtime-construction-3d-simulation/</guid>
+      <guid>https://imtiazalshariar.com/articles/siteflow-realtime-construction-3d-simulation/</guid>
       <description>&lt;p&gt;Companies like Kone hire a lot of firms and external contractors for their projects. I had the opportunity to work on one of their large projects - Siteflow.&lt;/p&gt;&#xA;&lt;p&gt;Siteflow is this software used on construction sites to manage lifts, i.e. see if they are operational, how many people are in it, on which floor, if something malfunctioned, etc. All this info properly baked in the UI.&lt;/p&gt;&#xA;&lt;p&gt;The stakeholders thought it would be nice to be able to see these in a 3D environment and for that they needed someone who knew WebGL.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The future is not AI-generated, but AI-assisted—and that distinction matters more than most headlines suggest.</title>
-      <link>http://localhost:1313/articles/the-future-is-not-ai-generated-but-ai-assisted/</link>
+      <link>https://imtiazalshariar.com/articles/the-future-is-not-ai-generated-but-ai-assisted/</link>
       <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/the-future-is-not-ai-generated-but-ai-assisted/</guid>
+      <guid>https://imtiazalshariar.com/articles/the-future-is-not-ai-generated-but-ai-assisted/</guid>
       <description>&lt;p&gt;Just-in latest YC backed AI startup is going to replace &amp;ldquo;Place a job title&amp;rdquo; — I&amp;rsquo;m pretty sure you&amp;rsquo;ve come across headlines like these. And you might get alarmed about some dystopian future ahead. You are right about the dystopian future part but it won&amp;rsquo;t come from AI replacing us outright. Rest assured this article was not AI-generated; AI-assisted? For sure.&lt;/p&gt;&#xA;&lt;p&gt;Before we dive deeper, it&amp;rsquo;s important to establish some definitions — what do I mean by AI generated and AI-assisted. AI-generated is what people often dismiss as &amp;ldquo;AI slop&amp;rdquo;, content that has no input aside from just mere prompts. When I say AI-assisted I&amp;rsquo;m referring to AI automating certain tasks within existing workflows. And if we look at trends people seem to be enjoying the AI-assisted workflows; it&amp;rsquo;s not only giving better results but are also accepte by consumers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Transforming Healthcare Through Intelligent Systems</title>
-      <link>http://localhost:1313/articles/transforming-healthcare-through-intelligent-systems/</link>
+      <link>https://imtiazalshariar.com/articles/transforming-healthcare-through-intelligent-systems/</link>
       <pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/transforming-healthcare-through-intelligent-systems/</guid>
+      <guid>https://imtiazalshariar.com/articles/transforming-healthcare-through-intelligent-systems/</guid>
       <description>&lt;p&gt;Putting aside all the hype and fear mongering on social media about AI replacing humans, we should take a look at how AI at its application level is going to increase accessibility in health care. I&amp;rsquo;ve had the luxury of working with Dr Raphael Chowdhury and his firm &lt;a href=&#34;https://bioforgehealth.org/&#34;&gt;Bioforge Health Systems&lt;/a&gt;. We did a few run through; made MVPs and tried testing in real environments to see how well AI automates different redundant tasks in a health care facility. This article explores one of those experiments we went tried.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mahfil - Safe, Curated Video Platform</title>
-      <link>http://localhost:1313/articles/mahfil/</link>
+      <link>https://imtiazalshariar.com/articles/mahfil/</link>
       <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/mahfil/</guid>
+      <guid>https://imtiazalshariar.com/articles/mahfil/</guid>
       <description>&lt;p&gt;Mahfil is a video-sharing and streaming platform built around safe, curated content you can actually trust. It works a lot like YouTube, but every video is reviewed to keep the experience clean, family-friendly, and free of harmful material — giving users a peaceful place to watch, share, and engage with uplifting content.&lt;/p&gt;&#xA;&lt;p&gt;This is made with the greater conservative Muslim demography in mind, made with strong moderation and ads are served via their own ethical ads platform with strong abstainance from gambling or other unethical content according to Islamic ethics. This project is owned by Kahf Yazilim A.Ş. I worked there as a contractual Frontend Developer hired for modernizing their old code base from 2019.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Deepfakes for Anonymous Group Therapy</title>
-      <link>http://localhost:1313/articles/deepfakes-anonymous-group-therapy/</link>
+      <link>https://imtiazalshariar.com/articles/deepfakes-anonymous-group-therapy/</link>
       <pubDate>Wed, 29 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/articles/deepfakes-anonymous-group-therapy/</guid>
+      <guid>https://imtiazalshariar.com/articles/deepfakes-anonymous-group-therapy/</guid>
       <description>&lt;p&gt;Another MVP we attempted in Finland under EU law, internally we called it &amp;ldquo;Persona&amp;rdquo;. When I say we I&amp;rsquo;m talking about Hasan, Shijie, Mursalat and me. The idea was brought forward by Alex who was very optimitic about group therapies and wanted to bring it on the web. The techincal challenge this posed was running deepfakes on the cloud; as normally people use their local machine with good GPUs for deepfakes but creating a distributed system for hosting multiple calls with multiple users that too with deepfake enabled was something new.&lt;/p&gt;</description>
     </item>
   </channel>
