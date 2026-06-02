@@ -1058,10 +1058,13 @@
                     if (redDot && blanket) {
                         const redDotRect = redDot.getBoundingClientRect();
                         const heroRect = heroSection.getBoundingClientRect();
-                        const relativeTop =
+                        let relativeTop =
                             ((redDotRect.top - heroRect.top - 80) /
                                 heroRect.height) *
                             100;
+                        if (window.innerWidth < 768) {
+                            relativeTop += 10;
+                        }
                         blanket.style.top = relativeTop + "%";
                     }
                 }

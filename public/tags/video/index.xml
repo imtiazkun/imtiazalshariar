@@ -1,19 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Video on Imtiaz Al Shariar - Design-forward Product Engineer</title>
-    <link>https://imtiazalshariar.com/tags/video/</link>
-    <description>Recent content in Video on Imtiaz Al Shariar - Design-forward Product Engineer</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://imtiazalshariar.com/tags/video/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mahfil - Safe, Curated Video Platform</title>
-      <link>https://imtiazalshariar.com/articles/mahfil/</link>
-      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://imtiazalshariar.com/articles/mahfil/</guid>
-      <description>&lt;p&gt;Mahfil is a video-sharing and streaming platform built around safe, curated content you can actually trust. It works a lot like YouTube, but every video is reviewed to keep the experience clean, family-friendly, and free of harmful material — giving users a peaceful place to watch, share, and engage with uplifting content.&lt;/p&gt;&#xA;&lt;p&gt;This is made with the greater conservative Muslim demography in mind, made with strong moderation and ads are served via their own ethical ads platform with strong abstainance from gambling or other unethical content according to Islamic ethics. This project is owned by Kahf Yazilim A.Ş. I worked there as a contractual Frontend Developer hired for modernizing their old code base from 2019.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Video on Imtiaz Al Shariar - Design-forward Product Engineer</title><link>https://imtiazalshariar.com/tags/video/</link><description>Recent content in Video on Imtiaz Al Shariar - Design-forward Product Engineer</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://imtiazalshariar.com/tags/video/index.xml" rel="self" type="application/rss+xml"/><item><title>Mahfil - Safe, Curated Video Platform</title><link>https://imtiazalshariar.com/articles/mahfil/</link><pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate><guid>https://imtiazalshariar.com/articles/mahfil/</guid><description>&lt;p>Mahfil is a video-sharing and streaming platform built around safe, curated content you can actually trust. It works a lot like YouTube, but every video is reviewed to keep the experience clean, family-friendly, and free of harmful material — giving users a peaceful place to watch, share, and engage with uplifting content.&lt;/p>
+&lt;p>This is made with the greater conservative Muslim demography in mind, made with strong moderation and ads are served via their own ethical ads platform with strong abstainance from gambling or other unethical content according to Islamic ethics. This project is owned by Kahf Yazilim A.Ş. I worked there as a contractual Frontend Developer hired for modernizing their old code base from 2019.&lt;/p></description></item></channel></rss>
