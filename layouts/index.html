@@ -1,781 +1,1125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-564KFQ4R");
+        </script>
+        <!-- End Google Tag Manager -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-564KFQ4R');</script>
-    <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Primary Meta Tags -->
+        <title>
+            {{ if and .Title (ne .Title .Site.Title) }}{{ .Title }} - {{ end
+            }}{{ .Site.Title }}
+        </title>
+        <meta
+            name="title"
+            content="{{ if and .Title (ne .Title .Site.Title) }}{{ .Title }} - {{ end }}{{ .Site.Title }}"
+        />
+        <meta
+            name="description"
+            content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+        />
+        {{ if .Params.keywords }}
+        <meta
+            name="keywords"
+            content="{{ range $i, $keyword := .Params.keywords }}{{ if $i }}, {{ end }}{{ $keyword }}{{ end }}"
+        />
+        {{ end }}
+        <meta name="author" content="{{ .Site.Params.author }}" />
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta name="language" content="{{ .Site.LanguageCode }}" />
+        <meta name="revisit-after" content="7 days" />
 
-    <!-- Primary Meta Tags -->
-    <title>{{ if and .Title (ne .Title .Site.Title) }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
-    <meta name="title" content="{{ if and .Title (ne .Title .Site.Title) }}{{ .Title }} - {{ end }}{{ .Site.Title }}">
-    <meta name="description"
-        content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    {{ if .Params.keywords }}
-    <meta name="keywords"
-        content="{{ range $i, $keyword := .Params.keywords }}{{ if $i }}, {{ end }}{{ $keyword }}{{ end }}">{{ end }}
-    <meta name="author" content="{{ .Site.Params.author }}">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="language" content="{{ .Site.LanguageCode }}">
-    <meta name="revisit-after" content="7 days">
+        <!-- Canonical URL -->
+        <link rel="canonical" href="{{ .Permalink }}" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="{{ .Permalink }}">
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="{{ .Site.BaseURL }}assets/favicon.ico"
+        />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="{{ .Site.BaseURL }}assets/favicon.ico"
+        />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ .Site.BaseURL }}assets/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}assets/favicon.ico">
+        <!-- Open Graph / Facebook -->
+        <meta
+            property="og:type"
+            content="{{ if .Params.og.type }}{{ .Params.og.type }}{{ else }}{{ .Site.Params.og.type }}{{ end }}"
+        />
+        <meta property="og:url" content="{{ .Permalink }}" />
+        <meta
+            property="og:title"
+            content="{{ if and .Title (ne .Title .Site.Title) }}{{ .Title }} - {{ end }}{{ .Site.Title }}"
+        />
+        <meta
+            property="og:description"
+            content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+        />
+        <meta
+            property="og:image"
+            content="{{ .Site.BaseURL }}assets/socialbanner.jpg"
+        />
+        <meta
+            property="og:image:alt"
+            content="{{ if .Params.og.imageAlt }}{{ .Params.og.imageAlt }}{{ else }}{{ .Site.Params.og.imageAlt }}{{ end }}"
+        />
+        <meta property="og:site_name" content="{{ .Site.Title }}" />
+        <meta property="og:locale" content="{{ .Site.LanguageCode }}" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type"
-        content="{{ if .Params.og.type }}{{ .Params.og.type }}{{ else }}{{ .Site.Params.og.type }}{{ end }}">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:title"
-        content="{{ if and .Title (ne .Title .Site.Title) }}{{ .Title }} - {{ end }}{{ .Site.Title }}">
-    <meta property="og:description"
-        content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta property="og:image" content="{{ .Site.BaseURL }}assets/socialbanner.jpg">
-    <meta property="og:image:alt"
-        content="{{ if .Params.og.imageAlt }}{{ .Params.og.imageAlt }}{{ else }}{{ .Site.Params.og.imageAlt }}{{ end }}">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
-    <meta property="og:locale" content="{{ .Site.LanguageCode }}">
+        <!-- Twitter -->
+        <meta
+            property="twitter:card"
+            content="{{ .Site.Params.twitter.card }}"
+        />
+        <meta property="twitter:url" content="{{ .Permalink }}" />
+        <meta
+            property="twitter:title"
+            content="{{ if and .Title (ne .Title .Site.Title) }}{{ .Title }} - {{ end }}{{ .Site.Title }}"
+        />
+        <meta
+            property="twitter:description"
+            content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+        />
+        <meta
+            property="twitter:image"
+            content="{{ .Site.BaseURL }}assets/socialbanner.jpg"
+        />
+        <meta
+            property="twitter:image:alt"
+            content="{{ if .Params.og.imageAlt }}{{ .Params.og.imageAlt }}{{ else }}{{ .Site.Params.og.imageAlt }}{{ end }}"
+        />
+        <meta
+            property="twitter:site"
+            content="{{ .Site.Params.twitter.site }}"
+        />
+        <meta
+            property="twitter:creator"
+            content="{{ .Site.Params.twitter.creator }}"
+        />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="{{ .Site.Params.twitter.card }}">
-    <meta property="twitter:url" content="{{ .Permalink }}">
-    <meta property="twitter:title"
-        content="{{ if and .Title (ne .Title .Site.Title) }}{{ .Title }} - {{ end }}{{ .Site.Title }}">
-    <meta property="twitter:description"
-        content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta property="twitter:image" content="{{ .Site.BaseURL }}assets/socialbanner.jpg">
-    <meta property="twitter:image:alt"
-        content="{{ if .Params.og.imageAlt }}{{ .Params.og.imageAlt }}{{ else }}{{ .Site.Params.og.imageAlt }}{{ end }}">
-    <meta property="twitter:site" content="{{ .Site.Params.twitter.site }}">
-    <meta property="twitter:creator" content="{{ .Site.Params.twitter.creator }}">
+        <!-- Additional SEO Meta Tags -->
+        <meta name="theme-color" content="#2c3e50" />
+        <meta name="msapplication-TileColor" content="#2c3e50" />
+        <meta name="application-name" content="{{ .Site.Title }}" />
 
-    <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#2c3e50">
-    <meta name="msapplication-TileColor" content="#2c3e50">
-    <meta name="application-name" content="{{ .Site.Title }}">
+        <!-- Google Site Verification -->
+        {{ if .Site.Params.seo.googleSiteVerification }}
+        <meta
+            name="google-site-verification"
+            content="{{ .Site.Params.seo.googleSiteVerification }}"
+        />
+        {{ end }}
 
-    <!-- Google Site Verification -->
-    {{ if .Site.Params.seo.googleSiteVerification }}
-    <meta name="google-site-verification" content="{{ .Site.Params.seo.googleSiteVerification }}">
-    {{ end }}
+        <!-- Bing Site Verification -->
+        {{ if .Site.Params.seo.bingSiteVerification }}
+        <meta
+            name="msvalidate.01"
+            content="{{ .Site.Params.seo.bingSiteVerification }}"
+        />
+        {{ end }}
 
-    <!-- Bing Site Verification -->
-    {{ if .Site.Params.seo.bingSiteVerification }}
-    <meta name="msvalidate.01" content="{{ .Site.Params.seo.bingSiteVerification }}">
-    {{ end }}
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "{{ .Site.Params.author }}",
-      "url": "{{ .Site.BaseURL }}",
-      "description": "{{ .Site.Params.description }}",
-      "jobTitle": "Design-forward Product Engineer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
-      },
-      "sameAs": [
-        "https://github.com/imtiazkun",
-        {{ if .Site.Params.linkedin }}"https://www.linkedin.com/in/{{ .Site.Params.linkedin }}/",{{ end }}
-        {{ if .Site.Params.twitter.site }}"https://x.com/{{ replace (.Site.Params.twitter.site) "@" "" }}",{{ end }}
-        "{{ .Site.BaseURL }}"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "{{ .Site.Title }}",
-      "url": "{{ .Site.BaseURL }}",
-      "description": "{{ .Site.Params.description }}",
-      "author": {
-        "@type": "Person",
-        "name": "{{ .Site.Params.author }}"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "{{ .Site.Params.author }}"
-      }
-    }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            font-family: 'EB Garamond', serif;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            font-weight: 600;
-            margin: 2rem 0 1rem 0;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        /* Mobile Menu Animations */
-        #mobile-menu {
-            transform: translateY(-10px);
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
-        }
-
-        #mobile-menu:not(.hidden) {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        /* Smooth hamburger icon transition */
-        #mobile-menu-button svg {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        /* Mobile menu button hover effect */
-        #mobile-menu-button:hover svg {
-            transform: scale(1.1);
-        }
-
-        /* Marquee Container */
-        .marquee-container {
-            overflow: hidden;
-            position: relative;
-        }
-
-        .marquee-content {
-            display: flex;
-            white-space: nowrap;
-            transition: none;
-        }
-
-        /* Dark Mode Styles */
-        @media (prefers-color-scheme: dark) {
+        <!-- JSON-LD Structured Data -->
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "{{ .Site.Params.author }}",
+              "url": "{{ .Site.BaseURL }}",
+              "description": "{{ .Site.Params.description }}",
+              "jobTitle": "Design-forward Product Engineer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Freelance"
+              },
+              "sameAs": [
+                "https://github.com/imtiazkun",
+                {{ if .Site.Params.linkedin }}"https://www.linkedin.com/in/{{ .Site.Params.linkedin }}/",{{ end }}
+                {{ if .Site.Params.twitter.site }}"https://x.com/{{ replace (.Site.Params.twitter.site) "@" "" }}",{{ end }}
+                "{{ .Site.BaseURL }}"
+              ]
+            }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "{{ .Site.Title }}",
+                "url": "{{ .Site.BaseURL }}",
+                "description": "{{ .Site.Params.description }}",
+                "author": {
+                    "@type": "Person",
+                    "name": "{{ .Site.Params.author }}"
+                },
+                "publisher": {
+                    "@type": "Person",
+                    "name": "{{ .Site.Params.author }}"
+                }
+            }
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style>
+            svg path {
+                will-change: transform;
+            }
             body {
-                background-color: #000000;
-                color: #ffffff;
+                font-family: "Inter", system-ui, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
             }
 
-            nav.bg-white {
-                background-color: #000000 !important;
-                border-color: #333333;
+            h1 {
+                font-family: "EB Garamond", serif;
+                font-weight: 600;
+                margin-bottom: 1rem;
             }
 
-            section.bg-white {
-                background-color: #000000 !important;
+            h2 {
+                font-weight: 600;
+                margin: 2rem 0 1rem 0;
             }
 
-            section.bg-gray-50 {
-                background-color: #111111 !important;
+            p {
+                margin-bottom: 1rem;
             }
 
-            footer.bg-white {
-                background-color: #000000 !important;
-                border-color: #333333;
-            }
-
+            /* Mobile Menu Animations */
             #mobile-menu {
-                background-color: #000000 !important;
-                border-color: #333333;
+                transform: translateY(-10px);
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
             }
 
-            /* Text colors */
-            .text-gray-900,
-            .text-gray-700,
-            .text-gray-600 {
-                color: #ffffff !important;
+            #mobile-menu:not(.hidden) {
+                transform: translateY(0);
+                opacity: 1;
             }
 
-            .text-gray-500 {
-                color: #cccccc !important;
+            /* Smooth hamburger icon transition */
+            #mobile-menu-button svg {
+                transition: transform 0.3s ease-in-out;
             }
 
-            /* Links */
-            a.text-gray-700,
-            a.text-gray-900 {
-                color: #ffffff !important;
+            /* Mobile menu button hover effect */
+            #mobile-menu-button:hover svg {
+                transform: scale(1.1);
             }
 
-            a:hover.text-gray-700,
-            a:hover.text-gray-900 {
-                color: #e5e5e5 !important;
+            /* Marquee Container */
+            .marquee-container {
+                overflow: hidden;
+                position: relative;
             }
 
-            /* Borders */
-            .border-gray-200,
-            .border-gray-300 {
-                border-color: #333333 !important;
+            .marquee-content {
+                display: flex;
+                white-space: nowrap;
+                transition: none;
             }
 
-            /* Buttons */
-            .bg-gray-900 {
+            /* Navbar Pill Styles */
+            .nav-pill {
                 background-color: #ffffff !important;
+            }
+            .nav-pill a,
+            .nav-pill button {
                 color: #000000 !important;
             }
 
-            .bg-gray-900:hover {
-                background-color: #e5e5e5 !important;
+            /* Dark Mode Styles */
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background-color: #000000;
+                    color: #ffffff;
+                }
+
+                nav.bg-white {
+                    background-color: #000000 !important;
+                    border-color: #333333;
+                }
+
+                section.bg-white {
+                    background-color: #000000 !important;
+                }
+
+                section.bg-gray-50 {
+                    background-color: #111111 !important;
+                }
+
+                footer.bg-white {
+                    background-color: #000000 !important;
+                    border-color: #333333;
+                }
+
+                #mobile-menu {
+                    background-color: #000000 !important;
+                    border-color: #333333;
+                }
+
+                /* Text colors */
+                .text-gray-900,
+                .text-gray-700,
+                .text-gray-600 {
+                    color: #ffffff !important;
+                }
+
+                .text-gray-500 {
+                    color: #cccccc !important;
+                }
+
+                /* Links */
+                a.text-gray-700,
+                a.text-gray-900 {
+                    color: #ffffff !important;
+                }
+
+                a:hover.text-gray-700,
+                a:hover.text-gray-900 {
+                    color: #e5e5e5 !important;
+                }
+
+                /* Borders */
+                .border-gray-200,
+                .border-gray-300 {
+                    border-color: #333333 !important;
+                }
+
+                /* Buttons */
+                .bg-gray-900 {
+                    background-color: #ffffff !important;
+                    color: #000000 !important;
+                }
+
+                .bg-gray-900:hover {
+                    background-color: #e5e5e5 !important;
+                }
+
+                .border-gray-300 {
+                    border-color: #555555 !important;
+                }
+
+                /* Hover states */
+                .hover\:bg-gray-100:hover {
+                    background-color: #222222 !important;
+                }
+
+                /* Categories and tags */
+                .bg-gray-100 {
+                    background-color: #222222 !important;
+                    color: #ffffff !important;
+                }
             }
+        </style>
+    </head>
 
-            .border-gray-300 {
-                border-color: #555555 !important;
-            }
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-564KFQ4R"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"
+            ></iframe
+        ></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- Navbar -->
+        <nav class="fixed top-0 left-0 right-0 z-50 mt-6">
+            <div class="flex justify-center items-start gap-4 px-4 relative">
+                <!-- Left Pill -->
+                <div
+                    class="nav-pill rounded-full shadow-lg px-6 h-12 flex items-center justify-between md:justify-start gap-6 w-full md:w-auto"
+                >
+                    <a href="/" class="text-base font-semibold">Im.</a>
 
-            /* Hover states */
-            .hover\:bg-gray-100:hover {
-                background-color: #222222 !important;
-            }
+                    <!-- Desktop Links -->
+                    <div class="hidden md:flex items-center gap-6 ml-10">
+                        <a
+                            href="/projects"
+                            class="uppercase text-xs font-semibold tracking-wider hover:opacity-70 transition-opacity"
+                            >Projects</a
+                        >
+                        <a
+                            href="/case-studies"
+                            class="uppercase text-xs font-semibold tracking-wider hover:opacity-70 transition-opacity"
+                            >Case Studies</a
+                        >
+                        <a
+                            href="/opinion"
+                            class="uppercase text-xs font-semibold tracking-wider hover:opacity-70 transition-opacity"
+                            >Opinion</a
+                        >
+                        <a
+                            href="https://www.reshh.com/u/imtiazkun"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="uppercase text-xs font-semibold tracking-wider hover:opacity-70 transition-opacity"
+                            >Gallery</a
+                        >
+                    </div>
 
-            /* Categories and tags */
-            .bg-gray-100 {
-                background-color: #222222 !important;
-                color: #ffffff !important;
-            }
-        }
-    </style>
-</head>
+                    <!-- Mobile Menu Button -->
+                    <button
+                        id="mobile-menu-button"
+                        class="md:hidden p-2 rounded-full hover:bg-black/10 transition-colors"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
 
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-564KFQ4R" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Navbar -->
-    <nav class="relative bg-white border-b border-gray-200">
-        <div class="container flex items-center mx-auto px-6 py-4">
-            <!-- Logo and Desktop Navigation -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
-                <a href="/projects" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Projects</a>
-                <a href="/case-studies" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Case
-                    Studies</a>
-                <a href="/opinion" class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Opinion</a>
-                <a href="https://www.reshh.com/u/imtiazkun" target="_blank" rel="noopener noreferrer"
-                    class="text-sm text-gray-700 hover:text-gray-900 transition-colors">Gallery</a>
-            </div>
+                <!-- Right Pill -->
+                <div
+                    class="hidden md:flex nav-pill rounded-full shadow-lg px-6 h-12 items-center"
+                >
+                    <a
+                        href="https://calendar.google.com/appointments/schedules/AcZssZ0vIxEfxqO07IDshieSgB5cDRWWmpjtg34FxlGMrSUP67kDaPcHPCLXZsSuBJFKqYZSZ1s6mXZ5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="uppercase text-xs font-semibold tracking-wider hover:opacity-70 transition-opacity"
+                        >Consult</a
+                    >
+                </div>
 
-            <!-- Mobile Logo -->
-            <div class="md:hidden">
-                <a href="/" class="text-xl font-semibold text-gray-900">Im.</a>
-            </div>
-
-            <!-- Desktop Action Buttons -->
-            <div class="hidden md:flex items-center space-x-4 ml-auto">
-                <a href="https://imtiazalshariar.substack.com/" target="_blank" rel="noopener noreferrer"
-                    class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full">Newsletter</a>
-                <a href="https://calendar.google.com/appointments/schedules/AcZssZ0vIxEfxqO07IDshieSgB5cDRWWmpjtg34FxlGMrSUP67kDaPcHPCLXZsSuBJFKqYZSZ1s6mXZ5" target="_blank" rel="noopener noreferrer"
-                    class="px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors">Consult</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button"
-                class="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
-
-            <!-- Mobile Menu Overlay -->
-            <div id="mobile-menu"
-                class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50">
-                <div class="px-6 py-4 space-y-4">
-                    <a href="/projects"
-                        class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Projects</a>
-                    <a href="/case-studies"
-                        class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Case Studies</a>
-                    <a href="/opinion"
-                        class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Opinion</a>
-                    <a href="https://www.reshh.com/u/imtiazkun" target="_blank" rel="noopener noreferrer"
-                        class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2">Gallery</a>
-                    <div class="pt-4 border-t border-gray-200 space-y-3">
-                        <a href="https://imtiazalshariar.substack.com/" target="_blank" rel="noopener noreferrer"
-                            class="block w-full px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors rounded-full border border-gray-300 text-center">Newsletter</a>
-                        <a href="https://calendar.google.com/appointments/schedules/AcZssZ0vIxEfxqO07IDshieSgB5cDRWWmpjtg34FxlGMrSUP67kDaPcHPCLXZsSuBJFKqYZSZ1s6mXZ5" target="_blank" rel="noopener noreferrer"
-                            class="block w-full px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors text-center">Consult</a>
+                <!-- Mobile Menu Overlay -->
+                <div
+                    id="mobile-menu"
+                    class="hidden md:hidden absolute top-full left-0 right-0 mt-2 mx-auto max-w-sm nav-pill bg-white rounded-2xl shadow-xl border border-gray-100 z-50 overflow-hidden"
+                >
+                    <div class="px-6 py-4 space-y-4">
+                        <a
+                            href="/projects"
+                            class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+                            >Projects</a
+                        >
+                        <a
+                            href="/case-studies"
+                            class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+                            >Case Studies</a
+                        >
+                        <a
+                            href="/opinion"
+                            class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+                            >Opinion</a
+                        >
+                        <a
+                            href="https://www.reshh.com/u/imtiazkun"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="block text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+                            >Gallery</a
+                        >
+                        <div class="pt-4 border-t border-gray-200 space-y-3">
+                            <a
+                                href="https://calendar.google.com/appointments/schedules/AcZssZ0vIxEfxqO07IDshieSgB5cDRWWmpjtg34FxlGMrSUP67kDaPcHPCLXZsSuBJFKqYZSZ1s6mXZ5"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="block w-full px-4 py-2 text-sm bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors text-center"
+                                >Consult</a
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
-    </nav>
+        </nav>
 
-    <!-- Hero Section -->
-    <section class="bg-white">
-        <div class="container flex flex-col lg:flex-row items-center lg:items-start gap-8 mx-auto px-6 py-16">
-            <div class="lg:w-2/3 xl:w-1/2 order-2 lg:order-1">
-                <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-                    Design-forward<br>
-                    Product Engineer.<br>
-                    Architecting scalable,<br>
-                    user-centric systems.
-                </h1>
+        <!-- Hero Section -->
+        <section
+            class="h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden"
+            style="
+                background-image: url(&quot;/assets/hero-background-image.png&quot;);
+                background-color: #391286;
+            "
+        >
+            <div
+                class="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full lg:w-[60%] max-h-full flex flex-col items-center"
+            >
+                <img
+                    src="/assets/hero-head.png"
+                    alt=""
+                    class="w-full h-auto object-contain"
+                />
+                <img
+                    src="/assets/hero-head-thoughts.svg"
+                    alt=""
+                    class="absolute inset-0 w-full h-full object-contain"
+                />
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 812 494" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="slitherFilter">
+                            <feTurbulence
+                                id="turbulence"
+                                type="fractalNoise"
+                                baseFrequency="0.015 0.04"
+                                numOctaves="2"
+                                seed="2"
+                            />
+                            <feDisplacementMap
+                                in="SourceGraphic"
+                                scale="6"
+                                xChannelSelector="R"
+                                yChannelSelector="G"
+                            />
+                        </filter>
+                    </defs>
+                    <g id="snakePaths" filter="url(#slitherFilter)">
+                        <path d="M150.988 345.559C152.349 342.442 153.709 339.326 155.07 336.209C152.885 335.307 150.701 334.404 148.516 333.502C143.089 331.26 137.663 329.016 132.237 326.772L129.547 325.535L127.223 327.648C119.607 335.132 111.99 342.616 104.375 350.1L109.016 349.491C98.7059 344.164 88.3942 338.838 78.079 333.519L76.8301 332.809L75.3486 333.33C64.3797 337.7 53.4136 342.077 42.4522 346.467L44.0051 346.39C44.0051 346.39 44.0051 346.39 44.005 346.39C41.4913 345.779 38.8733 345.559 36.2327 345.423C33.8199 345.299 31.3882 345.246 29 345.029C31.179 346.03 33.3144 347.195 35.4687 348.288C37.8263 349.485 40.2063 350.598 42.6906 351.32C42.6906 351.32 42.6906 351.32 42.6906 351.32L43.5384 351.526L44.2434 351.243C55.3883 347.343 66.5285 343.43 77.6659 339.51L74.9355 339.322C85.0261 345.056 95.1202 350.783 105.215 356.509L107.852 357.871L109.857 355.9C117.758 348.718 125.658 341.534 133.56 334.352L128.545 335.228C133.88 337.682 139.213 340.136 144.547 342.592C146.694 343.581 148.841 344.57 150.988 345.559Z" fill="white"/>
+                        <path d="M190.741 164.791C192.58 161.93 194.42 159.07 196.259 156.209C194.738 155.332 193.218 154.456 191.697 153.58C185.999 150.296 180.302 147.011 174.604 143.727L173.828 143.174L172.5 143.109C158.5 143.789 144.5 144.468 130.5 145.147L131.761 145.642C123.35 138.558 114.938 131.475 106.527 124.391C105.185 123.261 103.842 122.13 102.5 121C103.727 122.255 104.953 123.51 106.18 124.765C113.866 132.63 121.553 140.494 129.239 148.358L129.864 148.884L130.5 148.853C144.5 149.532 158.5 150.211 172.5 150.891L170.396 150.273C175.749 154.093 181.103 157.913 186.456 161.733C187.884 162.752 189.313 163.772 190.741 164.791Z" fill="white"/>
+                        <path d="M627.158 161.501C629.201 164.219 631.244 166.938 633.287 169.657C634.724 168.486 636.161 167.314 637.598 166.143C645.74 159.507 653.887 152.877 662.033 146.247L659.996 146.976C670.507 146.111 681.018 145.244 691.528 144.366L692.466 144.363L693.242 143.542C697.747 137.945 702.249 132.344 706.744 126.739L705.934 127.225C708.366 126.553 710.797 125.881 713.228 125.207C715.747 124.509 718.233 123.668 720.714 122.809C722.475 122.2 724.233 121.582 726 121C724.157 121.254 722.306 121.472 720.457 121.699C717.851 122.02 715.249 122.357 712.68 122.838C710.2 123.302 707.721 123.768 705.241 124.234L704.702 124.383L704.431 124.72C699.484 129.931 694.543 135.147 689.605 140.367L691.319 139.543C680.772 139.579 670.226 139.626 659.679 139.674L658.41 139.779L657.643 140.404C649.007 146.383 640.373 152.364 631.733 158.338C630.208 159.392 628.683 160.447 627.158 161.501Z" fill="white"/>
+                        <path d="M647.157 412.377C645.719 415.459 644.281 418.541 642.843 421.623C643.909 422.027 644.975 422.43 646.042 422.834C655.324 426.349 664.607 429.865 673.889 433.38L675 433.626C681.167 433.165 687.333 432.704 693.5 432.243L692.64 431.897C696.047 434.706 699.454 437.515 702.861 440.324C703.74 441.049 704.62 441.775 705.5 442.5C704.738 441.652 703.976 440.804 703.214 439.956C700.262 436.671 697.311 433.387 694.36 430.103L693.904 429.727L693.5 429.757C687.333 429.296 681.167 428.835 675 428.374L676.111 428.62C667.454 423.764 658.797 418.907 650.141 414.051C649.146 413.493 648.152 412.935 647.157 412.377Z" fill="white"/>
+                    </g>
+                </svg>
+                <div
+                    id="red-dot"
+                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-4 h-4 bg-red-500 rounded-full z-10 opacity-0"
+                ></div>
+            </div>
+            <div
+                id="hero-blanket"
+                class="absolute left-1/2 transform -translate-x-1/2 w-[200%] h-full bg-[url('/assets/hero-blanket.png')] bg-repeat-x bg-[length:auto_100%] md:bg-[length:auto_150%] rotate-[-3deg] origin-top"
+                style="top: 75%;"
+            ></div>
 
-                <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-                    Building end-to-end web applications and MVPs that solve complex business challenges, while also
-                    contributing to community development through non-profit initiatives. With
-                    strong design sensibilities and technical depth, I help startups, enterprises, and social ventures
-                    launch meaningful products and programs.
-                </p>
+            <!-- Trusted by Section -->
+            <div class="absolute bottom-16 left-0 right-0 z-10">
+                <div class="max-w-7xl mx-auto px-6">
+                    <h2 class="text-center font-bold text-sm mb-8 text-white">
+                        Trusted by innovative teams across Europe and Asia
+                    </h2>
 
-                <!-- Action Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 mt-8">
-                    <a href="https://calendar.google.com/appointments/schedules/AcZssZ0vIxEfxqO07IDshieSgB5cDRWWmpjtg34FxlGMrSUP67kDaPcHPCLXZsSuBJFKqYZSZ1s6mXZ5" target="_blank" rel="noopener noreferrer"
-                        class="inline-block px-6 py-3 bg-gray-900 text-white hover:bg-gray-800 transition-colors font-bold text-xl rounded-full">
-                        Consult
+                    <!-- Marquee Container -->
+                    <div class="marquee-container mt-4">
+                        <div id="marquee-content" class="marquee-content">
+                            <!-- Companies will be dynamically added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog and Case Studies Section -->
+        <section class="pt-16 pb-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-sm text-gray-600 uppercase tracking-wide"
+                        >Blog</span
+                    >
+                    <h2
+                        class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4"
+                    >
+                        Case Studies and Op-Eds
+                    </h2>
+                    <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+                        Articles and writings published on-site and across
+                        different spaces for discussion.
+                    </p>
+                </div>
+
+                <!-- Blog Posts List -->
+                <div class="space-y-8">
+                    {{ range first 3 (where .Site.RegularPages "Section"
+                    "articles") }}
+                    <article class="bg-transparent">
+                        <div class="flex flex-col md:flex-row">
+                            <div
+                                class="w-full md:w-96 h-48 md:h-64 bg-gray-200 flex items-center justify-center flex-shrink-0"
+                            >
+                                {{ if .Params.featuredImage }}
+                                <img
+                                    src="{{ .Params.featuredImage }}"
+                                    alt="{{ .Title }}"
+                                    class="w-full h-full object-cover"
+                                />
+                                {{ else }}
+                                <svg
+                                    class="w-12 h-12 text-gray-400"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                                {{ end }}
+                            </div>
+                            <div class="p-4 md:p-6 flex-1">
+                                <div
+                                    class="flex items-center justify-start gap-4 mb-3"
+                                >
+                                    {{ if .Params.categories }}
+                                    <span
+                                        class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                                        >{{ index .Params.categories 0 }}</span
+                                    >
+                                    {{ end }} {{ if .Params.readTime }}
+                                    <span class="text-sm text-gray-500"
+                                        >{{ .Params.readTime }}</span
+                                    >
+                                    {{ end }}
+                                </div>
+                                <h3
+                                    class="text-xl font-semibold text-gray-900 mb-3"
+                                >
+                                    {{ .Title }}
+                                </h3>
+                                <p class="text-gray-600 mb-4">
+                                    {{ .Params.description | default .Summary |
+                                    truncate 150 }}
+                                </p>
+                                <a
+                                    href="{{ .Permalink }}"
+                                    class="text-gray-900 font-medium hover:text-gray-700 flex items-center"
+                                >
+                                    Read more
+                                    <svg
+                                        class="w-4 h-4 ml-1"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5l7 7-7 7"
+                                        ></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    {{ end }}
+                </div>
+
+                <!-- View All Posts Button -->
+                <div class="text-left mt-12">
+                    <a
+                        href="/articles"
+                        class="inline-block px-6 py-3 bg-gray-900 text-white hover:bg-gray-800 transition-colors font-bold text-xl cursor-pointer"
+                    >
+                        View All Posts
                     </a>
                 </div>
             </div>
-            <div class="lg:w-1/3 xl:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2 w-full">
-                <canvas id="bouncing-circles" class="w-full aspect-square rounded-lg shadow-lg"
-                    style="background-color: #5f2dc2;"></canvas>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Trusted by Section -->
-    <section class="py-8 pb-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-center font-bold text-sm mb-16">Trusted by innovative teams across
-                Europe and
-                Asia</h2>
-
-            <!-- Marquee Container -->
-            <div class="marquee-container mt-8">
-                <div id="marquee-content" class="marquee-content">
-                    <!-- Companies will be dynamically added here -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog and Case Studies Section -->
-    <section class="pt-16 pb-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <span class="text-sm text-gray-600 uppercase tracking-wide">Blog</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Case Studies and Op-Eds</h2>
-                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Articles and writings published on-site and across
-                    different spaces for discussion.</p>
-            </div>
-
-
-            <!-- Blog Posts List -->
-            <div class="space-y-8">
-                {{ range first 3 (where .Site.RegularPages "Section" "articles") }}
-                <article class="bg-transparent">
-                    <div class="flex flex-col md:flex-row">
-                        <div
-                            class="w-full md:w-96 h-48 md:h-64 bg-gray-200 flex items-center justify-center flex-shrink-0">
-                            {{ if .Params.featuredImage }}
-                            <img src="{{ .Params.featuredImage }}" alt="{{ .Title }}"
-                                class="w-full h-full object-cover">
-                            {{ else }}
-                            <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            {{ end }}
-                        </div>
-                        <div class="p-4 md:p-6 flex-1">
-                            <div class="flex items-center justify-start gap-4 mb-3">
-                                {{ if .Params.categories }}
-                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{{ index
-                                    .Params.categories 0 }}</span>
-                                {{ end }}
-                                {{ if .Params.readTime }}
-                                <span class="text-sm text-gray-500">{{ .Params.readTime }}</span>
-                                {{ end }}
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ .Title }}</h3>
-                            <p class="text-gray-600 mb-4">{{ .Params.description | default .Summary | truncate 150 }}
-                            </p>
-                            <a href="{{ .Permalink }}"
-                                class="text-gray-900 font-medium hover:text-gray-700 flex items-center">
-                                Read more
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                {{ end }}
-            </div>
-
-            <!-- View All Posts Button -->
-            <div class="text-left mt-12">
-                <a href="/articles"
-                    class="inline-block px-6 py-3 bg-gray-900 text-white hover:bg-gray-800 transition-colors font-bold text-xl cursor-pointer">
-                    View All Posts
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main content -->
-    <!-- <div class="px-6 pt-8 pb-0">
+        <!-- Main content -->
+        <!-- <div class="px-6 pt-8 pb-0">
         {{ .Content }}
     </div> -->
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 py-6 md:py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 md:gap-4">
-                <div class="text-xs sm:text-sm text-gray-600 text-left">© {{ now.Year }} {{
-                    .Site.Params.author }}. All rights reserved.</div>
-                <div class="flex items-center gap-4 sm:gap-6 flex-wrap">
-                    <a href="https://www.linkedin.com/in/imtiazalshariar/" target="_blank" rel="noopener noreferrer"
-                        class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">LinkedIn</a>
-                    <a href="https://github.com/imtiazkun" target="_blank" rel="noopener noreferrer"
-                        class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">GitHub</a>
-                    <a href="https://x.com/imtiazalshariar" target="_blank" rel="noopener noreferrer"
-                        class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">Twitter/X</a>
-                    <a href="https://www.reshh.com/u/imtiazkun" target="_blank" rel="noopener noreferrer"
-                        class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">Reshh</a>
+        <!-- Footer -->
+        <footer class="bg-white border-t border-gray-200 py-6 md:py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 md:gap-4"
+                >
+                    <div class="text-xs sm:text-sm text-gray-600 text-left">
+                        © {{ now.Year }} {{ .Site.Params.author }}. All rights
+                        reserved.
+                    </div>
+                    <div class="flex items-center gap-4 sm:gap-6 flex-wrap">
+                        <a
+                            href="https://www.linkedin.com/in/imtiazalshariar/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm"
+                            >LinkedIn</a
+                        >
+                        <a
+                            href="https://github.com/imtiazkun"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm"
+                            >GitHub</a
+                        >
+                        <a
+                            href="https://x.com/imtiazalshariar"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm"
+                            >Twitter/X</a
+                        >
+                        <a
+                            href="https://www.reshh.com/u/imtiazkun"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm"
+                            >Reshh</a
+                        >
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- Mobile Menu JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const hamburgerIcon = mobileMenuButton.querySelector('svg');
+        <!-- Mobile Menu JavaScript -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const mobileMenuButton =
+                    document.getElementById("mobile-menu-button");
+                const mobileMenu = document.getElementById("mobile-menu");
+                const hamburgerIcon = mobileMenuButton.querySelector("svg");
 
-            mobileMenuButton.addEventListener('click', function () {
-                const isHidden = mobileMenu.classList.contains('hidden');
+                mobileMenuButton.addEventListener("click", function () {
+                    const isHidden = mobileMenu.classList.contains("hidden");
 
-                if (isHidden) {
-                    // Show menu
-                    mobileMenu.classList.remove('hidden');
-                    // Change hamburger to X
-                    hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
-                } else {
-                    // Hide menu
-                    mobileMenu.classList.add('hidden');
-                    // Change X back to hamburger
-                    hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
-                }
-            });
-
-            // Close menu when clicking outside
-            document.addEventListener('click', function (event) {
-                if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-                    mobileMenu.classList.add('hidden');
-                    hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
-                }
-            });
-
-            // Close menu when clicking on menu links
-            const menuLinks = mobileMenu.querySelectorAll('a');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    mobileMenu.classList.add('hidden');
-                    hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+                    if (isHidden) {
+                        // Show menu
+                        mobileMenu.classList.remove("hidden");
+                        // Change hamburger to X
+                        hamburgerIcon.innerHTML =
+                            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+                    } else {
+                        // Hide menu
+                        mobileMenu.classList.add("hidden");
+                        // Change X back to hamburger
+                        hamburgerIcon.innerHTML =
+                            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+                    }
                 });
-            });
 
-            // Continuous Marquee Implementation
-            const marqueeContent = document.getElementById('marquee-content');
-            const companies = [
-                { type: 'text', content: "KONE" },
-                { type: 'text', content: "Kahf Yazılım A.Ş." },
-                { type: 'text', content: "Zipli" },
-                { type: 'text', content: 'Ource' },
-                { type: 'text', content: 'Summer Schools' },
-                { type: 'text', content: 'Flowtusk' },
-                { type: 'text', content: 'ZeltaTech' }
-            ];
+                // Close menu when clicking outside
+                document.addEventListener("click", function (event) {
+                    if (
+                        !mobileMenuButton.contains(event.target) &&
+                        !mobileMenu.contains(event.target)
+                    ) {
+                        mobileMenu.classList.add("hidden");
+                        hamburgerIcon.innerHTML =
+                            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+                    }
+                });
 
-            // Create enough copies to fill the screen and ensure seamless loop
-            const copies = 4; // Number of complete sets to create
-            let currentPosition = 0;
-            const speed = 0.5; // pixels per frame
-
-            // Build the marquee content
-            function buildMarquee() {
-                marqueeContent.innerHTML = '';
-
-                for (let i = 0; i < copies; i++) {
-                    const companySet = document.createElement('div');
-                    companySet.className = 'flex items-center space-x-12 mr-12 flex-shrink-0';
-
-                    companies.forEach(company => {
-                        if (company.type === 'image') {
-                            const img = document.createElement('img');
-                            img.src = company.src;
-                            img.alt = company.alt;
-                            img.className = 'h-8 w-auto border-2 p-1 border-transparent';
-                            companySet.appendChild(img);
-                        } else {
-                            const span = document.createElement('span');
-                            span.textContent = company.content;
-                            span.className = 'text-gray-900 font-bold text-xl border-2 border-transparent px-2 py-1';
-                            companySet.appendChild(span);
-                        }
+                // Close menu when clicking on menu links
+                const menuLinks = mobileMenu.querySelectorAll("a");
+                menuLinks.forEach((link) => {
+                    link.addEventListener("click", function () {
+                        mobileMenu.classList.add("hidden");
+                        hamburgerIcon.innerHTML =
+                            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
                     });
+                });
 
-                    marqueeContent.appendChild(companySet);
-                }
-            }
-
-            // Animation loop
-            function animate() {
-                currentPosition -= speed;
-
-                // Reset position when one complete set has scrolled out
-                const setWidth = marqueeContent.children[0].offsetWidth;
-                if (Math.abs(currentPosition) >= setWidth) {
-                    currentPosition = 0;
-                }
-
-                marqueeContent.style.transform = `translateX(${currentPosition}px)`;
-                requestAnimationFrame(animate);
-            }
-
-            // Initialize
-            buildMarquee();
-            animate();
-
-            // Bouncing Circles Animation
-            const canvas = document.getElementById('bouncing-circles');
-            if (canvas) {
-                const ctx = canvas.getContext('2d');
-                const colors = ['#000000', '#FFFFFF']; // Black and white only
-
-                // Pixelated rendering
-                ctx.imageSmoothingEnabled = false;
-
-                // Circle class
-                class Circle {
-                    constructor(radiusRatio, color) {
-                        this.radiusRatio = radiusRatio;
-                        this.color = color;
-                        this.vx = (Math.random() - 0.5) * 3;
-                        this.vy = (Math.random() - 0.5) * 3;
-                        this.updateRadius();
-                        this.x = canvas.width / 2;
-                        this.y = canvas.height / 2;
-                    }
-
-                    updateRadius() {
-                        this.radius = (canvas.width / 4) * this.radiusRatio;
-                    }
-
-                    checkCollision(other) {
-                        const dx = other.x - this.x;
-                        const dy = other.y - this.y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
-                        const minDistance = this.radius + other.radius;
-
-                        if (distance < minDistance && distance > 0) {
-                            // Collision detected - separate circles first
-                            const overlap = minDistance - distance;
-                            const separationX = (dx / distance) * overlap * 0.5;
-                            const separationY = (dy / distance) * overlap * 0.5;
-
-                            this.x -= separationX;
-                            this.y -= separationY;
-                            other.x += separationX;
-                            other.y += separationY;
-
-                            // Calculate collision response (elastic collision)
-                            const normalX = dx / distance;
-                            const normalY = dy / distance;
-
-                            // Relative velocity
-                            const relativeVx = other.vx - this.vx;
-                            const relativeVy = other.vy - this.vy;
-
-                            // Velocity along normal
-                            const velocityAlongNormal = relativeVx * normalX + relativeVy * normalY;
-
-                            // Don't resolve if velocities are separating
-                            if (velocityAlongNormal > 0) return;
-
-                            // Elastic collision with mass consideration (using radius as mass proxy)
-                            const restitution = 0.9; // Bounciness
-                            const impulse = (2 * velocityAlongNormal) / (1 + 1); // Simplified: equal mass
-
-                            // Update velocities
-                            this.vx += impulse * normalX * restitution;
-                            this.vy += impulse * normalY * restitution;
-                            other.vx -= impulse * normalX * restitution;
-                            other.vy -= impulse * normalY * restitution;
-                        }
-                    }
-
-                    update() {
-                        this.x += this.vx;
-                        this.y += this.vy;
-
-                        // Bounce off walls
-                        if (this.x - this.radius <= 0 || this.x + this.radius >= canvas.width) {
-                            this.vx = -this.vx;
-                        }
-                        if (this.y - this.radius <= 0 || this.y + this.radius >= canvas.height) {
-                            this.vy = -this.vy;
-                        }
-
-                        // Keep within bounds
-                        this.x = Math.max(this.radius, Math.min(canvas.width - this.radius, this.x));
-                        this.y = Math.max(this.radius, Math.min(canvas.height - this.radius, this.y));
-                    }
-
-                    draw() {
-                        ctx.fillStyle = this.color;
-                        ctx.beginPath();
-                        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                        ctx.fill();
-                    }
-                }
-
-                // Create exactly 3 circles with specific size ratios
-                const circles = [];
-
-                // Assign random black/white colors ensuring not all are the same
-                function assignInitialColors(count) {
-                    const initialColors = [];
-                    let blackCount = 0;
-                    let whiteCount = 0;
-
-                    // Randomly assign colors
-                    for (let i = 0; i < count; i++) {
-                        const color = colors[Math.floor(Math.random() * 2)];
-                        initialColors.push(color);
-                        if (color === '#000000') blackCount++;
-                        else whiteCount++;
-                    }
-
-                    // Ensure at least one of each color
-                    if (blackCount === 0) {
-                        initialColors[0] = '#000000';
-                    } else if (whiteCount === 0) {
-                        initialColors[0] = '#FFFFFF';
-                    }
-
-                    return initialColors;
-                }
-
-                // Create 10 size categories, with n circles in each category (n = category number)
-                // Category 1: 1 circle, Category 2: 2 circles, Category 3: 3 circles, etc.
-                // Total: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55 circles
-                const sizeCategories = [
-                    1.0,      // Category 1: 1 circle (largest)
-                    0.7,      // Category 2: 2 circles
-                    0.5,      // Category 3: 3 circles
-                    0.35,     // Category 4: 4 circles
-                    0.25,     // Category 5: 5 circles
-                    0.18,     // Category 6: 6 circles
-                    0.13,     // Category 7: 7 circles
-                    0.10,     // Category 8: 8 circles
-                    0.08,     // Category 9: 9 circles
-                    0.06      // Category 10: 10 circles (smallest)
+                // Continuous Marquee Implementation
+                const marqueeContent =
+                    document.getElementById("marquee-content");
+                const companies = [
+                    { type: "text", content: "KONE" },
+                    { type: "text", content: "Kahf Yazılım A.Ş." },
+                    { type: "text", content: "Zipli" },
+                    { type: "text", content: "OURCE" },
+                    { type: "text", content: "Summer Schools" },
+                    { type: "text", content: "Flowtusk" },
+                    { type: "text", content: "Qardus" },
                 ];
 
-                // Calculate total number of circles
-                let totalCircles = 0;
-                sizeCategories.forEach((_, index) => {
-                    totalCircles += index + 1;
-                });
+                // Create enough copies to fill the screen and ensure seamless loop
+                const copies = 4; // Number of complete sets to create
+                let currentPosition = 0;
+                const speed = 0.5; // pixels per frame
 
-                const initialColors = assignInitialColors(totalCircles);
+                // Build the marquee content
+                function buildMarquee() {
+                    marqueeContent.innerHTML = "";
 
-                // Create circles for each category
-                let colorIndex = 0;
-                sizeCategories.forEach((ratio, categoryIndex) => {
-                    const circlesInCategory = categoryIndex + 1; // n circles for category n
-                    for (let i = 0; i < circlesInCategory; i++) {
-                        circles.push(new Circle(ratio, initialColors[colorIndex]));
-                        colorIndex++;
+                    for (let i = 0; i < copies; i++) {
+                        const companySet = document.createElement("div");
+                        companySet.className =
+                            "flex items-center space-x-12 mr-12 flex-shrink-0";
+
+                        companies.forEach((company) => {
+                            if (company.type === "image") {
+                                const img = document.createElement("img");
+                                img.src = company.src;
+                                img.alt = company.alt;
+                                img.className =
+                                    "h-8 w-auto border-2 p-1 border-transparent";
+                                companySet.appendChild(img);
+                            } else {
+                                const span = document.createElement("span");
+                                span.textContent = company.content;
+                                span.className =
+                                    "text-gray-900 font-bold text-xl border-2 border-transparent px-2 py-1";
+                                companySet.appendChild(span);
+                            }
+                        });
+
+                        marqueeContent.appendChild(companySet);
                     }
-                });
-
-                // Set initial positions - random locations ensuring circles stay within bounds
-                circles.forEach((circle) => {
-                    // Random position with margin for radius
-                    circle.x = Math.random() * (canvas.width - circle.radius * 2) + circle.radius;
-                    circle.y = Math.random() * (canvas.height - circle.radius * 2) + circle.radius;
-                });
-
-                // Set canvas size to be square
-                function resizeCanvas() {
-                    const container = canvas.parentElement;
-                    const size = Math.min(container.offsetWidth, 500);
-                    canvas.width = size;
-                    canvas.height = size;
-
-                    // Update circle radii when canvas resizes
-                    circles.forEach(circle => {
-                        circle.updateRadius();
-                    });
                 }
 
-                resizeCanvas();
-                window.addEventListener('resize', resizeCanvas);
-
                 // Animation loop
-                function animateCircles() {
-                    ctx.fillStyle = '#5f2dc2';
-                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                function animate() {
+                    currentPosition -= speed;
 
-                    // Update positions
-                    circles.forEach(circle => {
-                        circle.update();
-                    });
+                    // Reset position when one complete set has scrolled out
+                    const setWidth = marqueeContent.children[0].offsetWidth;
+                    if (Math.abs(currentPosition) >= setWidth) {
+                        currentPosition = 0;
+                    }
 
-                    // Check collisions between all pairs of circles
-                    for (let i = 0; i < circles.length; i++) {
-                        for (let j = i + 1; j < circles.length; j++) {
-                            circles[i].checkCollision(circles[j]);
+                    marqueeContent.style.transform = `translateX(${currentPosition}px)`;
+                    requestAnimationFrame(animate);
+                }
+
+                // Initialize
+                buildMarquee();
+                animate();
+
+                // Bouncing Circles Animation
+                const canvas = document.getElementById("bouncing-circles");
+                if (canvas) {
+                    const ctx = canvas.getContext("2d");
+                    const colors = ["#000000", "#FFFFFF"]; // Black and white only
+
+                    // Pixelated rendering
+                    ctx.imageSmoothingEnabled = false;
+
+                    // Circle class
+                    class Circle {
+                        constructor(radiusRatio, color) {
+                            this.radiusRatio = radiusRatio;
+                            this.color = color;
+                            this.vx = (Math.random() - 0.5) * 3;
+                            this.vy = (Math.random() - 0.5) * 3;
+                            this.updateRadius();
+                            this.x = canvas.width / 2;
+                            this.y = canvas.height / 2;
+                        }
+
+                        updateRadius() {
+                            this.radius = (canvas.width / 4) * this.radiusRatio;
+                        }
+
+                        checkCollision(other) {
+                            const dx = other.x - this.x;
+                            const dy = other.y - this.y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+                            const minDistance = this.radius + other.radius;
+
+                            if (distance < minDistance && distance > 0) {
+                                // Collision detected - separate circles first
+                                const overlap = minDistance - distance;
+                                const separationX =
+                                    (dx / distance) * overlap * 0.5;
+                                const separationY =
+                                    (dy / distance) * overlap * 0.5;
+
+                                this.x -= separationX;
+                                this.y -= separationY;
+                                other.x += separationX;
+                                other.y += separationY;
+
+                                // Calculate collision response (elastic collision)
+                                const normalX = dx / distance;
+                                const normalY = dy / distance;
+
+                                // Relative velocity
+                                const relativeVx = other.vx - this.vx;
+                                const relativeVy = other.vy - this.vy;
+
+                                // Velocity along normal
+                                const velocityAlongNormal =
+                                    relativeVx * normalX + relativeVy * normalY;
+
+                                // Don't resolve if velocities are separating
+                                if (velocityAlongNormal > 0) return;
+
+                                // Elastic collision with mass consideration (using radius as mass proxy)
+                                const restitution = 0.9; // Bounciness
+                                const impulse =
+                                    (2 * velocityAlongNormal) / (1 + 1); // Simplified: equal mass
+
+                                // Update velocities
+                                this.vx += impulse * normalX * restitution;
+                                this.vy += impulse * normalY * restitution;
+                                other.vx -= impulse * normalX * restitution;
+                                other.vy -= impulse * normalY * restitution;
+                            }
+                        }
+
+                        update() {
+                            this.x += this.vx;
+                            this.y += this.vy;
+
+                            // Bounce off walls
+                            if (
+                                this.x - this.radius <= 0 ||
+                                this.x + this.radius >= canvas.width
+                            ) {
+                                this.vx = -this.vx;
+                            }
+                            if (
+                                this.y - this.radius <= 0 ||
+                                this.y + this.radius >= canvas.height
+                            ) {
+                                this.vy = -this.vy;
+                            }
+
+                            // Keep within bounds
+                            this.x = Math.max(
+                                this.radius,
+                                Math.min(canvas.width - this.radius, this.x),
+                            );
+                            this.y = Math.max(
+                                this.radius,
+                                Math.min(canvas.height - this.radius, this.y),
+                            );
+                        }
+
+                        draw() {
+                            ctx.fillStyle = this.color;
+                            ctx.beginPath();
+                            ctx.arc(
+                                this.x,
+                                this.y,
+                                this.radius,
+                                0,
+                                Math.PI * 2,
+                            );
+                            ctx.fill();
                         }
                     }
 
-                    // Draw circles
-                    circles.forEach(circle => {
-                        circle.draw();
+                    // Create exactly 3 circles with specific size ratios
+                    const circles = [];
+
+                    // Assign random black/white colors ensuring not all are the same
+                    function assignInitialColors(count) {
+                        const initialColors = [];
+                        let blackCount = 0;
+                        let whiteCount = 0;
+
+                        // Randomly assign colors
+                        for (let i = 0; i < count; i++) {
+                            const color = colors[Math.floor(Math.random() * 2)];
+                            initialColors.push(color);
+                            if (color === "#000000") blackCount++;
+                            else whiteCount++;
+                        }
+
+                        // Ensure at least one of each color
+                        if (blackCount === 0) {
+                            initialColors[0] = "#000000";
+                        } else if (whiteCount === 0) {
+                            initialColors[0] = "#FFFFFF";
+                        }
+
+                        return initialColors;
+                    }
+
+                    // Create 10 size categories, with n circles in each category (n = category number)
+                    // Category 1: 1 circle, Category 2: 2 circles, Category 3: 3 circles, etc.
+                    // Total: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55 circles
+                    const sizeCategories = [
+                        1.0, // Category 1: 1 circle (largest)
+                        0.7, // Category 2: 2 circles
+                        0.5, // Category 3: 3 circles
+                        0.35, // Category 4: 4 circles
+                        0.25, // Category 5: 5 circles
+                        0.18, // Category 6: 6 circles
+                        0.13, // Category 7: 7 circles
+                        0.1, // Category 8: 8 circles
+                        0.08, // Category 9: 9 circles
+                        0.06, // Category 10: 10 circles (smallest)
+                    ];
+
+                    // Calculate total number of circles
+                    let totalCircles = 0;
+                    sizeCategories.forEach((_, index) => {
+                        totalCircles += index + 1;
                     });
 
-                    requestAnimationFrame(animateCircles);
+                    const initialColors = assignInitialColors(totalCircles);
+
+                    // Create circles for each category
+                    let colorIndex = 0;
+                    sizeCategories.forEach((ratio, categoryIndex) => {
+                        const circlesInCategory = categoryIndex + 1; // n circles for category n
+                        for (let i = 0; i < circlesInCategory; i++) {
+                            circles.push(
+                                new Circle(ratio, initialColors[colorIndex]),
+                            );
+                            colorIndex++;
+                        }
+                    });
+
+                    // Set initial positions - random locations ensuring circles stay within bounds
+                    circles.forEach((circle) => {
+                        // Random position with margin for radius
+                        circle.x =
+                            Math.random() * (canvas.width - circle.radius * 2) +
+                            circle.radius;
+                        circle.y =
+                            Math.random() *
+                                (canvas.height - circle.radius * 2) +
+                            circle.radius;
+                    });
+
+                    // Set canvas size to be square
+                    function resizeCanvas() {
+                        const container = canvas.parentElement;
+                        const size = Math.min(container.offsetWidth, 500);
+                        canvas.width = size;
+                        canvas.height = size;
+
+                        // Update circle radii when canvas resizes
+                        circles.forEach((circle) => {
+                            circle.updateRadius();
+                        });
+                    }
+
+                    resizeCanvas();
+                    window.addEventListener("resize", resizeCanvas);
+
+                    // Animation loop
+                    function animateCircles() {
+                        ctx.fillStyle = "#5f2dc2";
+                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                        // Update positions
+                        circles.forEach((circle) => {
+                            circle.update();
+                        });
+
+                        // Check collisions between all pairs of circles
+                        for (let i = 0; i < circles.length; i++) {
+                            for (let j = i + 1; j < circles.length; j++) {
+                                circles[i].checkCollision(circles[j]);
+                            }
+                        }
+
+                        // Draw circles
+                        circles.forEach((circle) => {
+                            circle.draw();
+                        });
+
+                        requestAnimationFrame(animateCircles);
+                    }
+
+                    animateCircles();
                 }
 
-                animateCircles();
-            }
-        });
-    </script>
-</body>
+                // Mouse parallax effect for hero background
+                const heroSection = document.querySelector(".h-screen");
+                if (heroSection) {
+                    document.addEventListener("mousemove", function (e) {
+                        const x = (e.clientX / window.innerWidth - 0.5) * 20;
+                        const y = (e.clientY / window.innerHeight - 0.5) * 20;
+                        heroSection.style.backgroundPosition = `calc(50% + ${x}px) calc(50% + ${y}px)`;
+                    });
+                }
 
+                // Position blanket based on red dot location
+                function positionBlanket() {
+                    const redDot = document.getElementById("red-dot");
+                    const blanket = document.getElementById("hero-blanket");
+                    if (redDot && blanket) {
+                        const redDotRect = redDot.getBoundingClientRect();
+                        const heroRect = heroSection.getBoundingClientRect();
+                        let relativeTop =
+                            ((redDotRect.top - heroRect.top - 80) /
+                                heroRect.height) *
+                            100;
+                        if (window.innerWidth < 768) {
+                            relativeTop += 5;
+                        }
+                        blanket.style.top = relativeTop + "%";
+                    }
+                }
+                positionBlanket();
+                window.addEventListener("resize", positionBlanket);
+
+                // Snake slither animation for SVG paths
+                // Customization variables:
+                // - speed: how fast the animation loops (default: 0.001)
+                // - xAmp: horizontal movement range in px (default: 8)
+                // - yAmp: vertical movement range in px (default: 6)
+                // - rotAmp: rotation range in degrees (default: 3)
+                // - skewAmp: skew range in degrees (default: 2)
+                // - displacementScale: wavy distortion intensity (default: 6)
+                const paths = document.querySelectorAll("#snakePaths path");
+                const turbulence = document.getElementById("turbulence");
+                if (paths.length > 0) {
+                    const settings = [
+                        { speed: 0.0012, xAmp: 10, yAmp: 7, rotAmp: 4, skewAmp: 2, phase: 0 },
+                        { speed: 0.001, xAmp: 8, yAmp: 6, rotAmp: 3, skewAmp: 2.5, phase: 1.5 },
+                        { speed: 0.0014, xAmp: 12, yAmp: 8, rotAmp: 5, skewAmp: 1.5, phase: 3 },
+                        { speed: 0.0009, xAmp: 9, yAmp: 5, rotAmp: 3.5, skewAmp: 2, phase: 4.5 }
+                    ];
+
+                    paths.forEach((path, i) => {
+                        path.style.transformBox = "fill-box";
+                        path.style.transformOrigin = "center";
+                    });
+
+                    let time = 0;
+                    function animateSlither() {
+                        time += 1;
+                        paths.forEach((path, i) => {
+                            const s = settings[i % settings.length];
+                            const t = time * s.speed + s.phase;
+                            const x = Math.sin(t) * s.xAmp;
+                            const y = Math.cos(t * 0.7) * s.yAmp;
+                            const rot = Math.sin(t * 0.5) * s.rotAmp;
+                            const skew = Math.cos(t * 0.9) * s.skewAmp;
+                            const scaleX = 1 + Math.sin(t * 0.3) * 0.03;
+                            const scaleY = 1 + Math.cos(t * 0.4) * 0.03;
+                            path.style.transform = `translate(${x}px, ${y}px) rotate(${rot}deg) skewX(${skew}deg) scale(${scaleX}, ${scaleY})`;
+                        });
+
+                        if (turbulence) {
+                            const freqX = 0.015 + Math.sin(time * 0.0003) * 0.003;
+                            const freqY = 0.04 + Math.cos(time * 0.0004) * 0.005;
+                            turbulence.setAttribute("baseFrequency", `${freqX} ${freqY}`);
+                        }
+
+                        requestAnimationFrame(animateSlither);
+                    }
+                    animateSlither();
+                }
+            });
+        </script>
+    </body>
 </html>
