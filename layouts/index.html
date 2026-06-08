@@ -717,6 +717,7 @@
                     function checkLoaded() {
                         loadedCount++;
                         if (loadedCount >= heroImages.length) {
+                            positionBlanket();
                             heroLoader.classList.add("fade-out");
                             heroLoader.addEventListener("transitionend", function () {
                                 heroLoader.style.display = "none";
