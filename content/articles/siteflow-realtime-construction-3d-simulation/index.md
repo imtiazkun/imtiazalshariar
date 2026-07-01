@@ -1,5 +1,5 @@
 ---
-title: "Real-time Simulation - Kone Siteflow"
+title: "Real-time Simulation in Siteflow - KONE (Finland)"
 date: 2026-01-15
 draft: false
 categories: ["Projects"]
@@ -9,7 +9,7 @@ featuredImage: "/assets/articles/siteflow-realtime-construction-3d-simulation/ko
 description: "A real-time 3D simulation for construction lifts, enabling visualization and planning of building sites in immersive detail."
 ---
 
-Companies like Kone hire a lot of firms and external contractors for their projects. I had the opportunity to work on one of their large projects - Siteflow. 
+Checkout [Siteflow](https://www.siteflow.kone.com)
 
 Siteflow is this software used on construction sites to manage lifts, i.e. see if they are operational, how many people are in it, on which floor, if something malfunctioned, etc. All this info properly baked in the UI.
 
