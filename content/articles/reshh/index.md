@@ -11,5 +11,6 @@ description: "A social media platform designed to showcase and connect Bengal's 
 
 Reshh emerged from a simple observation: Bengal's independent creative scene—musicians, game developers, artists, and other creators—lacked a dedicated space to connect, share, and grow their audience. While global platforms exist, they often don't capture the unique cultural context and community needs of Bengal's indie creators. Check [reshh](https://www.reshh.com) out.
 
-This is a work on progress and a project under my non-profit [OURCE](https://ource.org)
+This is a work in progress.
 
+![reshh screenshot](/assets/articles/reshh/reshh-screenshot-1.jpg)
