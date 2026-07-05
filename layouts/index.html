@@ -245,14 +245,6 @@
                 transition: none;
             }
 
-            #hero-loader {
-                transition: opacity 0.7s ease-out;
-            }
-            #hero-loader.fade-out {
-                opacity: 0;
-                pointer-events: none;
-            }
-
             /* Navbar Pill Styles */
             .nav-pill {
                 background-color: #ffffff !important;
@@ -349,6 +341,7 @@
     </head>
 
     <body>
+        {{ partial "loading-screen.html" . }}
         <!-- Google Tag Manager (noscript) -->
         <noscript
             ><iframe
@@ -359,7 +352,6 @@
             ></iframe
         ></noscript>
         <!-- End Google Tag Manager (noscript) -->
-        <div id="hero-loader" class="fixed inset-0 z-50 bg-[#391286]"></div>
         <!-- Navbar -->
         <nav class="fixed top-0 left-0 right-0 z-50 mt-6">
             <div class="flex justify-center items-start gap-4 px-4 relative">
@@ -705,33 +697,6 @@
         <!-- Mobile Menu JavaScript -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                const heroLoader = document.getElementById("hero-loader");
-                if (heroLoader) {
-                    const heroImages = [
-                        "/assets/hero-background-image.png",
-                        "/assets/hero-head.png",
-                        "/assets/hero-head-thoughts.svg",
-                        "/assets/hero-blanket.png"
-                    ];
-                    let loadedCount = 0;
-                    function checkLoaded() {
-                        loadedCount++;
-                        if (loadedCount >= heroImages.length) {
-                            positionBlanket();
-                            heroLoader.classList.add("fade-out");
-                            heroLoader.addEventListener("transitionend", function () {
-                                heroLoader.style.display = "none";
-                            }, { once: true });
-                        }
-                    }
-                    heroImages.forEach(function (src) {
-                        const img = new Image();
-                        img.onload = checkLoaded;
-                        img.onerror = checkLoaded;
-                        img.src = src;
-                    });
-                }
-
                 const mobileMenuButton =
                     document.getElementById("mobile-menu-button");
                 const mobileMenu = document.getElementById("mobile-menu");

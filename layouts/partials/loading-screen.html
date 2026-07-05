@@ -1,0 +1,60 @@
+<!-- Page loading screen -->
+<div
+    id="page-loader"
+    class="fixed inset-0 z-[60] flex items-center justify-center bg-black transition-opacity duration-500 ease-out"
+>
+    <div
+        class="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin"
+        role="status"
+        aria-label="Loading"
+    ></div>
+</div>
+
+<noscript>
+    <style>
+        #page-loader {
+            display: none !important;
+        }
+    </style>
+</noscript>
+
+<style>
+    #page-loader.fade-out {
+        opacity: 0;
+        pointer-events: none;
+    }
+</style>
+
+<script>
+    (function () {
+        const loader = document.getElementById("page-loader");
+        if (!loader) return;
+
+        function hideLoader() {
+            loader.classList.add("fade-out");
+            loader.addEventListener(
+                "transitionend",
+                function () {
+                    loader.style.display = "none";
+                },
+                { once: true },
+            );
+        }
+
+        let hidden = false;
+        function onComplete() {
+            if (hidden) return;
+            hidden = true;
+            hideLoader();
+        }
+
+        if (document.readyState === "complete") {
+            onComplete();
+        } else {
+            window.addEventListener("load", onComplete);
+        }
+
+        // Failsafe: hide after 5 seconds regardless
+        setTimeout(onComplete, 5000);
+    })();
+</script>
