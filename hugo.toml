@@ -6,6 +6,11 @@ buildFuture = true
 [pagination]
   pagerSize = 10
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
   description = "Design-forward Product Engineer architecting scalable, user-centric systems. Portfolio and blog showcasing innovative solutions and technical expertise."
   author = "Imtiaz Al Shariar Shamrat"
