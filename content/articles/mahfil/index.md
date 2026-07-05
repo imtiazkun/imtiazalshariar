@@ -5,6 +5,7 @@ draft: false
 categories: ["Projects"]
 tags: ["Video", "Streaming", "Content", "Platform", "Technology"]
 readTime: "1 min read"
+featuredImage: "/assets/articles/mahfil/mahfil.jpg"
 description: "A video-sharing and streaming platform built around safe, curated content you can actually trust. Every video is reviewed to keep the experience clean, family-friendly, and free of harmful material."
 ---
 
