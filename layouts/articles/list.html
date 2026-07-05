@@ -245,8 +245,20 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Articles</h1>
-                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Articles and writings published on-site and across
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-6">Articles and writings published on-site and across
                     different spaces for discussion.</p>
+
+                <!-- Tags -->
+                {{ if .Site.Taxonomies.tags }}
+                <div class="flex flex-wrap justify-center gap-2">
+                    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                    <a href="{{ $taxonomy.Page.RelPermalink }}"
+                        class="px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-gray-200 transition-colors">
+                        {{ $taxonomy.Page.Title }}
+                    </a>
+                    {{ end }}
+                </div>
+                {{ end }}
             </div>
 
             <!-- Articles List -->
@@ -337,8 +349,8 @@
                         class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">GitHub</a>
                     <a href="https://x.com/imtiazalshariar" target="_blank" rel="noopener noreferrer"
                         class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">Twitter/X</a>
-                    <a href="https://reshh.com/u/booingdaa" target="_blank" rel="noopener noreferrer"
-                        class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">Reshh</a>
+                    <a href="https://dribbble.com/shariarsenseii" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-600 hover:text-gray-900 transition-colors text-xs sm:text-sm">Dribbble</a>
                 </div>
             </div>
         </div>
