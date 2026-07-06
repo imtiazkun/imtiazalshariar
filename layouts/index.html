@@ -475,6 +475,7 @@
                 class="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full lg:w-[60%] max-h-full flex flex-col items-center"
             >
                 <img
+                    id="hero-head"
                     src="/assets/hero-head.png"
                     alt=""
                     class="w-full h-auto object-contain"
@@ -1069,7 +1070,14 @@
                         blanket.style.top = relativeTop + "%";
                     }
                 }
-                positionBlanket();
+                const heroHead = document.getElementById("hero-head");
+                if (heroHead) {
+                    if (heroHead.complete) {
+                        positionBlanket();
+                    } else {
+                        heroHead.addEventListener("load", positionBlanket);
+                    }
+                }
                 window.addEventListener("resize", positionBlanket);
 
                 // Snake slither animation for SVG paths
