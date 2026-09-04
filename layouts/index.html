@@ -383,11 +383,8 @@
 
         <!-- Hero Section -->
         <section
-            class="h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden"
-            style="
-                background-image: url(&quot;/assets/hero-background-image.png&quot;);
-                background-color: #391286;
-            "
+            class="h-screen relative overflow-hidden"
+            style="background-color: #391286"
         >
             <div
                 class="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full lg:w-[60%] max-h-full flex flex-col items-center"
@@ -1140,15 +1137,7 @@
                     animateCircles();
                 }
 
-                // Mouse parallax effect for hero background
                 const heroSection = document.querySelector(".h-screen");
-                if (heroSection) {
-                    document.addEventListener("mousemove", function (e) {
-                        const x = (e.clientX / window.innerWidth - 0.5) * 20;
-                        const y = (e.clientY / window.innerHeight - 0.5) * 20;
-                        heroSection.style.backgroundPosition = `calc(50% + ${x}px) calc(50% + ${y}px)`;
-                    });
-                }
 
                 // Position blanket based on red dot location
                 function positionBlanket() {
