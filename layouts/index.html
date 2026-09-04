@@ -457,12 +457,12 @@
         </section>
 
         <!-- About Section -->
-        <section class="pt-16 pb-16 bg-white">
+        <section class="bg-white overflow-hidden">
             <div
-                class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+                class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch"
             >
                 <!-- Left: About content -->
-                <div>
+                <div class="py-16">
                     <div class="mb-8">
                         <span
                             class="text-sm text-gray-600 uppercase tracking-wide"
@@ -509,12 +509,12 @@
                 </div>
 
                 <!-- Right: Portrait -->
-                <div class="hidden md:block">
+                <div class="hidden md:block self-stretch">
                     <img
                         src="/assets/about-decor.svg"
                         alt=""
                         aria-hidden="true"
-                        class="w-full h-auto"
+                        class="w-full h-full object-cover"
                     />
                 </div>
             </div>
