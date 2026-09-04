@@ -383,8 +383,11 @@
 
         <!-- Hero Section -->
         <section
-            class="h-screen relative overflow-hidden"
-            style="background-color: #000000"
+            class="h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden"
+            style="
+                background-image: url(&quot;/assets/hero_section_image.jpeg&quot;);
+                background-color: #000000;
+            "
         >
             <div
                 class="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full lg:w-[60%] max-h-full flex flex-col items-center"
@@ -393,7 +396,7 @@
                     id="hero-head"
                     src="/assets/hero-head.png"
                     alt=""
-                    class="w-full h-auto object-contain"
+                    class="w-full h-auto object-contain invisible"
                 />
                 <img
                     src="/assets/hero-head-thoughts.svg"
