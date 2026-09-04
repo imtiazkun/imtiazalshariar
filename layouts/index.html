@@ -428,16 +428,7 @@
                         <path d="M647.157 412.377C645.719 415.459 644.281 418.541 642.843 421.623C643.909 422.027 644.975 422.43 646.042 422.834C655.324 426.349 664.607 429.865 673.889 433.38L675 433.626C681.167 433.165 687.333 432.704 693.5 432.243L692.64 431.897C696.047 434.706 699.454 437.515 702.861 440.324C703.74 441.049 704.62 441.775 705.5 442.5C704.738 441.652 703.976 440.804 703.214 439.956C700.262 436.671 697.311 433.387 694.36 430.103L693.904 429.727L693.5 429.757C687.333 429.296 681.167 428.835 675 428.374L676.111 428.62C667.454 423.764 658.797 418.907 650.141 414.051C649.146 413.493 648.152 412.935 647.157 412.377Z" fill="#ffffff"/>
                     </g>
                 </svg>
-                <div
-                    id="red-dot"
-                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-4 h-4 bg-red-500 rounded-full z-10 opacity-0"
-                ></div>
             </div>
-            <div
-                id="hero-blanket"
-                class="absolute left-1/2 transform -translate-x-1/2 w-[200%] h-full bg-[url('/assets/hero-blanket.png')] bg-repeat-x bg-[length:auto_100%] md:bg-[length:auto_150%] rotate-[-3deg] origin-top"
-                style="top: 75%;"
-            ></div>
 
             <!-- Trusted by Section -->
             <div class="absolute bottom-16 left-0 right-0 z-10">
@@ -1141,33 +1132,6 @@
                 }
 
                 const heroSection = document.querySelector(".h-screen");
-
-                // Position blanket based on red dot location
-                function positionBlanket() {
-                    const redDot = document.getElementById("red-dot");
-                    const blanket = document.getElementById("hero-blanket");
-                    if (redDot && blanket) {
-                        const redDotRect = redDot.getBoundingClientRect();
-                        const heroRect = heroSection.getBoundingClientRect();
-                        let relativeTop =
-                            ((redDotRect.top - heroRect.top - 80) /
-                                heroRect.height) *
-                            100;
-                        if (window.innerWidth < 768) {
-                            relativeTop += 5;
-                        }
-                        blanket.style.top = relativeTop + "%";
-                    }
-                }
-                const heroHead = document.getElementById("hero-head");
-                if (heroHead) {
-                    if (heroHead.complete) {
-                        positionBlanket();
-                    } else {
-                        heroHead.addEventListener("load", positionBlanket);
-                    }
-                }
-                window.addEventListener("resize", positionBlanket);
 
                 // Snake slither animation for SVG paths
                 // Customization variables:
