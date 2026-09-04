@@ -540,9 +540,11 @@
 
                 <!-- Projects List -->
                 <div class="space-y-8">
-                    {{ range first 3 (where (where .Site.RegularPages "Section"
-                    "articles") "Params.categories" "intersect" (slice
-                    "Projects")) }}
+                    {{ $featured := slice
+                    "/articles/siteflow-realtime-construction-3d-simulation"
+                    "/articles/zipli-rescuing-surplus-food-at-scale" }}
+                    {{ range $featured }}
+                    {{ with $.Site.GetPage . }}
                     <article class="bg-transparent">
                         <div class="flex flex-col md:flex-row">
                             <div
@@ -614,6 +616,7 @@
                             </div>
                         </div>
                     </article>
+                    {{ end }}
                     {{ end }}
                 </div>
 
