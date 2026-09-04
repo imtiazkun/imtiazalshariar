@@ -539,81 +539,79 @@
                 </div>
 
                 <!-- Projects List -->
-                <div class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {{ $featured := slice
                     "/articles/siteflow-realtime-construction-3d-simulation"
                     "/articles/zipli-rescuing-surplus-food-at-scale" }}
                     {{ range $featured }}
                     {{ with $.Site.GetPage . }}
-                    <article class="bg-transparent">
-                        <div class="flex flex-col md:flex-row">
-                            <div
-                                class="w-full md:w-96 h-48 md:h-64 bg-gray-200 flex items-center justify-center flex-shrink-0"
+                    <article class="flex flex-col bg-transparent">
+                        <div
+                            class="w-full h-48 md:h-64 bg-gray-200 flex items-center justify-center"
+                        >
+                            {{ if .Params.featuredImage }}
+                            <img
+                                src="{{ .Params.featuredImage }}"
+                                alt="{{ .Title }}"
+                                class="w-full h-full object-cover"
+                            />
+                            {{ else }}
+                            <svg
+                                class="w-12 h-12 text-gray-400"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
                             >
-                                {{ if .Params.featuredImage }}
-                                <img
-                                    src="{{ .Params.featuredImage }}"
-                                    alt="{{ .Title }}"
-                                    class="w-full h-full object-cover"
-                                />
-                                {{ else }}
-                                <svg
-                                    class="w-12 h-12 text-gray-400"
-                                    fill="currentColor"
-                                    viewBox="0 0 20 20"
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                                    clip-rule="evenodd"
+                                ></path>
+                            </svg>
+                            {{ end }}
+                        </div>
+                        <div class="pt-4 md:pt-6 flex flex-col flex-1">
+                            <div
+                                class="flex items-center justify-start gap-4 mb-3"
+                            >
+                                {{ if .Params.categories }}
+                                <span
+                                    class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                                    >{{ index .Params.categories 0 }}</span
                                 >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
-                                        clip-rule="evenodd"
-                                    ></path>
-                                </svg>
+                                {{ end }} {{ if .Params.readTime }}
+                                <span class="text-sm text-gray-500"
+                                    >{{ .Params.readTime }}</span
+                                >
                                 {{ end }}
                             </div>
-                            <div class="p-4 md:p-6 flex-1">
-                                <div
-                                    class="flex items-center justify-start gap-4 mb-3"
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-3"
+                            >
+                                {{ .Title }}
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                {{ .Params.description | default .Summary |
+                                truncate 150 }}
+                            </p>
+                            <a
+                                href="{{ .Permalink }}"
+                                class="mt-auto text-gray-900 font-medium hover:text-gray-700 flex items-center"
+                            >
+                                View project
+                                <svg
+                                    class="w-4 h-4 ml-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
                                 >
-                                    {{ if .Params.categories }}
-                                    <span
-                                        class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                                        >{{ index .Params.categories 0 }}</span
-                                    >
-                                    {{ end }} {{ if .Params.readTime }}
-                                    <span class="text-sm text-gray-500"
-                                        >{{ .Params.readTime }}</span
-                                    >
-                                    {{ end }}
-                                </div>
-                                <h3
-                                    class="text-xl font-semibold text-gray-900 mb-3"
-                                >
-                                    {{ .Title }}
-                                </h3>
-                                <p class="text-gray-600 mb-4">
-                                    {{ .Params.description | default .Summary |
-                                    truncate 150 }}
-                                </p>
-                                <a
-                                    href="{{ .Permalink }}"
-                                    class="text-gray-900 font-medium hover:text-gray-700 flex items-center"
-                                >
-                                    View project
-                                    <svg
-                                        class="w-4 h-4 ml-1"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M9 5l7 7-7 7"
-                                        ></path>
-                                    </svg>
-                                </a>
-                            </div>
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5l7 7-7 7"
+                                    ></path>
+                                </svg>
+                            </a>
                         </div>
                     </article>
                     {{ end }}
@@ -652,8 +650,13 @@
 
                 <!-- Blog Posts List -->
                 <div class="space-y-8">
-                    {{ range first 3 (where .Site.RegularPages "Section"
-                    "articles") }}
+                    {{ $blog := slice }}
+                    {{ range where .Site.RegularPages "Section" "articles" }}
+                    {{ if not (in (.Params.categories | default slice) "Projects") }}
+                    {{ $blog = $blog | append . }}
+                    {{ end }}
+                    {{ end }}
+                    {{ range first 3 $blog }}
                     <article class="bg-transparent">
                         <div class="flex flex-col md:flex-row">
                             <div
