@@ -458,19 +458,24 @@
 
         <!-- About Section -->
         <section class="pt-16 pb-16 bg-white">
-            <div class="max-w-3xl mx-auto px-6">
-                <div class="text-center mb-8">
-                    <span class="text-sm text-gray-600 uppercase tracking-wide"
-                        >About</span
-                    >
-                    <h2
-                        class="text-3xl md:text-4xl font-bold text-gray-900 mt-2"
-                    >
-                        Design sensibility, technical depth
-                    </h2>
-                </div>
-                <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
-                    <p>
+            <div
+                class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+            >
+                <!-- Left: About content -->
+                <div>
+                    <div class="mb-8">
+                        <span
+                            class="text-sm text-gray-600 uppercase tracking-wide"
+                            >About</span
+                        >
+                        <h2
+                            class="text-3xl md:text-4xl font-bold text-gray-900 mt-2"
+                        >
+                            Design sensibility, technical depth
+                        </h2>
+                    </div>
+                    <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                        <p>
                         Currently growing
                         <a
                             href="https://www.flowtusk.com/"
@@ -499,7 +504,17 @@
                             class="inline-flex items-center rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-opacity hover:opacity-80"
                             >Consult</a
                         >
+                        </div>
                     </div>
+                </div>
+
+                <!-- Right: Portrait -->
+                <div class="hidden md:block">
+                    <img
+                        src="/assets/hero-head.png"
+                        alt="Imtiaz Al Shariar"
+                        class="w-full h-auto rounded-2xl object-cover"
+                    />
                 </div>
             </div>
         </section>
