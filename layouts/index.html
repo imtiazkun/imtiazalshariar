@@ -388,19 +388,19 @@
                 background-image: url(&quot;/assets/hero_section_image.jpeg&quot;);
                 background-color: #000000;
             "
-        ></section>
+        >
+            <!-- Trusted by Section -->
+            <div class="absolute bottom-8 left-0 right-0 z-10">
+                <div class="max-w-7xl mx-auto px-6">
+                    <h2 class="text-center font-bold text-sm mb-6 text-white">
+                        Trusted by innovative teams across Europe and Asia
+                    </h2>
 
-        <!-- Trusted by Section -->
-        <section class="bg-white pt-12 pb-8">
-            <div class="max-w-7xl mx-auto px-6">
-                <h2 class="text-center font-bold text-sm mb-8 text-gray-900">
-                    Trusted by innovative teams across Europe and Asia
-                </h2>
-
-                <!-- Marquee Container -->
-                <div class="marquee-container mt-4">
-                    <div id="marquee-content" class="marquee-content">
-                        <!-- Companies will be dynamically added here -->
+                    <!-- Marquee Container -->
+                    <div class="marquee-container mt-4">
+                        <div id="marquee-content" class="marquee-content">
+                            <!-- Companies will be dynamically added here -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -829,7 +829,7 @@
                                 const span = document.createElement("span");
                                 span.textContent = company.content;
                                 span.className =
-                                    "text-gray-900 font-bold text-xl border-2 border-transparent px-2 py-1";
+                                    "text-white font-bold text-xl border-2 border-transparent px-2 py-1";
                                 companySet.appendChild(span);
                             }
                         });
