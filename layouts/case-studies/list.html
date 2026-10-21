@@ -220,7 +220,7 @@
                             <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ .Title }}</h3>
                             <p class="text-gray-600 mb-4">{{ .Params.description | default .Summary | truncate 150 }}
                             </p>
-                            <a href="{{ .Permalink }}"
+                            <a href="{{ .Params.externalUrl | default .Permalink }}"
                                 class="text-gray-900 font-medium hover:text-gray-700 flex items-center">
                                 Read more
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
