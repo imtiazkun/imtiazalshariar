@@ -27,8 +27,6 @@ jobs:
         run: |
           wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.121.0/hugo_extended_0.121.0_linux-amd64.deb
           sudo dpkg -i /tmp/hugo.deb || sudo apt-get install -f
-      - name: Install Dart Sass
-        run: sudo snap install dart-sass
       - name: Checkout
         uses: actions/checkout@v4
         with:
