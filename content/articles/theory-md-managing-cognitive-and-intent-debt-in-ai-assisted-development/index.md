@@ -5,7 +5,7 @@ draft: false
 categories: ["Articles"]
 tags: ["AI", "Software Engineering", "Developer Experience"]
 readTime: ""
-featuredImage: ""
+featuredImage: "/assets/articles/theory-md-managing-cognitive-and-intent-debt-in-ai-assisted-development/theorymd-managing-cognitive-and-intent-debt-in-ai-assisted-development.jpg"
 description: "In our newfound AI powered workplaces, one problem is slowly building up, a cognitive burden that is getting harder to manage as AI keeps building."
 ---
 
