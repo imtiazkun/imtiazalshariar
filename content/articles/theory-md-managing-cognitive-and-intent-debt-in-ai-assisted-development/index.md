@@ -22,12 +22,4 @@ Here's what we (me and my team) are doing. We use obsidian for developing a "the
 
 Meaning, a sober engineer will be able to explain what the program represents in the real world and what it ignores. Individual should know the why behind each rule and can respond to any request for change in the system. We can use the same theories to test ownership. This helps us make sure no one loses track while building. 
 
-| Naur's rule | Library example | Without the theory |
-| --- | --- | --- |
-| Map the program to the real world | A `Copy` is a physical book; a `Title` is all copies of *Dune*. Families and shelf locations are deliberately left out. | Adds a `shelf` field nobody keeps accurate |
-| Justify each part | `Copy` and `Title` are separate because members borrow a copy but reserve a title. | Merges them to "simplify" and breaks reservations |
-| Handle change: it fits | "Renew a loan online" fits. A renewal is a loan whose due date moves. | Gets it right, but by luck |
-| Handle change: it breaks an assumption | "Add e-books" breaks the assumption that a copy is physical and held by one person at a time. | Fake copies with special cases everywhere |
-| Handle change: it hits an ignored area | "Let parents see their kids' loans" needs families, which were never modeled, and raises privacy questions. | A `parent_id` field with no clear rules |
-
 Theory.md is an open source simple obsidian plugin paired with a containerized server in go that allows users to form the theory first and then let AI build the whole software based on it. The obsidian plugin and server merely facilitates collaborating and tracking authorship. I'm trying to package it properly instead of launching raw scripts. Here's the github repository in advance: https://github.com/imtiazkun/theory.md 
