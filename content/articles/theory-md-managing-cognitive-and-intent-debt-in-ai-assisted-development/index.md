@@ -22,4 +22,10 @@ Here's what we (me and my team) are doing. We use obsidian for developing a "the
 
 Meaning, a sober engineer will be able to explain what the program represents in the real world and what it ignores. Individual should know the why behind each rule and can respond to any request for change in the system. We can use the same theories to test ownership. This helps us make sure no one loses track while building. 
 
-Theory.md is an open source simple obsidian plugin paired with a containerized server in go that allows users to form the theory first and then let AI build the whole software based on it. The obsidian plugin and server merely facilitates collaborating and tracking authorship. I'm trying to package it properly instead of launching raw scripts. Here's the github repository in advance: https://github.com/imtiazkun/theory.md 
+Theory.md is an open source simple obsidian plugin that uses gh (github gli tool) and claude code to control context. Instead of writing unorganized prompts, engineers collaborate on a theory repository inside obsidian. They write the what and whys with, proper guardrails in the code repositories. Instead of spending hours on manually prompting engineers write rules with IDs inside each note.md named after their feature and then multiple changes (diffs) are compiled to code after committing them to project's theory repository. So, far it seems useful but we'll be more confident once we use it more. 
+Have a look at the plugin respository. We are building theory.md using theory.md 
+
+
+
+Repository: https://github.com/imtiazkun/theory-obsidian
+Reach out to me by email if you want to collaborate or create an issue on githug if you have anything interesting. 
